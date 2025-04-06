@@ -1,0 +1,3 @@
+C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/encoder_AaP.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/edit_cache.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/rebuild_cache.dir
