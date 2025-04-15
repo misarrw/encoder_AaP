@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
+#include "../SubstitutionCipher.h"
 
-class CaesarCipher {
+class CaesarCipher : public SubstitutionCipher {
 public:
     std::string caesar_encryption(const std::string& text, const std::string& key);
 
