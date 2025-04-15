@@ -176,6 +176,30 @@ work_folder/globals.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.s
 .PHONY : work_folder/globals.cpp.s
 
+work_folder/substitution_ciphers/SubstitutionCipher.obj: work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj
+.PHONY : work_folder/substitution_ciphers/SubstitutionCipher.obj
+
+# target to build an object file
+work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj
+.PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj
+
+work_folder/substitution_ciphers/SubstitutionCipher.i: work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
+.PHONY : work_folder/substitution_ciphers/SubstitutionCipher.i
+
+# target to preprocess a source file
+work_folder/substitution_ciphers/SubstitutionCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
+.PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
+
+work_folder/substitution_ciphers/SubstitutionCipher.s: work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
+.PHONY : work_folder/substitution_ciphers/SubstitutionCipher.s
+
+# target to generate assembly for a file
+work_folder/substitution_ciphers/SubstitutionCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
+.PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
+
 work_folder/substitution_ciphers/caesar/CaesarCipher.obj: work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.obj
 .PHONY : work_folder/substitution_ciphers/caesar/CaesarCipher.obj
 
@@ -215,6 +239,9 @@ help:
 	@echo ... work_folder/globals.obj
 	@echo ... work_folder/globals.i
 	@echo ... work_folder/globals.s
+	@echo ... work_folder/substitution_ciphers/SubstitutionCipher.obj
+	@echo ... work_folder/substitution_ciphers/SubstitutionCipher.i
+	@echo ... work_folder/substitution_ciphers/SubstitutionCipher.s
 	@echo ... work_folder/substitution_ciphers/caesar/CaesarCipher.obj
 	@echo ... work_folder/substitution_ciphers/caesar/CaesarCipher.i
 	@echo ... work_folder/substitution_ciphers/caesar/CaesarCipher.s

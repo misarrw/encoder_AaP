@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/encoder_AaP.dir/main.cpp.obj.d"
   "CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.obj"
   "CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.obj.d"
+  "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj"
+  "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj.d"
   "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.obj"
   "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.obj.d"
   "encoder_AaP.exe"
