@@ -8,6 +8,7 @@ add_executable(encoder_AaP
     main.cpp
     work_folder/globals.cpp
     work_folder/substitution_ciphers/caesar/CaesarCipher.cpp
+    work_folder/substitution_ciphers/SubstitutionCipher.cpp
 )
 
 # Указываем, где искать заголовки

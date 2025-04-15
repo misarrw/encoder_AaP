@@ -3,3 +3,4 @@
 
 
 extern const std::string ALPHABET;
+extern const int ALPHABET_SIZE;
