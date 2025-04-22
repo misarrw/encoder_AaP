@@ -1,5 +1,5 @@
 #include "CaesarCipher.hpp"
-#include "../../globals.hpp"
+#include "globals.hpp"
 #include <cctype>
 
 std::string CaesarCipher::caesar_encryption(const std::string& text, const std::string& key) {

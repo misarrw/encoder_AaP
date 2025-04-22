@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-#include "../SubstitutionCipher.h"
+#include "../SubstitutionCipher.hpp"
+
 
 class CaesarCipher : public SubstitutionCipher {
 public:

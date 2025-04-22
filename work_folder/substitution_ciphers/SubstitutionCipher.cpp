@@ -1,6 +1,6 @@
 #include <iostream>
-#include "SubstitutionCipher.h"
-#include "../globals.hpp"
+#include "SubstitutionCipher.hpp"
+#include "globals.hpp"
 
 
 int SubstitutionCipher::opposite_alpha(int& alpha)

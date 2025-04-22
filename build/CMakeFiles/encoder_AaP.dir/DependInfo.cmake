@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/skwor/HSE/c++/encoder_AaP/main.cpp" "CMakeFiles/encoder_AaP.dir/main.cpp.obj" "gcc" "CMakeFiles/encoder_AaP.dir/main.cpp.obj.d"
-  "C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/globals.cpp" "CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.obj" "gcc" "CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.obj.d"
-  "C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.cpp" "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj" "gcc" "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj.d"
-  "C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp" "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.obj" "gcc" "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.obj.d"
+  "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/main.cpp" "CMakeFiles/encoder_AaP.dir/main.cpp.o" "gcc" "CMakeFiles/encoder_AaP.dir/main.cpp.o.d"
+  "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.cpp" "CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.o" "gcc" "CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.o.d"
+  "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.cpp" "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o" "gcc" "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o.d"
+  "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp" "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o" "gcc" "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

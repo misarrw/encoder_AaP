@@ -1,8 +1,8 @@
 #include <iostream>
 #include <array>
 #include <string>
-#include "AffineRecurrentCipher.h"
-#include "../../../globals.hpp"
+#include "AffineRecurrentCipher.hpp"
+#include "globals.hpp"
 
 
 std::array<int, 2> AffineRecurrentCipher::find_another_key(const std::array<int, 2>& key1, const std::array<int, 2>& key2, const std::string& text)
