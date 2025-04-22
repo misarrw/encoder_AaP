@@ -3,7 +3,7 @@
 #include "../globals.hpp"
 
 
-int SubstitutionCipher::opposite_alpha(int alpha)
+int SubstitutionCipher::opposite_alpha(int& alpha)
 {
     int counter = 1;
     int remainder = ((counter * ALPHABET_SIZE) + 1) % alpha;

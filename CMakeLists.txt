@@ -9,6 +9,8 @@ add_executable(encoder_AaP
     work_folder/globals.cpp
     work_folder/substitution_ciphers/caesar/CaesarCipher.cpp
     work_folder/substitution_ciphers/SubstitutionCipher.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp
+    work_folder/substitution_ciphers/affine/AffineCipher.cpp
 )
 
 # Указываем, где искать заголовки
