@@ -1,7 +1,1 @@
 #include <iostream>
-
-
-class VigenereCipher
-{
-
-};

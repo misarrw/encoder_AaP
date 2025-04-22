@@ -1,5 +1,5 @@
 class SubstitutionCipher
 {
 public:
-    int opposite_alpha(int alpha);    
+    int opposite_alpha(int& alpha);
 };
