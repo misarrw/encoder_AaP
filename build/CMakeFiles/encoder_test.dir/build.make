@@ -114,11 +114,71 @@ CMakeFiles/encoder_test.dir/work_folder/globals.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_test.dir/work_folder/globals.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.cpp" -o CMakeFiles/encoder_test.dir/work_folder/globals.cpp.s
 
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o: CMakeFiles/encoder_test.dir/flags.make
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o: /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o: CMakeFiles/encoder_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o -MF CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o.d -o CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o -c "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp"
+
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp" > CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i
+
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp" -o CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s
+
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o: CMakeFiles/encoder_test.dir/flags.make
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o: /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o: CMakeFiles/encoder_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o -MF CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o.d -o CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o -c "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp"
+
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp" > CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i
+
+CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp" -o CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s
+
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o: CMakeFiles/encoder_test.dir/flags.make
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o: /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o: CMakeFiles/encoder_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o -MF CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o.d -o CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o -c "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp"
+
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp" > CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
+
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp" -o CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
+
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o: CMakeFiles/encoder_test.dir/flags.make
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o: /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.cpp
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o: CMakeFiles/encoder_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o -MF CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o.d -o CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o -c "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.cpp"
+
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.cpp" > CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
+
+CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.cpp" -o CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
+
 # Object files for target encoder_test
 encoder_test_OBJECTS = \
 "CMakeFiles/encoder_test.dir/encoder_test.cpp.o" \
 "CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.o" \
-"CMakeFiles/encoder_test.dir/work_folder/globals.cpp.o"
+"CMakeFiles/encoder_test.dir/work_folder/globals.cpp.o" \
+"CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o" \
+"CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o" \
+"CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o" \
+"CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o"
 
 # External object files for target encoder_test
 encoder_test_EXTERNAL_OBJECTS =
@@ -126,9 +186,13 @@ encoder_test_EXTERNAL_OBJECTS =
 encoder_test: CMakeFiles/encoder_test.dir/encoder_test.cpp.o
 encoder_test: CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.o
 encoder_test: CMakeFiles/encoder_test.dir/work_folder/globals.cpp.o
+encoder_test: CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o
+encoder_test: CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o
+encoder_test: CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
+encoder_test: CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
 encoder_test: CMakeFiles/encoder_test.dir/build.make
 encoder_test: CMakeFiles/encoder_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable encoder_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable encoder_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/encoder_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

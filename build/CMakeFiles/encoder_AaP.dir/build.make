@@ -128,12 +128,42 @@ CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.cpp" -o CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
 
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o: CMakeFiles/encoder_AaP.dir/flags.make
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o: /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o: CMakeFiles/encoder_AaP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o -MF CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o.d -o CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o -c "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp"
+
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp" > CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
+
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp" -o CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
+
+CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o: CMakeFiles/encoder_AaP.dir/flags.make
+CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o: /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.cpp
+CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o: CMakeFiles/encoder_AaP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o -MF CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o.d -o CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o -c "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.cpp"
+
+CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.cpp" > CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.i
+
+CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.cpp" -o CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.s
+
 # Object files for target encoder_AaP
 encoder_AaP_OBJECTS = \
 "CMakeFiles/encoder_AaP.dir/main.cpp.o" \
 "CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.o" \
 "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o" \
-"CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o"
+"CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o" \
+"CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o" \
+"CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o"
 
 # External object files for target encoder_AaP
 encoder_AaP_EXTERNAL_OBJECTS =
@@ -142,9 +172,11 @@ encoder_AaP: CMakeFiles/encoder_AaP.dir/main.cpp.o
 encoder_AaP: CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.o
 encoder_AaP: CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o
 encoder_AaP: CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
+encoder_AaP: CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
+encoder_AaP: CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o
 encoder_AaP: CMakeFiles/encoder_AaP.dir/build.make
 encoder_AaP: CMakeFiles/encoder_AaP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable encoder_AaP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable encoder_AaP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/encoder_AaP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -263,6 +263,7 @@ work_folder/SubFunctions.o: work_folder/SubFunctions.cpp.o
 
 # target to build an object file
 work_folder/SubFunctions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.o
 .PHONY : work_folder/SubFunctions.cpp.o
 
@@ -271,6 +272,7 @@ work_folder/SubFunctions.i: work_folder/SubFunctions.cpp.i
 
 # target to preprocess a source file
 work_folder/SubFunctions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.i
 .PHONY : work_folder/SubFunctions.cpp.i
 
@@ -279,8 +281,57 @@ work_folder/SubFunctions.s: work_folder/SubFunctions.cpp.s
 
 # target to generate assembly for a file
 work_folder/SubFunctions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.s
 .PHONY : work_folder/SubFunctions.cpp.s
+
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.o: work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.o
+
+# target to build an object file
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o
+
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.i: work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.i
+
+# target to preprocess a source file
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i
+
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.s: work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.s
+
+# target to generate assembly for a file
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s
+
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.o: work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.o
+
+# target to build an object file
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o
+
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.i: work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.i
+
+# target to preprocess a source file
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i
+
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.s: work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.s
+
+# target to generate assembly for a file
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s
 
 work_folder/globals.o: work_folder/globals.cpp.o
 .PHONY : work_folder/globals.o
@@ -315,6 +366,7 @@ work_folder/substitution_ciphers/SubstitutionCipher.o: work_folder/substitution_
 # target to build an object file
 work_folder/substitution_ciphers/SubstitutionCipher.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
 .PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
 
 work_folder/substitution_ciphers/SubstitutionCipher.i: work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
@@ -323,6 +375,7 @@ work_folder/substitution_ciphers/SubstitutionCipher.i: work_folder/substitution_
 # target to preprocess a source file
 work_folder/substitution_ciphers/SubstitutionCipher.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
 .PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
 
 work_folder/substitution_ciphers/SubstitutionCipher.s: work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
@@ -331,7 +384,35 @@ work_folder/substitution_ciphers/SubstitutionCipher.s: work_folder/substitution_
 # target to generate assembly for a file
 work_folder/substitution_ciphers/SubstitutionCipher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
 .PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
+
+work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.o: work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
+.PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.o
+
+# target to build an object file
+work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
+.PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
+
+work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.i: work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
+.PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.i
+
+# target to preprocess a source file
+work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
+.PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
+
+work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.s: work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
+.PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.s
+
+# target to generate assembly for a file
+work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
+.PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
 
 work_folder/substitution_ciphers/caesar/CaesarCipher.o: work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o
 .PHONY : work_folder/substitution_ciphers/caesar/CaesarCipher.o
@@ -382,12 +463,21 @@ help:
 	@echo "... work_folder/SubFunctions.o"
 	@echo "... work_folder/SubFunctions.i"
 	@echo "... work_folder/SubFunctions.s"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.o"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.i"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.s"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.o"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.i"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.s"
 	@echo "... work_folder/globals.o"
 	@echo "... work_folder/globals.i"
 	@echo "... work_folder/globals.s"
 	@echo "... work_folder/substitution_ciphers/SubstitutionCipher.o"
 	@echo "... work_folder/substitution_ciphers/SubstitutionCipher.i"
 	@echo "... work_folder/substitution_ciphers/SubstitutionCipher.s"
+	@echo "... work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.o"
+	@echo "... work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.i"
+	@echo "... work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.s"
 	@echo "... work_folder/substitution_ciphers/caesar/CaesarCipher.o"
 	@echo "... work_folder/substitution_ciphers/caesar/CaesarCipher.i"
 	@echo "... work_folder/substitution_ciphers/caesar/CaesarCipher.s"

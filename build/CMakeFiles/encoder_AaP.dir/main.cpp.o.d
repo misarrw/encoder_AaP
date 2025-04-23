@@ -957,4 +957,6 @@ CMakeFiles/encoder_AaP.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/unistd.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/caesar/CaesarCipher.hpp \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/caesar/../SubstitutionCipher.hpp
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/caesar/../SubstitutionCipher.hpp \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.hpp \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.hpp

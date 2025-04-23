@@ -11,8 +11,7 @@ std::vector<int> SubFunction::text_in_numbers(const std::string& text) {
         
 
         if (upper_letter == ' ') {
-            result.push_back(0);
-            result.push_back(0);
+            result.push_back(-1);
             continue;
         }
         
@@ -21,12 +20,19 @@ std::vector<int> SubFunction::text_in_numbers(const std::string& text) {
             result.push_back(static_cast<int>(letter_pos) + 1); 
             continue;
         }
-
-        size_t symbol_pos = SYMBOLS.find(upper_letter);
-        if (symbol_pos != std::string::npos) {
-            result.push_back(static_cast<int>(symbol_pos) + 100); 
-        }
     }
     
+    return result;
+}
+
+std::string SubFunction::numbers_to_text(const std::vector<int>& nums) {
+    std::string result;
+    for (int num : nums) {
+        if (num == -1) {
+            result += ' ';
+        } else {
+            result += static_cast<char>('A' + num);
+        }
+    }
     return result;
 }

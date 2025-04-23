@@ -129,12 +129,12 @@ external/clean: _deps/doctest-build/clean
 CMakeFiles/encoder_AaP.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=3,4,5,6,7 "Built target encoder_AaP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=3,4,5,6,7,8,9 "Built target encoder_AaP"
 .PHONY : CMakeFiles/encoder_AaP.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/encoder_AaP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/encoder_AaP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" 0
 .PHONY : CMakeFiles/encoder_AaP.dir/rule
@@ -146,7 +146,7 @@ encoder_AaP: CMakeFiles/encoder_AaP.dir/rule
 # codegen rule for target.
 CMakeFiles/encoder_AaP.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=3,4,5,6,7 "Finished codegen for target encoder_AaP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=3,4,5,6,7,8,9 "Finished codegen for target encoder_AaP"
 .PHONY : CMakeFiles/encoder_AaP.dir/codegen
 
 # clean rule for target.
@@ -161,12 +161,12 @@ CMakeFiles/encoder_AaP.dir/clean:
 CMakeFiles/encoder_test.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=8,9,10,11 "Built target encoder_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=10,11,12,13,14,15,16,17 "Built target encoder_test"
 .PHONY : CMakeFiles/encoder_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/encoder_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/encoder_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" 0
 .PHONY : CMakeFiles/encoder_test.dir/rule
@@ -178,7 +178,7 @@ encoder_test: CMakeFiles/encoder_test.dir/rule
 # codegen rule for target.
 CMakeFiles/encoder_test.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=8,9,10,11 "Finished codegen for target encoder_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/CMakeFiles" --progress-num=10,11,12,13,14,15,16,17 "Finished codegen for target encoder_test"
 .PHONY : CMakeFiles/encoder_test.dir/codegen
 
 # clean rule for target.
