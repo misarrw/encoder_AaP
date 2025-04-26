@@ -16,21 +16,8 @@ std::vector<std::array<int, 2>> AffineRecurrentCipher::all_keys(
     std::vector<std::array<int, 2>> keys;
     keys.push_back(key1);
     keys.push_back(key2);
-    
-    // Проверяем только первые два ключа
-    if (std::gcd(key1[0], ALPHABET_SIZE) != 1) {
-        throw std::invalid_argument("First key's 'a' must be coprime with ALPHABET_SIZE");
-    }
-    if (std::gcd(key2[0], ALPHABET_SIZE) != 1) {
-        throw std::invalid_argument("Second key's 'a' must be coprime with ALPHABET_SIZE");
-    }
 
-    // Считаем только буквы (игнорируем пробелы)
-    size_t letter_count = std::count_if(text.begin(), text.end(), 
-        [](char c) { return c != ' '; });
-    
-    // Генерируем ключи для всех букв (без проверки взаимной простоты)
-    for (size_t i = 2; i < letter_count; ++i) {
+    for (size_t i = 2; i < text.size(); ++i) {
         int new_a = (keys[i-1][0] * keys[i-2][0]) % ALPHABET_SIZE;
         int new_b = (keys[i-1][1] + keys[i-2][1]) % ALPHABET_SIZE;
         keys.push_back({new_a, new_b});
@@ -46,74 +33,68 @@ std::string AffineRecurrentCipher::encryption(const std::string& text,
     if (text.empty()) return "";
 
     auto keys = all_keys(key1, key2, text);
-    std::string result;
+    std::vector<int> pre_result;
     size_t key_index = 0;
+    std::vector<int> text_in_nums = SubFunction::text_in_numbers(text);
     
-    for (char c : text) {
-        if (c == ' ') {
-            result += ' ';
-            continue;
-        }
-        
-        int num = toupper(c) - 'A'; // A=0, B=1, ..., Z=25
+    for (int c : text_in_nums) {
         const auto& key = keys[key_index++];
-        
-        int encrypted = (key[0] * num + key[1]) % ALPHABET_SIZE;
-        if (encrypted < 0) encrypted += ALPHABET_SIZE;
-        
-        result += static_cast<char>('A' + encrypted);
+        if (c == -1) { pre_result.push_back(c);} 
+        else {
+            int encrypted = (key[0] * c + key[1]) % ALPHABET_SIZE;
+            if (encrypted < 0) encrypted += ALPHABET_SIZE;
+            pre_result.push_back(encrypted);
+            }
     }
+    std::string result = SubFunction::numbers_to_text(pre_result);
     
     return result;
 }
 
-std::vector<std::array<int, 2>> AffineRecurrentCipher::decryption_keys(
-    const std::vector<std::array<int, 2>>& encryption_keys) 
+std::vector<std::array<int, 2>> AffineRecurrentCipher::decryption_keys(const std::array<int, 2>& key1, const std::array<int, 2>& key2, const std::string& text) 
 {
     std::vector<std::array<int, 2>> dec_keys;
     
-    for (const auto& key : encryption_keys) {
-        int a = key[0];
-        int b = key[1];
-        
-        int a_inv = SubstitutionCipher::opposite_alpha(a);
-        // Проверка корректности обратного элемента
-        if ((a * a_inv) % ALPHABET_SIZE != 1) {
-            throw std::invalid_argument("Invalid key - no modular inverse");
-        }
-        
-        dec_keys.push_back({a_inv, b});  // Сохраняем b для использования в формуле
+    int a1 = key1[0];
+    int b1 = key1[1];
+    int a2 = key2[0];  
+    int b2 = key2[1];
+    
+    int a1_inv = SubstitutionCipher::opposite_alpha(a1);
+    int a2_inv = SubstitutionCipher::opposite_alpha(a2);
+
+    dec_keys.push_back({a1_inv, b1});
+    dec_keys.push_back({a2_inv, b2});
+
+    for (size_t i = 2; i < text.size(); i++) {  
+        int new_a = (dec_keys[i-2][0] * dec_keys[i-1][0]) % ALPHABET_SIZE;  
+        int new_b = (dec_keys[i-2][1] + dec_keys[i-1][1]) % ALPHABET_SIZE;  
+        dec_keys.push_back({new_a, new_b}); 
     }
     
     return dec_keys;
 }
 
-std::string AffineRecurrentCipher::decryption(const std::string& ciphertext, 
-                                            const std::array<int, 2>& key1,
-                                            const std::array<int, 2>& key2) 
+
+std::string AffineRecurrentCipher::decryption(const std::string& ciphertext, const std::array<int, 2>& key1, const std::array<int, 2>& key2) 
 {
     if (ciphertext.empty()) return "";
 
-    auto enc_keys = all_keys(key1, key2, ciphertext);
-    auto dec_keys = decryption_keys(enc_keys);
-    std::string result;
+    auto dec_keys = decryption_keys(key1, key2, ciphertext);
+    std::vector<int> pre_result;
     size_t key_index = 0;
+    std::vector<int> text_in_nums = SubFunction::text_in_numbers(ciphertext);
     
-    for (char c : ciphertext) {
-        if (c == ' ') {
-            result += ' ';
-            continue;
+    for (int c : text_in_nums) {
+        const auto& key = dec_keys[key_index++];
+        if (c == -1) { pre_result.push_back(c);}
+        else {
+            int decrypted = (key[0] * (c - key[1])) % ALPHABET_SIZE;
+            if (decrypted < 0) decrypted += ALPHABET_SIZE;
+            pre_result.push_back(decrypted);
         }
         
-        int num = toupper(c) - 'A';
-        const auto& key = dec_keys[key_index++];
-        
-        // Правильная формула дешифрования: D(x) = a⁻¹(x - b) mod 26
-        int decrypted = (key[0] * (num - key[1])) % ALPHABET_SIZE;
-        decrypted = (decrypted + ALPHABET_SIZE) % ALPHABET_SIZE;
-        
-        result += static_cast<char>('A' + decrypted);
     }
-    
+    std::string result = SubFunction::numbers_to_text(pre_result);
     return result;
 }

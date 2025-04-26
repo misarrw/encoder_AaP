@@ -14,7 +14,7 @@ std::string CaesarCipher::caesar_encryption(const std::string& text, const std::
                 cipher_text += key[index];
             } 
             else {
-                return "Oops, some symbols does not match any symbol from English alphabet :(";
+                return "Oops, some symbols do not match any symbol from English alphabet :(";
             }
         }
     }
@@ -34,7 +34,7 @@ std::string CaesarCipher::caesar_decryption(const std::string& cipher_text, cons
                 decrypted_text += ALPHABET[index];
             } 
             else {
-                return "Oops, some symbols does not match any symbol from English alphabet :(";
+                return "Oops, some symbols do not match any symbol from English alphabet :(";
             }
         }
     }

@@ -8,7 +8,6 @@ std::vector<int> SubFunction::text_in_numbers(const std::string& text) {
     
     for (char letter : text) {
         char upper_letter = std::toupper(static_cast<unsigned char>(letter));
-        
 
         if (upper_letter == ' ') {
             result.push_back(-1);
@@ -17,7 +16,7 @@ std::vector<int> SubFunction::text_in_numbers(const std::string& text) {
         
         size_t letter_pos = ALPHABET.find(upper_letter);
         if (letter_pos != std::string::npos) {
-            result.push_back(static_cast<int>(letter_pos) + 1); 
+            result.push_back(static_cast<int>(letter_pos)); 
             continue;
         }
     }
