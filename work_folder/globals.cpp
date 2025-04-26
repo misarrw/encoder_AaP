@@ -1,7 +1,6 @@
-#include <iostream>
-#include <array>
-#include "globals.hpp"
+#include "globals.h"
 
 
 const std::string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const int ALPHABET_SIZE = 26;
+

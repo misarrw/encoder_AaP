@@ -1,5 +1,5 @@
 # include "OpentextGamma.h"
-# include "../../../../globals.hpp"
+# include "../../../../globals.h"
 # include <iostream>
 # include <vector>
 # include <string>
