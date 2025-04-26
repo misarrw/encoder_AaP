@@ -5,5 +5,6 @@
 class SubFunction
 {
     public:
-        std::vector<int> text_in_numbers(const std::string& text);
+        static std::vector<int> text_in_numbers(const std::string& text);
+        static std::string numbers_to_text(const std::vector<int>& nums);
 };

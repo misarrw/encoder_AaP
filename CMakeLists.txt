@@ -11,12 +11,19 @@ add_executable(encoder_AaP
     work_folder/globals.cpp
     work_folder/substitution_ciphers/caesar/CaesarCipher.cpp
     work_folder/substitution_ciphers/SubstitutionCipher.cpp
+    work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
+    work_folder/SubFunctions.cpp
 )
 
 add_executable(encoder_test
     encoder_test.cpp 
     work_folder/SubFunctions.cpp
-    work_folder/globals.cpp)
+    work_folder/globals.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp
+    work_folder/SubFunctions.cpp
+    work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
+    work_folder/substitution_ciphers/SubstitutionCipher.cpp)
 
 
 add_subdirectory(external)
@@ -30,6 +37,9 @@ target_link_libraries(encoder_test PRIVATE doctest::doctest)
 target_include_directories(encoder_AaP PRIVATE
     ${CMAKE_SOURCE_DIR}/work_folder
 )
+
+
+
 
 # Для тестового проекта
 target_include_directories(encoder_test PRIVATE
