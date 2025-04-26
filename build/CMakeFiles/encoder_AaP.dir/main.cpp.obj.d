@@ -133,4 +133,5 @@ CMakeFiles/encoder_AaP.dir/main.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/ostream.tcc \
  C:/Users/skwor/gcc/include/c++/14.2.0/istream \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/istream.tcc \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/substitution_ciphers/caesar/CaesarCipher.hpp
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/substitution_ciphers/caesar/CaesarCipher.hpp \
+ C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.h

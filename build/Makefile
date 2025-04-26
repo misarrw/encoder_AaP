@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.obj: work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.obj
+
+# target to build an object file
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj
+
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.i: work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.i
+
+# target to preprocess a source file
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.i
+
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.s: work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.s
+
+# target to generate assembly for a file
+work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.s
+
 work_folder/globals.obj: work_folder/globals.cpp.obj
 .PHONY : work_folder/globals.obj
 
@@ -200,6 +224,30 @@ work_folder/substitution_ciphers/SubstitutionCipher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
 .PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
 
+work_folder/substitution_ciphers/affine/AffineCipher.obj: work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.obj
+
+# target to build an object file
+work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj
+
+work_folder/substitution_ciphers/affine/AffineCipher.i: work_folder/substitution_ciphers/affine/AffineCipher.cpp.i
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.i
+
+# target to preprocess a source file
+work_folder/substitution_ciphers/affine/AffineCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.i
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.cpp.i
+
+work_folder/substitution_ciphers/affine/AffineCipher.s: work_folder/substitution_ciphers/affine/AffineCipher.cpp.s
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.s
+
+# target to generate assembly for a file
+work_folder/substitution_ciphers/affine/AffineCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\encoder_AaP.dir\build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.s
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.cpp.s
+
 work_folder/substitution_ciphers/caesar/CaesarCipher.obj: work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.obj
 .PHONY : work_folder/substitution_ciphers/caesar/CaesarCipher.obj
 
@@ -236,12 +284,18 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.obj
+	@echo ... work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.i
+	@echo ... work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.s
 	@echo ... work_folder/globals.obj
 	@echo ... work_folder/globals.i
 	@echo ... work_folder/globals.s
 	@echo ... work_folder/substitution_ciphers/SubstitutionCipher.obj
 	@echo ... work_folder/substitution_ciphers/SubstitutionCipher.i
 	@echo ... work_folder/substitution_ciphers/SubstitutionCipher.s
+	@echo ... work_folder/substitution_ciphers/affine/AffineCipher.obj
+	@echo ... work_folder/substitution_ciphers/affine/AffineCipher.i
+	@echo ... work_folder/substitution_ciphers/affine/AffineCipher.s
 	@echo ... work_folder/substitution_ciphers/caesar/CaesarCipher.obj
 	@echo ... work_folder/substitution_ciphers/caesar/CaesarCipher.i
 	@echo ... work_folder/substitution_ciphers/caesar/CaesarCipher.s

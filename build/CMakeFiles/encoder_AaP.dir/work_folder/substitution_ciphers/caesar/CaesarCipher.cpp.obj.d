@@ -100,6 +100,7 @@ CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/uses_allocator.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/uses_allocator_args.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/tuple \
+ C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.h \
  C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/globals.hpp \
  C:/Users/skwor/gcc/include/c++/14.2.0/iostream \
  C:/Users/skwor/gcc/include/c++/14.2.0/ostream \

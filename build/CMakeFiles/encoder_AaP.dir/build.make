@@ -131,12 +131,44 @@ CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\SubstitutionCipher.cpp -o CMakeFiles\encoder_AaP.dir\work_folder\substitution_ciphers\SubstitutionCipher.cpp.s
 
+CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj: CMakeFiles/encoder_AaP.dir/flags.make
+CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj: CMakeFiles/encoder_AaP.dir/includes_CXX.rsp
+CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp
+CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj: CMakeFiles/encoder_AaP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj -MF CMakeFiles\encoder_AaP.dir\work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\opentext_gamma\OpentextGamma.cpp.obj.d -o CMakeFiles\encoder_AaP.dir\work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\opentext_gamma\OpentextGamma.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\opentext_gamma\OpentextGamma.cpp
+
+CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.i"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\opentext_gamma\OpentextGamma.cpp > CMakeFiles\encoder_AaP.dir\work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\opentext_gamma\OpentextGamma.cpp.i
+
+CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.s"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\opentext_gamma\OpentextGamma.cpp -o CMakeFiles\encoder_AaP.dir\work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\opentext_gamma\OpentextGamma.cpp.s
+
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj: CMakeFiles/encoder_AaP.dir/flags.make
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj: CMakeFiles/encoder_AaP.dir/includes_CXX.rsp
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/substitution_ciphers/affine/AffineCipher.cpp
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj: CMakeFiles/encoder_AaP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj -MF CMakeFiles\encoder_AaP.dir\work_folder\substitution_ciphers\affine\AffineCipher.cpp.obj.d -o CMakeFiles\encoder_AaP.dir\work_folder\substitution_ciphers\affine\AffineCipher.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\affine\AffineCipher.cpp
+
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.i"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\affine\AffineCipher.cpp > CMakeFiles\encoder_AaP.dir\work_folder\substitution_ciphers\affine\AffineCipher.cpp.i
+
+CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.s"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\affine\AffineCipher.cpp -o CMakeFiles\encoder_AaP.dir\work_folder\substitution_ciphers\affine\AffineCipher.cpp.s
+
 # Object files for target encoder_AaP
 encoder_AaP_OBJECTS = \
 "CMakeFiles/encoder_AaP.dir/main.cpp.obj" \
 "CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.obj" \
 "CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.obj" \
-"CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj"
+"CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj" \
+"CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj" \
+"CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj"
 
 # External object files for target encoder_AaP
 encoder_AaP_EXTERNAL_OBJECTS =
@@ -145,11 +177,13 @@ encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/main.cpp.obj
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.obj
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.obj
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.obj
+encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/opentext_gamma/OpentextGamma.cpp.obj
+encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.obj
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/build.make
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/linkLibs.rsp
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/objects1.rsp
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable encoder_AaP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable encoder_AaP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\encoder_AaP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
