@@ -1,8 +1,8 @@
 #include <iostream>
-#include "work_folder/substitution_ciphers/caesar/CaesarCipher.hpp"
+#include "CaesarCipher.h"
 #include <cctype>
-#include "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.hpp"
-#include "work_folder/SubFunctions.hpp"
+#include "AffineRecurrentCipher.h"
+#include "work_folder/SubFunctions.h"
 
 int main()
 {

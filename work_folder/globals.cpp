@@ -1,4 +1,4 @@
-#include "globals.hpp"
+#include "globals.h"
 
 
 const std::string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

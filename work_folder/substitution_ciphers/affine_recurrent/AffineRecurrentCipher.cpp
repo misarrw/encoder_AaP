@@ -1,10 +1,10 @@
 #include <iostream>
 #include <array>
 #include <string>
-#include "AffineRecurrentCipher.hpp"
-#include "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.hpp"
-#include "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.hpp"
-#include "globals.hpp"
+#include "AffineRecurrentCipher.h"
+#include "../../SubFunctions.h"
+#include "../SubstitutionCipher.h"
+#include "../../globals.h"
 #include <numeric>
 
 

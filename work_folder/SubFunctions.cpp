@@ -1,6 +1,6 @@
 #include <iostream>
-#include "SubFunctions.hpp"
-#include "globals.hpp"
+#include "SubFunctions.h"
+#include "globals.h"
 #include <cctype>
 
 std::vector<int> SubFunction::text_in_numbers(const std::string& text) {
