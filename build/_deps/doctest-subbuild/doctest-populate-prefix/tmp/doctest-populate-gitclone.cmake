@@ -3,11 +3,11 @@
 
 cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
-if(EXISTS "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt" AND EXISTS "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt" AND
-  "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt")
+if(EXISTS "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt" AND EXISTS "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt" AND
+  "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt" IS_NEWER_THAN "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt")
   message(VERBOSE
     "Avoiding repeated git clone, stamp file is up to date: "
-    "'/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt'"
+    "'C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt'"
   )
   return()
 endif()
@@ -22,12 +22,12 @@ else()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-src'")
+  message(FATAL_ERROR "Failed to remove directory: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -35,9 +35,9 @@ set(error_code 1)
 set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
-    COMMAND "/opt/homebrew/bin/git"
+    COMMAND "C:/Program Files/Git/cmd/git.exe"
             clone --no-checkout --config "advice.detachedHead=false" "https://github.com/doctest/doctest.git" "doctest-src"
-    WORKING_DIRECTORY "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps"
+    WORKING_DIRECTORY "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
@@ -51,9 +51,9 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "/opt/homebrew/bin/git"
+  COMMAND "C:/Program Files/Git/cmd/git.exe"
           checkout "master" --
-  WORKING_DIRECTORY "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-src"
+  WORKING_DIRECTORY "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
@@ -64,24 +64,24 @@ endif()
 set(init_submodules TRUE)
 if(init_submodules)
   execute_process(
-    COMMAND "/opt/homebrew/bin/git" 
+    COMMAND "C:/Program Files/Git/cmd/git.exe" 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-src"
+    WORKING_DIRECTORY "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-src"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-src'")
+  message(FATAL_ERROR "Failed to update submodules in: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E copy "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt" "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt" "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt'")
 endif()

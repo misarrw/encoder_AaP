@@ -1,8 +1,8 @@
-# Install script for directory: /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/external
+# Install script for directory: C:/Users/skwor/HSE/c++/encoder_AaP/external
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Encoder")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,17 +34,17 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "C:/Users/skwor/gcc/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-build/cmake_install.cmake")
+  include("C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-build/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/external/install_local_manifest.txt"
+  file(WRITE "C:/Users/skwor/HSE/c++/encoder_AaP/build/external/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

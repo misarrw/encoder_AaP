@@ -1,6 +1,6 @@
 CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.obj: \
  C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\caesar\CaesarCipher.cpp \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\caesar\CaesarCipher.hpp \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\caesar\CaesarCipher.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/string \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/requires_hosted.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -101,7 +101,7 @@ CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/uses_allocator_args.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/tuple \
  C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.h \
- C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/globals.hpp \
+ C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/globals.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/iostream \
  C:/Users/skwor/gcc/include/c++/14.2.0/ostream \
  C:/Users/skwor/gcc/include/c++/14.2.0/ios \
@@ -135,6 +135,4 @@ CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/basic_ios.tcc \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/ostream.tcc \
  C:/Users/skwor/gcc/include/c++/14.2.0/istream \
- C:/Users/skwor/gcc/include/c++/14.2.0/bits/istream.tcc \
- C:/Users/skwor/gcc/include/c++/14.2.0/array \
- C:/Users/skwor/gcc/include/c++/14.2.0/compare
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/istream.tcc

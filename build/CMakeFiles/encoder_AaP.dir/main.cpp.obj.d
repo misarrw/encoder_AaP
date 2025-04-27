@@ -133,5 +133,14 @@ CMakeFiles/encoder_AaP.dir/main.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/ostream.tcc \
  C:/Users/skwor/gcc/include/c++/14.2.0/istream \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/istream.tcc \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/substitution_ciphers/caesar/CaesarCipher.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.h
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\caesar\CaesarCipher.h \
+ C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\affine_recurrent\AffineRecurrentCipher.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/array \
+ C:/Users/skwor/gcc/include/c++/14.2.0/compare \
+ C:/Users/skwor/gcc/include/c++/14.2.0/vector \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_vector.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/vector.tcc \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\SubFunctions.h

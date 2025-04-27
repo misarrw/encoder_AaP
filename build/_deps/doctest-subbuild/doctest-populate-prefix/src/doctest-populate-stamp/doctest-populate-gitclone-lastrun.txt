@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/opt/homebrew/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/tmp/doctest-populate-gitclone.cmake
-source_dir=/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/doctest-src
-work_dir=/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps
+command=C:/Program Files/CMake/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-subbuild/doctest-populate-prefix/tmp/doctest-populate-gitclone.cmake
+source_dir=C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-src
+work_dir=C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps
 repository=https://github.com/doctest/doctest.git
 remote=origin
 init_submodules=TRUE

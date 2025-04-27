@@ -1,2 +1,2 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libdoctest_with_main.a CMakeFiles/doctest_with_main.dir/doctest/parts/doctest.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libdoctest_with_main.a
+C:\Users\skwor\gcc\bin\ar.exe qc libdoctest_with_main.a CMakeFiles/doctest_with_main.dir/doctest/parts/doctest.cpp.obj
+C:\Users\skwor\gcc\bin\ranlib.exe libdoctest_with_main.a
