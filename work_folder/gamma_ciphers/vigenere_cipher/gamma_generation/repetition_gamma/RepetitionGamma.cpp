@@ -1,11 +1,11 @@
-# include "RepetitionGamma.hpp"
-# include "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.hpp"
-# include "globals.hpp"
+# include "RepetitionGamma.h"
+# include "SubFunctions.h"
+# include "globals.h"
 # include <iostream>
 # include <cctype>
 
 
-std::vector<int> VigenereCipher :: RepetitionGamma :: repgamma(const std::string& key, std::vector<int>& text_numbers)
+std::vector<int> RepetitionGamma :: repgamma(const std::string& key, std::vector<int>& text_numbers)
 {
     const size_t len_text = text_numbers.size();
     const size_t len_key = key.size(); 

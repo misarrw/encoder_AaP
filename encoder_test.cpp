@@ -1,10 +1,9 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
-#include "SubFunctions.hpp"
-#include "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.hpp"
-#include "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.hpp"
-
-extern const std::string ALPHABET;
+#include "SubFunctions.h"
+#include "work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\repetition_gamma\RepetitionGamma.h"
+#include "work_folder\substitution_ciphers\affine_recurrent\AffineRecurrentCipher.h"
+#include "globals.h"
 
 TEST_CASE("Encoding tests") {
     SubFunction encoder;
@@ -27,7 +26,7 @@ TEST_CASE("Encoding tests") {
 }
 
 TEST_CASE("Creating rep gamma") {
-    VigenereCipher::RepetitionGamma gamma;
+    RepetitionGamma gamma;
 
     SUBCASE("Short key repeats correctly") {
         std::string key = "AB";
