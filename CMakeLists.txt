@@ -7,17 +7,25 @@ include(FetchContent)
 
 # Добавляем исполняемый файл
 add_executable(encoder_AaP
-    encoder_test
-    encoder_test.cpp 
     main.cpp
     work_folder/globals.cpp
     work_folder/substitution_ciphers/caesar/CaesarCipher.cpp
     work_folder/substitution_ciphers/SubstitutionCipher.cpp
     work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
     work_folder/SubFunctions.cpp
+    work_folder/block_ciphers/BlockCipher.cpp
+    work_folder/block_ciphers/hill_cipher/HillCipher.cpp
+)
+
+add_executable(encoder_test
+    encoder_test.cpp 
+    work_folder/SubFunctions.cpp
+    work_folder/globals.cpp
     work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
     work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp
-    
+    work_folder/SubFunctions.cpp
+    work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
+    work_folder/substitution_ciphers/SubstitutionCipher.cpp
 )
 
 add_executable(encoder_armadillo

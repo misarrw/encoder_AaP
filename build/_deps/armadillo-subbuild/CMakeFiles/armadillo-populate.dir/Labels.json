@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/CMakeFiles/armadillo-populate"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/CMakeFiles/armadillo-populate.rule"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/CMakeFiles/armadillo-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/armadillo-populate-prefix/src/armadillo-populate-stamp/armadillo-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/armadillo-populate-prefix/src/armadillo-populate-stamp/armadillo-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/armadillo-populate-prefix/src/armadillo-populate-stamp/armadillo-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/armadillo-populate-prefix/src/armadillo-populate-stamp/armadillo-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/armadillo-populate-prefix/src/armadillo-populate-stamp/armadillo-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/armadillo-populate-prefix/src/armadillo-populate-stamp/armadillo-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/armadillo-populate-prefix/src/armadillo-populate-stamp/armadillo-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-subbuild/armadillo-populate-prefix/src/armadillo-populate-stamp/armadillo-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"armadillo-populate"
+		],
+		"name" : "armadillo-populate"
+	}
+}

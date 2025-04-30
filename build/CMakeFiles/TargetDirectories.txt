@@ -1,5 +1,6 @@
 C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/encoder_AaP.dir
 C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/encoder_test.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/encoder_armadillo.dir
 C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/test.dir
 C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/edit_cache.dir
 C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/rebuild_cache.dir
@@ -22,3 +23,19 @@ C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-build/CMakeFiles/list_ins
 C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-build/CMakeFiles/install.dir
 C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-build/CMakeFiles/install/local.dir
 C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/doctest-build/CMakeFiles/install/strip.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/CMakeFiles/armadillo.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/CMakeFiles/test.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/CMakeFiles/edit_cache.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/CMakeFiles/rebuild_cache.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/CMakeFiles/list_install_components.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/CMakeFiles/install.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/CMakeFiles/install/local.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/CMakeFiles/install/strip.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tests1/CMakeFiles/test.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tests1/CMakeFiles/edit_cache.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tests1/CMakeFiles/rebuild_cache.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tests1/CMakeFiles/list_install_components.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tests1/CMakeFiles/install.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tests1/CMakeFiles/install/local.dir
+C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tests1/CMakeFiles/install/strip.dir
