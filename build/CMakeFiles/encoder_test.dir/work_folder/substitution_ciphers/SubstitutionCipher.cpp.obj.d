@@ -134,4 +134,10 @@ CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.
  C:/Users/skwor/gcc/include/c++/14.2.0/istream \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/istream.tcc \
  C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\SubstitutionCipher.h \
+ C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/SubFunctions.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/vector \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_vector.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/vector.tcc \
  C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/globals.h
