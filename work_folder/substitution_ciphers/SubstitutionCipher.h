@@ -1,6 +1,8 @@
 #pragma once
+#include "../SubFunctions.h"
 
-class SubstitutionCipher
+
+class SubstitutionCipher: public SubFunction
 {
 public:
     static int opposite_alpha(int& alpha);

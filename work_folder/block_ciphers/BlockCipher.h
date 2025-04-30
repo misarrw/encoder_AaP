@@ -1,12 +1,17 @@
 #pragma once
 #include <vector>
-#include <string>
+
 
 class BlockCipher
 {
 public:
+    size_t key_size;
     // Здесь должна быть функция проверки ключа, ЯРИК
     std::vector<std::vector<int>> text_into_numbers_ngrammas(std::string& text, std::vector<std::vector<int>>& key);
+    int extendedGCD(int a, int b, int &x, int &y);
+    int modInverse(int a, int m);
+    bool check_key(std::vector<std::vector<int>>& key, size_t block_size);
+    std::vector<std::vector<int>> creat_key();
 };
 
 

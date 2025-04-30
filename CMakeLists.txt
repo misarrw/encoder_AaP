@@ -28,11 +28,23 @@ add_executable(encoder_test
     work_folder/substitution_ciphers/SubstitutionCipher.cpp
 )
 
+add_executable(encoder_armadillo
+    main.cpp
+    work_folder/SubFunctions.cpp
+    work_folder/globals.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp
+    work_folder/SubFunctions.cpp
+    work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
+    work_folder/substitution_ciphers/SubstitutionCipher.cpp)
 
 add_subdirectory(external)
 
 # Присоединили doctest
 target_link_libraries(encoder_test PRIVATE doctest::doctest)
+
+target_link_libraries(encoder_armadillo PRIVATE armadillo)
+
 
 
 # Указываем, где искать заголовки
@@ -46,7 +58,12 @@ target_include_directories(encoder_test PRIVATE
     ${CMAKE_SOURCE_DIR}/work_folder
 )
 
+target_include_directories(encoder_armadillo PRIVATE
+    ${CMAKE_SOURCE_DIR}/work_folder
+)
+
 # Включили CMake
 enable_testing()
 # Зарегистрировали тест для CMake
 add_test(NAME encoder_test COMMAND encoder_test --force-colors -d)
+
