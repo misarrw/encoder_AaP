@@ -2,31 +2,37 @@
 #include "globals.h"
 #include <cctype>
 
-std::string CaesarCipher::caesar_encryption(const std::string& text, const std::string& key) {
-    std::string cipher_text;
+std::string CaesarCipher::caesar_encryption(const std::string& text) {
+    std::string ciphertext;
     for (char letter : text) {
-        if (letter == ' ') {
-            cipher_text += ' ';
+        if (!isalpha(letter)) {
+            ciphertext += letter;
         } 
         else {
             size_t index = ALPHABET.find(toupper(letter));
             if (index != std::string::npos) {
-                cipher_text += key[index];
+                ciphertext += key[index];
             } 
             else {
                 return "Oops, some symbols do not match any symbol from English alphabet :(";
             }
         }
     }
-    return cipher_text;
+    for (auto& c : ciphertext) {
+        c = std::toupper(c);
+    }
+    return ciphertext;
 }
 
-std::string CaesarCipher::caesar_decryption(const std::string& cipher_text, const std::string& key)
+std::string CaesarCipher::caesar_decryption(const std::string& ciphertext)
 {
     std::string decrypted_text;
-    for (char letter: cipher_text) {
-        if (letter == ' ') {
-            decrypted_text += ' ';
+    for (auto& c : key) {
+        c = std::toupper(c);
+    }
+    for (char letter: ciphertext) {
+        if (!isalpha(letter)) {
+            decrypted_text += letter;
         } 
         else {
             size_t index = key.find(toupper(letter));
@@ -37,6 +43,9 @@ std::string CaesarCipher::caesar_decryption(const std::string& cipher_text, cons
                 return "Oops, some symbols do not match any symbol from English alphabet :(";
             }
         }
+    }
+    for (auto& c : decrypted_text) {
+        c = std::toupper(c);
     }
     return decrypted_text;
 }
