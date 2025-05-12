@@ -15,6 +15,7 @@ add_executable(encoder_AaP
     work_folder/SubFunctions.cpp
     work_folder/block_ciphers/BlockCipher.cpp
     work_folder/block_ciphers/hill_cipher/HillCipher.cpp
+    work_folder/files_functions.cpp
 )
 
 add_executable(encoder_test
@@ -36,7 +37,10 @@ add_executable(encoder_armadillo
     work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp
     work_folder/SubFunctions.cpp
     work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
-    work_folder/substitution_ciphers/SubstitutionCipher.cpp)
+    work_folder/substitution_ciphers/SubstitutionCipher.cpp
+    work_folder/substitution_ciphers/caesar/CaesarCipher.cpp
+    work_folder/files_functions.cpp
+)
 
 add_subdirectory(external)
 
@@ -45,6 +49,9 @@ target_link_libraries(encoder_test PRIVATE doctest::doctest)
 
 target_link_libraries(encoder_armadillo PRIVATE armadillo)
 
+target_link_libraries(encoder_AaP PRIVATE armadillo)
+
+find_package(Armadillo REQUIRED)
 
 
 # Указываем, где искать заголовки
