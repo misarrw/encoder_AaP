@@ -4,18 +4,18 @@
 #include <string>
 
 
-std::vector<std::vector<int>> BlockCipher::text_into_numbers_ngrammas(std::string& text, std::vector<std::vector<int>>& key)
+std::vector<std::vector<int>> BlockCipher::text_into_numbers_ngrammas(std::string& text)
 {
     std::vector<std::string> ngrammas_list;
-    key_size = key.size();
+    key_size = key_vec.size();
     while (text.size() % key_size != 0) {
         text += 'x';
     }
     size_t text_size = text.size();
     for (size_t index = 1; index < text_size; index++) {
-        if ((index + 1) % key[0].size() == 0) {
-            size_t begin = index + 1 - key[0].size();
-            size_t length = key[0].size();
+        if ((index + 1) % key_vec[0].size() == 0) {
+            size_t begin = index + 1 - key_vec[0].size();
+            size_t length = key_vec[0].size();
             ngrammas_list.push_back(text.substr(begin, length));
         }
     }
@@ -31,7 +31,7 @@ std::vector<std::vector<int>> BlockCipher::text_into_numbers_ngrammas(std::strin
     return ngrammas_numbers;
 }
 
-int BlockCipher::extendedGCD(int a, int b = ALPHABET_SIZE, int &x, int &y) {
+int BlockCipher::extendedGCD(int a, int b, int& x, int& y) {
     if (b == 0) {
         x = 1;
         y = 0;
@@ -55,12 +55,10 @@ int BlockCipher::modInverse(int a, int m) {
     }
 }
 
-bool BlockCipher::check_key(std::vector<std::vector<int>>& key, size_t block_size)
+bool BlockCipher::check_key(std::vector<std::vector<int>>& key_vec, size_t block_size)
 {
     if (key_size != block_size * block_size){
         return false;
     }
     return true;
 }
-
-std::vector<std::vector<int>> BlockCipher::creat_key(){}

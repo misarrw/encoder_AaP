@@ -1,5 +1,5 @@
 # pragma once
-# include "VigenereCipher.h"
+# include "..\..\VigenereCipher.h"
 # include <vector>
 # include <string>
 
