@@ -1,6 +1,8 @@
 #include <iostream>
 #include "SubFunctions.h"
 #include "globals.h"
+#include <algorithm>
+#include <cctype>
 
 std::vector<int> SubFunction::text_in_numbers(const std::string& text) {
     std::vector<int> result;
@@ -33,4 +35,10 @@ std::string SubFunction::numbers_to_text(const std::vector<int>& nums) {
         }
     }
     return result;
+}
+
+bool SubFunction::is_alpha(const std::string& str) {
+    return !str.empty() && 
+           std::all_of(str.begin(), str.end(), 
+               [](char c){ return isalpha(c); });
 }
