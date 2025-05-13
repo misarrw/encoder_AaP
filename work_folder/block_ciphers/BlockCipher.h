@@ -12,12 +12,14 @@ class BlockCipher
 protected:
     size_t key_size;
     std::vector<std::vector<int>> key_vec;
+    arma::mat key;
     
 
 public:
     BlockCipher(std::vector<std::vector<int>> matrix) : key_vec(matrix) 
     {
-        arma::mat key(key_vec.size(), key_vec[0].size());
+        key_size = key_vec.size();
+        arma::mat key(key_size, key_size);
         for (size_t i = 0; i < key_vec.size(); ++i) {
             for (size_t j = 0; j < key_vec[i].size(); ++j) {
                 key(i, j) = static_cast<double>(key_vec[i][j]);
@@ -33,7 +35,7 @@ public:
     std::vector<std::vector<int>> text_into_numbers_ngrammas(std::string& text);
     int extendedGCD(int a, int b, int& x, int& y);
     int modInverse(int a, int m);
-    bool check_key(std::vector<std::vector<int>>& key, size_t block_size);
+    bool check_key(size_t block_size);
 };
 
 

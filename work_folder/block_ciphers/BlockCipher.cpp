@@ -55,7 +55,7 @@ int BlockCipher::modInverse(int a, int m) {
     }
 }
 
-bool BlockCipher::check_key(std::vector<std::vector<int>>& key_vec, size_t block_size)
+bool BlockCipher::check_key(size_t block_size)
 {
     if (key_size != block_size * block_size){
         return false;
