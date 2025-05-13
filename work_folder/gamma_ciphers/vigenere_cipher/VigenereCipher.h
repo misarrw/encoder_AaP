@@ -16,6 +16,10 @@ public:
         std::vector<int> opentext(const std::string& key, std::vector<int>& text_numbers, int option);
     };
 
+    class CiphertextGamma {
+    public:
+        std::vector<int> ciphertext(const std::string& key);
+    };
     // Дополнительно можно сделать экземпляры классов полями:
     RepetitionGamma repetitionGamma;
     OpentextGamma opentextGamma;
