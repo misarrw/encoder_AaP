@@ -31,30 +31,6 @@ std::vector<std::vector<int>> BlockCipher::text_into_numbers_ngrammas(std::strin
     return ngrammas_numbers;
 }
 
-int BlockCipher::extendedGCD(int a, int b, int& x, int& y) {
-    if (b == 0) {
-        x = 1;
-        y = 0;
-        return a;
-    }
-    int x1, y1;
-    int gcd = extendedGCD(b, a % b, x1, y1);
-    x = y1;
-    y = x1 - (a / b) * y1;
-    return gcd;
-}
-
-int BlockCipher::modInverse(int a, int m) {
-    int x, y;
-    int gcd = extendedGCD(a, m, x, y);
-    
-    if (gcd != 1) {
-        return -1; 
-    } else {
-        return (x % m + m) % m;
-    }
-}
-
 bool BlockCipher::check_key(std::vector<std::vector<int>>& key_vec, size_t block_size)
 {
     if (key_size != block_size * block_size){
