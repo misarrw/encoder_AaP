@@ -8,5 +8,7 @@
 class HillCipher : public BlockCipher
 {
 public:
-    std::string hill(std::string& pretext, int& option);
+    HillCipher(std::vector<std::vector<int>> matrix) : BlockCipher(matrix) {}
+
+    std::string hill(std::string& pretext, int& option) override;
 };
