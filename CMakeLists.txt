@@ -40,6 +40,8 @@ add_executable(encoder_armadillo
     work_folder/substitution_ciphers/SubstitutionCipher.cpp
     work_folder/substitution_ciphers/caesar/CaesarCipher.cpp
     work_folder/files_functions.cpp
+    work_folder/block_ciphers/BlockCipher.cpp
+    work_folder/block_ciphers/hill_cipher/HillCipher.cpp
 )
 
 add_subdirectory(external)

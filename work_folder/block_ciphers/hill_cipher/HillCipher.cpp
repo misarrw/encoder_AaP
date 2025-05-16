@@ -11,19 +11,22 @@
 std::string HillCipher::hill(std::string& pretext, int& option)
 {
     std::string text;
-    for (char symbol: text) {
+    for (char symbol: pretext) {
         if (!std::count(SYMBOLS.begin(), SYMBOLS.end(), symbol)) {
             text += symbol;
         }
     }
-    std::vector<std::vector<int>> text_ngrammas_numbers = text_into_numbers_ngrammas(pretext);
+    for (auto& c : text) {
+        c = std::toupper(c);
+    }
+    std::vector<std::vector<int>> text_ngrammas_numbers = text_into_numbers_ngrammas(text);
     std::vector<std::vector<int>> ciphertext_ngrammas_numbers;
     std::vector<int> ciphertext_ngramma;
     int letter = 0;
     size_t key_size = key_vec.size();
     for (std::vector<int> text_ngramma: text_ngrammas_numbers) {
         for (size_t i = 0; i < key_size; i++) {
-            for (size_t j = 0; j < key_size; i++) {
+            for (size_t j = 0; j < key_size; j++) {
                 letter += key_vec[i][j] * text_ngramma[j];
             }
             ciphertext_ngramma.push_back(letter % ALPHABET_SIZE);
@@ -38,9 +41,6 @@ std::string HillCipher::hill(std::string& pretext, int& option)
         for (int number: ngramma_numbers) {
             ciphertext += static_cast<char>(ALPHABET[number]);
         }
-    }
-    for (auto& c : ciphertext) {
-        c = std::toupper(c);
     }
     return ciphertext;
 }

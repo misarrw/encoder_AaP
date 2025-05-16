@@ -10,7 +10,6 @@
 class BlockCipher
 {
 protected:
-    size_t key_size;
     std::vector<std::vector<int>> key_vec;
     
 
@@ -29,9 +28,15 @@ public:
             throw std::runtime_error("\nRemember the GCD rules! The determinant of your matrix-key should have 1 as GCD with the number of the letters in your language.\nTry again:");
         }
     }
-    // Здесь должна быть функция проверки ключа, ЯРИК
     std::vector<std::vector<int>> text_into_numbers_ngrammas(std::string& text);
-    bool check_key(std::vector<std::vector<int>>& key, size_t block_size);
+    bool check_key(size_t key_space, size_t block_size);
+    virtual std::string hill(std::string& pretext, int& option) {
+        throw std::runtime_error("Method 'hill' not implemented in base class.");
+    }
+
+    
+
+    virtual ~BlockCipher() = default;
 };
 
 
