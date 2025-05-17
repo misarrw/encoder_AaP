@@ -134,17 +134,9 @@ int main()
                     }
 
                     BlockCipher* key_vec = new HillCipher(matrix);
-                    bool if_correct = key_vec->check_key(matrix.size() * matrix[0].size(), matrix[0].size());
-
-                    if (!if_correct) {
-                        std::cout << "Your key is not square or invalid. Try again!" << std::endl;
-                        delete key_vec;
-                    }
-                    else {
-                        int option = 1;
-                        std::string ciphertext = key_vec->hill(text, option);
-                        string_to_file(file_for_ciphertext, ciphertext);
-                    }
+                    int option = 1;
+                    std::string ciphertext = key_vec->hill(text, option);
+                    string_to_file(file_for_ciphertext, ciphertext);
                     delete key_vec;
                 }
 
@@ -315,7 +307,7 @@ int main()
                 "2. Recurrent Hill cipher\n"
                 "Enter strictly 1 or 2:" << std::endl;
                 std::cin >> chosen_cipher;
-                std::cout << "Enter the number of rows and columns in the key matrix (enter only a positive integer without dots or other symbols)" << std::endl;
+                std::cout << "Enter the number of rows and columns in the key matrix (enter only a positive integer without dots or other symbols): " << std::endl;
                     std::string size;
                     std::cin >> size;
                     int key_size = std::stoi(size);
@@ -342,18 +334,11 @@ int main()
                         }
     
                         BlockCipher* key_vec = new HillCipher(matrix);
-                        bool if_correct = key_vec->check_key(matrix.size() * matrix[0].size(), matrix[0].size());
-    
-                        if (!if_correct) {
-                            std::cout << "Your key is not square or invalid. Try again!" << std::endl;
-                            delete key_vec;
-                        }
-                        else {
-                            int option = 1;
-                            std::string text = key_vec->hill(ciphertext, option);
-                            string_to_file(file_for_text, text);
-                        }
+                        int option = 2;
+                        std::string text = key_vec->hill(ciphertext, option);
+                        string_to_file(file_for_text, text);
                         delete key_vec;
+                            
                     }
 
                 else if (chosen_cipher == '2') {

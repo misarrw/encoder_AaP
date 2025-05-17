@@ -9,7 +9,11 @@
 
 
 std::string HillCipher::hill(std::string& pretext, int& option)
-{
+{   
+    if (option == 2) {
+        key_vec = find_inverse_matrix();
+    }
+
     std::string text;
     for (char symbol: pretext) {
         if (!std::count(SYMBOLS.begin(), SYMBOLS.end(), symbol)) {
