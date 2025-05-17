@@ -2,7 +2,7 @@
 #include <string>
 #include "../SubstitutionCipher.h"
 #include <unordered_set>
-#include "globals.h"
+#include "../../globals.h"
 
 
 class CaesarCipher : public SubstitutionCipher {

@@ -5,9 +5,9 @@
 #include <armadillo>
 #include <numeric>
 #include "..\globals.h"
+#include "..\SubFunctions.h"
 
-
-class BlockCipher
+class BlockCipher : public SubFunction
 {
 protected:
     std::vector<std::vector<int>> key_vec;
@@ -15,7 +15,10 @@ protected:
 
 public:
     BlockCipher(std::vector<std::vector<int>> matrix) : key_vec(matrix) 
-    {
+    {   
+        if (matrix.size() != matrix[0].size()) {
+            throw std::runtime_error("\nYour matrix is not square :(");
+        }
         arma::mat key(key_vec.size(), key_vec[0].size());
         for (size_t i = 0; i < key_vec.size(); ++i) {
             for (size_t j = 0; j < key_vec[i].size(); ++j) {
@@ -34,7 +37,9 @@ public:
         throw std::runtime_error("Method 'hill' not implemented in base class.");
     }
 
-    
+    arma::mat make_arma_matrix(std::vector<std::vector<int>>& key_vec);
+
+    std::vector<std::vector<int>> find_inverse_matrix();
 
     virtual ~BlockCipher() = default;
 };

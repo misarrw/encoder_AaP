@@ -29,10 +29,43 @@ std::vector<std::vector<int>> BlockCipher::text_into_numbers_ngrammas(std::strin
     return ngrammas_numbers;
 }
 
-bool BlockCipher::check_key(size_t key_space, size_t block_size)
+
+arma::mat BlockCipher::make_arma_matrix(std::vector<std::vector<int>>& key_vec) 
 {
-    if (key_space != block_size * block_size) {
-        return false;
+    arma::mat key(key_vec.size(), key_vec[0].size());
+    for (size_t i = 0; i < key_vec.size(); ++i) {
+        for (size_t j = 0; j < key_vec[i].size(); ++j) {
+            key(i, j) = static_cast<double>(key_vec[i][j]);
+        }
     }
-    return true;
+    return key;
+}
+
+
+std::vector<std::vector<int>> BlockCipher::find_inverse_matrix() {
+    arma::mat arma_matrix = make_arma_matrix(key_vec);
+
+    double det = arma::det(arma_matrix);
+    int determinant = static_cast<int>(round(det)) % ALPHABET_SIZE;
+    determinant = (determinant % ALPHABET_SIZE + ALPHABET_SIZE) % ALPHABET_SIZE;
+
+    int opposite_determinant = modInverse(determinant, ALPHABET_SIZE);
+    if (opposite_determinant == -1) {
+        throw std::runtime_error("Matrix is not invertible modulo ALPHABET_SIZE");
+    }
+
+    arma::mat adj_matrix = det * arma::inv(arma_matrix);
+
+    std::vector<std::vector<int>> inverse_matrix(adj_matrix.n_rows, std::vector<int>(adj_matrix.n_cols));
+    for (size_t i = 0; i < adj_matrix.n_rows; ++i) {
+        for (size_t j = 0; j < adj_matrix.n_cols; ++j) {
+            int value = static_cast<int>(round(adj_matrix(i, j)));
+            inverse_matrix[i][j] = (value * opposite_determinant) % ALPHABET_SIZE;
+            if (inverse_matrix[i][j] < 0) {
+                inverse_matrix[i][j] += ALPHABET_SIZE;
+            }
+        }
+    }
+
+    return inverse_matrix;
 }
