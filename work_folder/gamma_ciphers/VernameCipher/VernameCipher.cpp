@@ -1,10 +1,10 @@
-#include "VernamCipher.h"
+#include "VernameCipher.h"
 #include <iostream>
 #include <vector>
 #include <random>  
 #include "globals.h"
 
-void VernamCipher::creat_gamma() {
+void VernameCipher::creat_gamma() {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> dist(0, ALPHABET_SIZE); 

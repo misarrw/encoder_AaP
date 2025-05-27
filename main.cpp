@@ -6,10 +6,10 @@
 #include "work_folder\files_functions.h"
 #include "work_folder\block_ciphers\BlockCipher.h"
 #include "work_folder\block_ciphers\hill_cipher\HillCipher.h"
-#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereOpenTextGamma\VigenereOpenTextGamma.cpp"
-#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereCipherTextGamma\VigenereCipherTextGamma.cpp"
-#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereRepetitionGamma\VigenereRepetitionGamma.cpp"
-#include "work_folder\gamma_ciphers\VernamCipher\VernamCipher.cpp"
+#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereOpenTextGamma\VigenereOpenTextGamma.h"
+#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereCipherTextGamma\VigenereCipherTextGamma.h"
+#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereRepetitionGamma\VigenereRepetitionGamma.h"
+#include "work_folder\gamma_ciphers\VernameCipher\VernameCipher.h"
 
 int main()
 {
@@ -174,8 +174,8 @@ int main()
         }
 
             else if (cipher_type == '3') {
-                std::cout << "1. Vigenère cipher\n"
-                "2. Vernam cipher\n"
+                std::cout << "1. Vigenere cipher\n"
+                "2. Vername cipher\n"
                 "Enter strictly 1 or 2:" << std::endl;
                 std::cin >> chosen_cipher;
 
@@ -187,22 +187,25 @@ int main()
                     "Enter strictly 1, 2 or 3: " << std::endl;
                     char gamma_type;
                     std::cin >> gamma_type;
-
+                    std::string ciphertext;
                     if (gamma_type == '1') {
-                        VigenereRepetitionGamma(text, 1);
+                        ciphertext =  VigenereRepetitionGamma(text, 1).cipher();
+                        std::cout << ciphertext;
                     }
 
                     else if (gamma_type == '2') {
-                        VigenereOpenTextGamma(text, 1);
+                        ciphertext =  VigenereOpenTextGamma(text, 1).cipher();
                     }
 
                     else if (gamma_type == '3') {
-                        VigenereCipherTextGamma(text, 1);
+                        ciphertext =  VigenereCipherTextGamma(text, 1).cipher();
                     }
+
+                    string_to_file(file_for_ciphertext, ciphertext);
                 }
 
                 else if (chosen_cipher == '2') {
-                    VernamCipher(text, 1);
+                    VernameCipher(text, 1);
                 }
 
             }
@@ -361,8 +364,8 @@ int main()
         }
 
         else if (cipher_type == '3') {
-            std::cout << "1. Vigenère cipher\n"
-            "2. Vernam cipher\n"
+            std::cout << "1. Vigenere cipher\n"
+            "2. Vername cipher\n"
             "Enter strictly 1 or 2:" << std::endl;
             std::cin >> chosen_cipher;
 
@@ -375,21 +378,25 @@ int main()
                 char gamma_type;
                 std::cin >> gamma_type;
 
+                std::string text;
+
                 if (gamma_type == '1') {
-                    VigenereRepetitionGamma(ciphertext, -1);
+                    text =  VigenereRepetitionGamma(ciphertext, -1).cipher();
                 }
 
                 else if (gamma_type == '2') {
-                    VigenereCipherTextGamma(ciphertext, 1);
+                    text =  VigenereCipherTextGamma(ciphertext, 1).cipher();
                 }
 
                 else if (gamma_type == '3') {
-                    VigenereOpenTextGamma(ciphertext, 1);
+                    text =  VigenereOpenTextGamma(ciphertext, 1).cipher();
                 }
+                
+                string_to_file(file_for_text, text);
             }
 
             else if (chosen_cipher == '2') {
-                VernamCipher(ciphertext, -1);
+                VernameCipher(ciphertext, -1);
             }
 
             }

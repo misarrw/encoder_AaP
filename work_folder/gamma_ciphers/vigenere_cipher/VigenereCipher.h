@@ -13,8 +13,6 @@ class VigenereCipher : public GammaCipher{
         text_numbers = text_in_numbers(text);
         x = x;
         check_key();
-        creat_gamma();
-        cipher();
     }
     virtual ~VigenereCipher() {}
 };

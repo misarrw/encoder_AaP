@@ -12,6 +12,12 @@ add_executable(encoder_AaP
     work_folder/substitution_ciphers/caesar/CaesarCipher.cpp
     work_folder/substitution_ciphers/SubstitutionCipher.cpp
     work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
+    work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp
+    work_folder/gamma_ciphers/GammaCipher.cpp
     work_folder/SubFunctions.cpp
     work_folder/block_ciphers/BlockCipher.cpp
     work_folder/block_ciphers/hill_cipher/HillCipher.cpp
@@ -22,19 +28,21 @@ add_executable(encoder_test
     encoder_test.cpp 
     work_folder/SubFunctions.cpp
     work_folder/globals.cpp
-    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
-    work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp
     work_folder/SubFunctions.cpp
     work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
     work_folder/substitution_ciphers/SubstitutionCipher.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
+    work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp
+    work_folder/gamma_ciphers/GammaCipher.cpp
 )
 
 add_executable(encoder_armadillo
     main.cpp
     work_folder/SubFunctions.cpp
     work_folder/globals.cpp
-    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
-    work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp
     work_folder/SubFunctions.cpp
     work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp
     work_folder/substitution_ciphers/SubstitutionCipher.cpp
@@ -42,6 +50,12 @@ add_executable(encoder_armadillo
     work_folder/files_functions.cpp
     work_folder/block_ciphers/BlockCipher.cpp
     work_folder/block_ciphers/hill_cipher/HillCipher.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp
+    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
+    work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp
+    work_folder/gamma_ciphers/GammaCipher.cpp
 )
 
 add_subdirectory(external)
