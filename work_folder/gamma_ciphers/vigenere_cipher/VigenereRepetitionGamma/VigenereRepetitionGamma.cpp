@@ -1,11 +1,10 @@
-# include "RepetitionGamma.h"
-# include "SubFunctions.h"
-# include "globals.h"
+#include "VigenereRepetitionGamma.h"
+# include "..\..\globals.h"
 # include <iostream>
 # include <cctype>
 
 
-std::vector<int> RepetitionGamma :: repgamma(const std::string& key, std::vector<int>& text_numbers)
+void VigenereRepetitionGamma::creat_gamma()
 {
     const size_t len_text = text_numbers.size();
     const size_t len_key = key.size(); 
@@ -16,7 +15,6 @@ std::vector<int> RepetitionGamma :: repgamma(const std::string& key, std::vector
     for (size_t i{0}; i<len_text; ++i){
         gamma_str+=key[i%len_key]; //нужно в ключе сделать проверку, что длина не ноль
     }
-    std::vector<int> gamma = SubFunction::text_in_numbers(gamma_str);
-    return gamma;
+    gamma = text_in_numbers(gamma_str);
 }
 

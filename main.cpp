@@ -3,12 +3,13 @@
 #include "work_folder\SubFunctions.h"
 #include <fstream>
 #include "work_folder\substitution_ciphers\caesar\CaesarCipher.h"
-#include "work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\opentext_gamma\OpentextGamma.h"
-#include "work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\\repetition_gamma\RepetitionGamma.h"
 #include "work_folder\files_functions.h"
 #include "work_folder\block_ciphers\BlockCipher.h"
 #include "work_folder\block_ciphers\hill_cipher\HillCipher.h"
-// #include "work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\ciphertext_gamma"
+#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereOpenTextGamma\VigenereOpenTextGamma.cpp"
+#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereCipherTextGamma\VigenereCipherTextGamma.cpp"
+#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereRepetitionGamma\VigenereRepetitionGamma.cpp"
+#include "work_folder\gamma_ciphers\VernamCipher\VernamCipher.cpp"
 
 int main()
 {
@@ -179,15 +180,6 @@ int main()
                 std::cin >> chosen_cipher;
 
                 if (chosen_cipher == '1') {
-                    std::cout << "Enter the key: it must consist of letters, neither numbers nor other symbols" << std::endl;
-                    std::string key;
-                    std::cin >> key;
-
-                    // key validation function
-                    // letter-to-number conversion function
-
-                    // condition checking key length and setting limits based on length
-
                     std::cout << "Choose gamma generation type:\n"
                     "1. Key repetition\n"
                     "2. Opentext gamma\n"
@@ -197,25 +189,20 @@ int main()
                     std::cin >> gamma_type;
 
                     if (gamma_type == '1') {
-                        RepetitionGamma gamma;
-                        // gamma generation function
+                        VigenereRepetitionGamma(text, 1);
                     }
 
                     else if (gamma_type == '2') {
-                        OpentextGamma gamma;
-                        // gamma generation function
+                        VigenereOpenTextGamma(text, 1);
                     }
 
                     else if (gamma_type == '3') {
-                        // CiphertextGamma gamma;
-                        // gamma generation function
+                        VigenereCipherTextGamma(text, 1);
                     }
-
-                    // encryption function
                 }
 
                 else if (chosen_cipher == '2') {
-                    // Vernam
+                    VernamCipher(text, 1);
                 }
 
             }
@@ -373,51 +360,37 @@ int main()
             }
         }
 
-            else if (cipher_type == '3') {
-                std::cout << "1. Vigenère cipher\n"
-                "2. Vernam cipher\n"
-                "Enter strictly 1 or 2:" << std::endl;
-                std::cin >> chosen_cipher;
+        else if (cipher_type == '3') {
+            std::cout << "1. Vigenère cipher\n"
+            "2. Vernam cipher\n"
+            "Enter strictly 1 or 2:" << std::endl;
+            std::cin >> chosen_cipher;
 
-                if (chosen_cipher == '1') {
-                    std::cout << "Enter the key: it must consist of letters, neither numbers nor other symbols" << std::endl;
-                    std::string key;
-                    std::cin >> key;
+            if (chosen_cipher == '1') {
+                std::cout << "Choose gamma generation type:\n"
+                "1. Key repetition\n"
+                "2. Opentext gamma\n"
+                "3. Ciphertext gamma\n"
+                "Enter strictly 1, 2 or 3: " << std::endl;
+                char gamma_type;
+                std::cin >> gamma_type;
 
-                    // key validation function
-                    // letter-to-number conversion function
-
-                    // condition checking key length and setting limits based on length
-
-                    std::cout << "Choose gamma generation type:\n"
-                    "1. Key repetition\n"
-                    "2. Opentext gamma\n"
-                    "3. Ciphertext gamma\n"
-                    "Enter strictly 1, 2 or 3: " << std::endl;
-                    char gamma_type;
-                    std::cin >> gamma_type;
-
-                    if (gamma_type == '1') {
-                        RepetitionGamma gamma;
-                        // gamma generation function
-                    }
-
-                    else if (gamma_type == '2') {
-                        OpentextGamma gamma;
-                        // gamma generation function
-                    }
-
-                    else if (gamma_type == '3') {
-                        // CiphertextGamma gamma;
-                        // gamma generation function
-                    }
-
-                    // encryption function
+                if (gamma_type == '1') {
+                    VigenereRepetitionGamma(ciphertext, -1);
                 }
 
-                else if (chosen_cipher == '2') {
-                    // Vernam
+                else if (gamma_type == '2') {
+                    VigenereCipherTextGamma(ciphertext, 1);
                 }
+
+                else if (gamma_type == '3') {
+                    VigenereOpenTextGamma(ciphertext, 1);
+                }
+            }
+
+            else if (chosen_cipher == '2') {
+                VernamCipher(ciphertext, -1);
+            }
 
             }
 
