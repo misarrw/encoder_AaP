@@ -1,4 +1,4 @@
-# include "../../../../globals.h"
+# include "../../../globals.h"
 # include <iostream>
 # include <vector>
 # include <string>
