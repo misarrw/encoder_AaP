@@ -4,13 +4,8 @@
 #include <cctype>
 
 
-AffineCipher::AffineCipher(const std::array<int, 2>& key, const std::string& t, bool f)
-{
-    text = t;
-    alpha = key[0];
-    beta = key[1];
-    flag = f;
-}
+AffineCipher::AffineCipher(const char& alpha, const char& beta, const std::string& text, bool flag): 
+                            alpha(alpha), beta(beta), text(text), flag(flag) {}
 
 
 std::string AffineCipher::affine()
