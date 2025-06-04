@@ -3,6 +3,7 @@
 #include "work_folder\SubFunctions.h"
 #include <fstream>
 #include "work_folder\substitution_ciphers\caesar\CaesarCipher.h"
+#include "work_folder\substitution_ciphers\affine\AffineCipher.h"
 #include "work_folder\files_functions.h"
 #include "work_folder\block_ciphers\BlockCipher.h"
 #include "work_folder\block_ciphers\hill_cipher\HillCipher.h"
@@ -72,9 +73,7 @@ int main()
                     std::cout << "\nEnter beta component of the encryption key: ";
                     char beta;
                     std::cin >> beta;
-                    // combine components into key
-                    // key validation
-                    // encryption function
+                    std::string ciphertext = AffineCipher(alpha, beta, text, true).affine();
                 }
 
                 else if (chosen_cipher == '3') {
@@ -190,7 +189,6 @@ int main()
                     std::string ciphertext;
                     if (gamma_type == '1') {
                         ciphertext = VigenereRepetitionGamma(text, 1).ciphertext;
-                        std::cout << ciphertext;
                     }
 
                     else if (gamma_type == '2') {
@@ -260,9 +258,8 @@ int main()
                     std::cout << "\nEnter beta component of the encryption key: ";
                     char beta;
                     std::cin >> beta;
-                    // combine components into key
-                    // key validation
-                    // encryption function
+                    std::string text = AffineCipher(alpha, beta, ciphertext, false).affine();
+                    string_to_file(file_for_text, text);
                 }
 
                 else if (chosen_cipher == '3') {

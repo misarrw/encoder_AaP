@@ -12,7 +12,7 @@ class AffineCipher: public SubstitutionCipher
 
         std::string affine();
         int cipher(int &index);
-        AffineCipher(const std::array<int, 2>& key, const std::string& text, bool flag);
+        AffineCipher(const char& alpha, const char& beta, const std::string& text, bool flag);
 };
 
 class AffineCoder: public AffineCipher
