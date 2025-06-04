@@ -7,12 +7,13 @@
 class GammaCipher : public SubFunction
 {
     protected:
-    std::vector<int> text_numbers;
-    std::vector<int> gamma;
-    int x;
-    void add_char_gamma(int i) {}
+    virtual std::vector<int> get_gamma() = 0;
+    virtual const std::vector<int>& get_text() const = 0;
+    virtual const int& get_param() = 0;
+    virtual void add_char_gamma(std::vector<int>& gamma, int i) {return;}
     virtual void creat_gamma() = 0;
+    virtual void cipher();
     public:
-    std::string cipher();
+    std::string ciphertext{};
     virtual ~GammaCipher() {}
 };
