@@ -189,16 +189,16 @@ int main()
                     std::cin >> gamma_type;
                     std::string ciphertext;
                     if (gamma_type == '1') {
-                        ciphertext =  VigenereRepetitionGamma(text, 1).cipher();
+                        ciphertext = VigenereRepetitionGamma(text, 1).ciphertext;
                         std::cout << ciphertext;
                     }
 
                     else if (gamma_type == '2') {
-                        ciphertext =  VigenereOpenTextGamma(text, 1).cipher();
+                        ciphertext =  VigenereOpenTextGamma(text, 1).ciphertext;
                     }
 
                     else if (gamma_type == '3') {
-                        ciphertext =  VigenereCipherTextGamma(text, 1).cipher();
+                        ciphertext =  VigenereCipherTextGamma(text, 1).ciphertext;
                     }
 
                     string_to_file(file_for_ciphertext, ciphertext);
@@ -381,15 +381,15 @@ int main()
                 std::string text;
 
                 if (gamma_type == '1') {
-                    text =  VigenereRepetitionGamma(ciphertext, -1).cipher();
+                    text =  VigenereRepetitionGamma(ciphertext, -1).ciphertext;
                 }
 
                 else if (gamma_type == '2') {
-                    text =  VigenereCipherTextGamma(ciphertext, 1).cipher();
+                    text =  VigenereCipherTextGamma(ciphertext, -1).ciphertext;
                 }
 
                 else if (gamma_type == '3') {
-                    text =  VigenereOpenTextGamma(ciphertext, 1).cipher();
+                    text =  VigenereOpenTextGamma(ciphertext, -1).ciphertext;
                 }
                 
                 string_to_file(file_for_text, text);
