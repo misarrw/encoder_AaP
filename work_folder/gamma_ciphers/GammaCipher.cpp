@@ -1,17 +1,21 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include <algorithm>
 #include "GammaCipher.h"
 
-std::string GammaCipher::cipher()
+void GammaCipher::cipher()
         {
-            creat_gamma();
-            std::string ciphertext;
-            for (int index: text_numbers){
-                int ind_gamma = gamma[index];
-                int index_char = (index + x * ind_gamma) % ALPHABET_SIZE;
+            auto gamma = get_gamma();
+            const auto& text = get_text();
+            const int x = get_param();
+            for (int i{0}; i < text.size(); i++){
+                int ind_gamma = gamma[i];
+                int index_char = (text[i] + (ind_gamma * x)) % ALPHABET_SIZE;
+                index_char = (index_char % ALPHABET_SIZE + ALPHABET_SIZE) % ALPHABET_SIZE;
+                std::cout << gamma[i] << " " << text[i] << " " << x << " " << index_char << std::endl;
                 ciphertext += ALPHABET[index_char];
-                add_char_gamma(index_char);
+                add_char_gamma(gamma, index_char);
             }
-            return ciphertext;
+            return;
         }

@@ -4,14 +4,17 @@
 #include "VigenereCipher.h"
 #include "..\..\globals.h"
 
-std::vector<int> VigenereCipher::check_key() 
+void VigenereCipher::check_key() 
 {
     while (true) {
-        std::string key;
-        std::cin >> key;
-        if (is_alpha(key) && key.size() <= len_key) {
-            key = key;
+        std::string key_input;
+        std::cout << "Enter the key: " << std::endl; 
+        std::cin >> key_input;
+        if (is_alpha(key_input) && key_input.size() <= get_len_key()) {
+            key = key_input;
             key_numbers = text_in_numbers(key);
+            return;
         }
+        std::cout << "Key input error";
     }
 }

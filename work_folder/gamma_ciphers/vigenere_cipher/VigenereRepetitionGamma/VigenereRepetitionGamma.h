@@ -3,8 +3,14 @@
 
 class VigenereRepetitionGamma : public VigenereCipher {
     protected:
-    size_t len_key = text_numbers.size();
     void creat_gamma() override;
+    size_t get_len_key() const override {return text_numbers.size();}
     public:
-    VigenereRepetitionGamma(std::string text, int x) : VigenereCipher(text, x) {}
+    VigenereRepetitionGamma(std::string text, int x) {
+        param = x;
+        text_numbers = text_in_numbers(text);
+        check_key();
+        creat_gamma();
+        cipher();
+    };
 };
