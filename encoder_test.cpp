@@ -1,10 +1,13 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
 #include "SubFunctions.h"
-#include "work_folder\gamma_ciphers\vigenere_cipher\gamma_generation\repetition_gamma\RepetitionGamma.h"
 #include "work_folder\substitution_ciphers\affine_recurrent\AffineRecurrentCipher.h"
 #include "globals.h"
+#include "work_folder\substitution_ciphers\caesar\CaesarCipher.h"
+#include "work_folder\block_ciphers\hill_cipher\HillCipher.h"
 
+
+// sardarik's tests
 TEST_CASE("Encoding tests") {
     SubFunction encoder;
     
@@ -25,27 +28,27 @@ TEST_CASE("Encoding tests") {
     }
 }
 
-TEST_CASE("Creating rep gamma") {
-    RepetitionGamma gamma;
+// TEST_CASE("Creating rep gamma") {
+//     RepetitionGamma gamma;
 
-    SUBCASE("Short key repeats correctly") {
-        std::string key = "AB";
-        std::vector<int> text_numbers{1,1,1}; 
-        CHECK(gamma.repgamma(key, text_numbers) == std::vector<int>{0, 1, 0}); 
-    }
+//     SUBCASE("Short key repeats correctly") {
+//         std::string key = "AB";
+//         std::vector<int> text_numbers{1,1,1}; 
+//         CHECK(gamma.repgamma(key, text_numbers) == std::vector<int>{0, 1, 0}); 
+//     }
 
-    SUBCASE("Key same length as text") {
-        std::string key = "XYZ";
-        std::vector<int> text_numbers{1,1,1};
-        CHECK(gamma.repgamma(key, text_numbers) == std::vector<int>{23, 24, 25}); 
-    }
+//     SUBCASE("Key same length as text") {
+//         std::string key = "XYZ";
+//         std::vector<int> text_numbers{1,1,1};
+//         CHECK(gamma.repgamma(key, text_numbers) == std::vector<int>{23, 24, 25}); 
+//     }
 
-    SUBCASE("Single-letter key") {
-        std::string key = "A";
-        std::vector<int> text_numbers{1,1,1};
-        CHECK(gamma.repgamma(key, text_numbers) == std::vector<int>{0,0,0});
-    }
-}
+//     SUBCASE("Single-letter key") {
+//         std::string key = "A";
+//         std::vector<int> text_numbers{1,1,1};
+//         CHECK(gamma.repgamma(key, text_numbers) == std::vector<int>{0,0,0});
+//     }
+// }
 
 TEST_CASE("Affine recurrent encryption and decryption") {
     AffineRecurrentCipher cipher;
@@ -124,3 +127,153 @@ TEST_CASE("Affine recurrent encryption and decryption") {
         CHECK(decrypted == text);
     }
 }
+
+
+// misarrw's tests
+TEST_CASE("Caesar encryption") {
+    std::string k = "qazwsxedcrfvtgbyhnujmikolp";
+    CaesarCipher caesar(k);
+
+    SUBCASE("Empty string") {
+        std::string text = "";
+        std::string ciphertext = caesar.caesar_encryption(text);
+        CHECK(ciphertext == "");
+    }
+
+    SUBCASE("One-symbol string") {
+        std::string text = "A";
+        std::string ciphertext = caesar.caesar_encryption(text);
+        CHECK(ciphertext == "Q");
+    }
+
+    SUBCASE("Different letter cases string") {
+        std::string text = "bUtTeRfLy";
+        std::string ciphertext = caesar.caesar_encryption(text);
+        CHECK(ciphertext == "AMJJSNXVL");
+    }
+
+    SUBCASE("Letters and symbols string") {
+        std::string text = "Hello, World!";
+        std::string ciphertext = caesar.caesar_encryption(text);
+        CHECK(ciphertext == "DSVVB, KBNVW!");
+    }
+}
+
+
+TEST_CASE("Caesar Decryption") {
+    std::string k = "qazwsxedcrfvtgbyhnujmikolp";
+    CaesarCipher caesar(k);
+
+    SUBCASE("Empty string") {
+        std::string ciphertext = "";
+        std::string text = caesar.caesar_decryption(ciphertext);
+        CHECK(text == "");
+    }
+
+    SUBCASE("One-symbol string") {
+        std::string ciphertext = "Q";
+        std::string text = caesar.caesar_decryption(ciphertext);
+        CHECK(text == "A");
+    }
+
+    SUBCASE("Different letter cases string") {
+        std::string ciphertext = "AmJjSnXvL";
+        std::string text = caesar.caesar_decryption(ciphertext);
+        CHECK(text == "BUTTERFLY");
+    }
+
+    SUBCASE("Letters and symbols string") {
+        std::string ciphertext = "Dsvvb, Kbnvw!";
+        std::string text = caesar.caesar_decryption(ciphertext);
+        CHECK(text == "HELLO, WORLD!");
+    }
+}
+
+
+TEST_CASE("Caesar invalid key") {
+    SUBCASE("Not full key") {
+        REQUIRE_THROWS_AS(CaesarCipher{"hahaha"}, std::invalid_argument);
+    }
+
+    SUBCASE("Repeated symbols key") {
+        REQUIRE_THROWS_AS(CaesarCipher{"aaaaaaaaaaaaaaaaaaaaaaaaaa"}, std::invalid_argument);
+    }
+
+    SUBCASE("Empty key") {
+        REQUIRE_THROWS_AS(CaesarCipher{""}, std::invalid_argument);
+    }
+
+    SUBCASE("Key with symbols") {
+        REQUIRE_THROWS_AS(CaesarCipher{"ABC123?"}, std::invalid_argument);
+    }
+}
+
+
+TEST_CASE("Vigenere encryption") {
+    std::vector<std::vector<int>> key{{1, 1}, {3, 4}};
+    std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(key);
+    int option = 1;
+
+    SUBCASE("Empty string") {
+        std::string text = "";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "");
+    }
+
+    SUBCASE("One-symbol string") {
+        std::string text = "A";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "XO");
+    }
+
+    SUBCASE("Different letter cases string") {
+        std::string text = "bUtTeRfLy";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "VFMDVCQHVI");
+    }
+
+    SUBCASE("Letters and symbols string") {
+        std::string text = "Hello, World!";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "LLWZNMKSCRAX");
+    }
+}
+
+
+TEST_CASE("Vigenere decryption") {
+    std::vector<std::vector<int>> key{{1, 1}, {3, 4}};
+    std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(key);
+    int option = 2;
+
+    SUBCASE("Empty string") {
+        std::string text = "";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "");
+    }
+
+    SUBCASE("One-symbol string") {
+        std::string text = "A";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "DX");
+    }
+
+    SUBCASE("Different letter cases string") {
+        std::string text = "VfMdVcQhVi";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "BUTTERFLYX");
+    }
+}
+
+
+TEST_CASE("Hill invalid key") {
+    SUBCASE("Not square matrix") {
+        REQUIRE_THROWS_AS(BlockCipher({{1, 1}, {1}}), std::invalid_argument);
+    }
+
+    SUBCASE("no GCD = 1") {
+        REQUIRE_THROWS_AS(BlockCipher({{1, 1}, {3, 5}}), std::invalid_argument);
+    }
+}
+
+
+// jabohka's tests
