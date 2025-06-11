@@ -1,27 +1,16 @@
 #include <iostream>
-#include <AffineCipher.h>
-#include <..\..\globals.h>
+#include "AffineCipher.h"
+#include "..\..\globals.h"
 #include <cctype>
 
 
-AffineCipher::AffineCipher(const std::array<int, 2>& key, const std::string& t, bool f)
-{
-    text = t;
-    alpha = key[0];
-    beta = key[1];
-    flag = f;
-}
+AffineCipher::AffineCipher(const std::string& text):text(text) {}
 
 
-std::string AffineCipher::affine()
+std::string AffineCipher::affine(Affine& coder)
 {
     std::string cipher_text;
-    if (flag) {
-        AffineCipher coder = AffineCoder();
-    } else {
-        AffineCipher coder = AffineEncoder();
-        alpha = opposite_alpha(alpha);
-    }
+    std::cout << text;
     for (char c : text) {
         c = toupper(c);
         int index = ALPHABET.find(c);
@@ -29,15 +18,15 @@ std::string AffineCipher::affine()
             cipher_text += c;
             continue;
         }
-        int enc_c = cipher(index);
+        int enc_c = coder.cipher(index);
         cipher_text += ALPHABET[enc_c];
     }
-    
     return cipher_text;
 }
 
 int AffineCoder::cipher(int &index)
 {
+    std::cout << "2";
     return (alpha * index + beta) % ALPHABET_SIZE;
 }
 
