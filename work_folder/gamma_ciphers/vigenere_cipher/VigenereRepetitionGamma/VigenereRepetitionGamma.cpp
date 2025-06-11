@@ -6,8 +6,9 @@
 
 void VigenereRepetitionGamma::creat_gamma()
 {
+    std::cout << "blyat";
     const size_t len_text = text_numbers.size();
-    const size_t len_key = 100000000; 
+    const size_t len_key = key_numbers.size(); 
     
     std::string gamma_str;
     gamma_str.reserve(len_text);
@@ -17,5 +18,7 @@ void VigenereRepetitionGamma::creat_gamma()
         gamma_str+=key[i%len_key]; //нужно в ключе сделать проверку, что длина не ноль
     }
     gamma = text_in_numbers(gamma_str);
+    std::cout << "blyat";
+    return;
 }
 
