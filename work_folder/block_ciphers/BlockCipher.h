@@ -11,14 +11,12 @@ class BlockCipher : public SubFunction
 {
 protected:
     std::vector<std::vector<int>> key_vec;
+    void check_hill_key(std::vector<std::vector<int>> matrix, int determinant);
     
 
 public:
     BlockCipher(std::vector<std::vector<int>> matrix) : key_vec(matrix) 
     {   
-        if (matrix.size() != matrix[0].size()) {
-            throw std::runtime_error("\nYour matrix is not square :(");
-        }
         arma::mat key(key_vec.size(), key_vec[0].size());
         for (size_t i = 0; i < key_vec.size(); ++i) {
             for (size_t j = 0; j < key_vec[i].size(); ++j) {
@@ -27,13 +25,16 @@ public:
     }
         int determinant = static_cast<int>(round(arma::det(key))) % ALPHABET_SIZE;
 
-        if (std::gcd(determinant, ALPHABET_SIZE) != 1) {
-            throw std::runtime_error("\nRemember the GCD rules! The determinant of your matrix-key should have 1 as GCD with the number of the letters in your language.\nTry again:");
+        try {
+            check_hill_key(matrix, determinant);
+        }
+        catch (const InvalidInputError& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
         }
     }
     std::vector<std::vector<int>> text_into_numbers_ngrammas(std::string& text);
     bool check_key(size_t key_space, size_t block_size);
-    virtual std::string hill(std::string& pretext, int& option) {
+    virtual std::string hill(std::string& pretext, char& option) {
         throw std::runtime_error("Method 'hill' not implemented in base class.");
     }
 

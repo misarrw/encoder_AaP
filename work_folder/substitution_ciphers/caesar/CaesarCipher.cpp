@@ -49,3 +49,11 @@ std::string CaesarCipher::caesar_decryption(const std::string& ciphertext)
     }
     return decrypted_text;
 }
+
+
+void CaesarCipher::check_caesar_key(std::unordered_set<char> key_set)
+{
+    if (key_set.size() != ALPHABET_SIZE) {
+        throw InvalidInputError("\nYour key is too short or incorrect. Check the tip and try again");
+    }
+}
