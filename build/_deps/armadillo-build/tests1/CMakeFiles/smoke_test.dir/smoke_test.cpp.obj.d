@@ -182,9 +182,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/chrono.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/ratio \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/parse_numbers.h \
- C:/Users/skwor/gcc/include/c++/14.2.0/atomic \
- C:/Users/skwor/gcc/include/c++/14.2.0/bits/atomic_base.h \
- C:/Users/skwor/gcc/include/c++/14.2.0/bits/atomic_lockfree_defines.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/mutex \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/std_mutex.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/unique_lock.h \
@@ -197,6 +194,9 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/thread \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/std_thread.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/this_thread_sleep.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/atomic \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/atomic_base.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/atomic_lockfree_defines.h \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/compiler_setup.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/include_hdf5.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/include_superlu.hpp \
@@ -291,7 +291,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/mtGlue_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/SpGlue_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/mtSpGlue_bones.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/SpToDGlue_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/GlueCube_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/eGlueCube_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/mtGlueCube_bones.hpp \
@@ -357,8 +356,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_nonzeros_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_diff_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_norm_bones.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_vecnorm_bones.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_norm2est_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_sqrtmat_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_logmat_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_range_bones.hpp \
@@ -374,7 +371,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_row_as_mat_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_col_as_mat_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_times_bones.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_times_misc_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_mixed_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_cov_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_cor_bones.hpp \
@@ -418,7 +414,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spop_repmat_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spop_vectorise_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spop_norm_bones.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spop_vecnorm_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_plus_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_minus_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_schur_bones.hpp \
@@ -429,7 +424,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_max_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_merge_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_relational_bones.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spsolve_factoriser_bones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/debug.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/memory.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/arma_cmath.hpp \
@@ -488,7 +482,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_elem.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_approx_equal.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_norm.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_vecnorm.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_dot.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_randu.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_randn.hpp \
@@ -577,7 +570,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_quantile.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_powmat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_powext.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_diags_spdiags.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_speye.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_spones.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/fn_sprandn.hpp \
@@ -609,7 +601,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/GlueCube_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/SpGlue_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/mtSpGlue_meat.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/SpToDGlue_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/eOp_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/eOpCube_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/eGlue_meat.hpp \
@@ -719,8 +710,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_nonzeros_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_diff_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_norm_meat.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_vecnorm_meat.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_norm2est_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_sqrtmat_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_logmat_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_range_meat.hpp \
@@ -736,7 +725,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_row_as_mat_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/op_col_as_mat_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_times_meat.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_times_misc_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_mixed_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_cov_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/glue_cor_meat.hpp \
@@ -780,7 +768,6 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spop_repmat_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spop_vectorise_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spop_norm_meat.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spop_vecnorm_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_plus_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_minus_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_schur_meat.hpp \
@@ -791,5 +778,4 @@ _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/smoke_test.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_max_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_merge_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_relational_meat.hpp \
- C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spsolve_factoriser_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/compiler_setup_post.hpp

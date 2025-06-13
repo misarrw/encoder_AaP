@@ -135,20 +135,7 @@ inline
 sword
 randi(const distr_param& param)
   {
-  arma_extra_debug_sigprint();
-  
-  int a = 0;
-  int b = arma_rng::randi<sword>::max_val();
-  
-  param.get_int_vals(a,b);
-  
-  arma_debug_check( (a > b), "randi(): incorrect distribution parameters; a must be less than b" );
-  
-  sword out_val = sword(0);
-  
-  arma_rng::randi<sword>::fill(&out_val, uword(1), a, b);
-  
-  return out_val;
+  return as_scalar( randi<ivec>(uword(1), uword(1), param) );
   }
 
 
@@ -159,20 +146,7 @@ inline
 typename arma_scalar_only<eT>::result
 randi(const distr_param& param)
   {
-  arma_extra_debug_sigprint();
-  
-  int a = 0;
-  int b = arma_rng::randi<eT>::max_val();
-  
-  param.get_int_vals(a,b);
-  
-  arma_debug_check( (a > b), "randi(): incorrect distribution parameters; a must be less than b" );
-  
-  eT out_val = eT(0);
-  
-  arma_rng::randi<eT>::fill(&out_val, uword(1), a, b);
-  
-  return out_val;
+  return eT( as_scalar( randi< Col<eT> >(uword(1), uword(1), param) ) );
   }
 
 
@@ -182,8 +156,6 @@ inline
 sword
 randi()
   {
-  arma_extra_debug_sigprint();
-  
   return sword( arma_rng::randi<sword>() );
   }
 
@@ -195,8 +167,6 @@ inline
 typename arma_scalar_only<eT>::result
 randi()
   {
-  arma_extra_debug_sigprint();
-  
   return eT( arma_rng::randi<eT>() );
   }
 

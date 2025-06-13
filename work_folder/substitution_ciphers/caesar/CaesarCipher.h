@@ -8,6 +8,7 @@
 class CaesarCipher : public SubstitutionCipher {
 private:
     std::string key;
+    void check_caesar_key(std::unordered_set<char> key_set);
 
 public:
     CaesarCipher(std::string k) : key(k) 
@@ -16,8 +17,11 @@ public:
         for (char symbol: key) {
             key_set.insert(symbol);
         }
-        if (key_set.size() != ALPHABET_SIZE) {
-            throw std::length_error("\nYour key is too short or incorrect. Check the tip and try again");
+        try {
+            check_caesar_key(key_set);
+        }
+        catch (const InvalidInputError& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
         }
     }
     std::string caesar_encryption(const std::string& text);

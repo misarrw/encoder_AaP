@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Encoder")
+  set(CMAKE_INSTALL_PREFIX "/usr")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -80,14 +80,14 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Program Files (x86)/Encoder/share/Armadillo/CMake/ArmadilloConfig.cmake;C:/Program Files (x86)/Encoder/share/Armadillo/CMake/ArmadilloConfigVersion.cmake")
+   "/usr/share/Armadillo/CMake/ArmadilloConfig.cmake;/usr/share/Armadillo/CMake/ArmadilloConfigVersion.cmake")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "C:/Program Files (x86)/Encoder/share/Armadillo/CMake" TYPE FILE FILES
+  file(INSTALL DESTINATION "/usr/share/Armadillo/CMake" TYPE FILE FILES
     "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/InstallFiles/ArmadilloConfig.cmake"
     "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/InstallFiles/ArmadilloConfigVersion.cmake"
     )

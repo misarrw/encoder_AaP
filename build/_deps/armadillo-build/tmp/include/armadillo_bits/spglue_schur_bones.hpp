@@ -27,13 +27,13 @@ class spglue_schur
   public:
   
   template<typename T1, typename T2>
-  inline static void apply(SpMat<typename T1::elem_type>& out, const SpGlue<T1,T2,spglue_schur>& X);
+  arma_hot inline static void apply(SpMat<typename T1::elem_type>& out, const SpGlue<T1,T2,spglue_schur>& X);
   
   template<typename eT, typename T1, typename T2>
-  inline static void apply_noalias(SpMat<eT>& out, const SpProxy<T1>& pa, const SpProxy<T2>& pb);
+  arma_hot inline static void apply_noalias(SpMat<eT>& out, const SpProxy<T1>& pa, const SpProxy<T2>& pb);
   
   template<typename eT>
-  inline static void apply_noalias(SpMat<eT>& out, const SpMat<eT>& A, const SpMat<eT>& B);
+  arma_hot inline static void apply_noalias(SpMat<eT>& out, const SpMat<eT>& A, const SpMat<eT>& B);
   };
 
 

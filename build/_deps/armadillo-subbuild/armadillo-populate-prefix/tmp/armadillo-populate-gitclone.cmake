@@ -52,13 +52,13 @@ endif()
 
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe"
-          checkout "12.6.x" --
+          checkout "12.0.x" --
   WORKING_DIRECTORY "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: '12.6.x'")
+  message(FATAL_ERROR "Failed to checkout tag: '12.0.x'")
 endif()
 
 set(init_submodules TRUE)

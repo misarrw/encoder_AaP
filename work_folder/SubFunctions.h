@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <exception>
 
 
 class SubFunction
@@ -10,4 +11,17 @@ public:
     int extendedGCD(int a, int b, int& x, int& y);
     int modInverse(int a, int m);
     bool is_alpha(const std::string& str);
+};
+
+
+class InvalidInputError : public std::exception {
+private:
+    std::string message; 
+
+public:
+    explicit InvalidInputError(const std::string& msg) : message(msg) {}
+
+    const char* what() const noexcept override {
+        return message.c_str();
+    }
 };

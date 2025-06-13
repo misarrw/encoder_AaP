@@ -132,4 +132,13 @@ CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCi
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/basic_ios.tcc \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/ostream.tcc \
  C:/Users/skwor/gcc/include/c++/14.2.0/istream \
- C:/Users/skwor/gcc/include/c++/14.2.0/bits/istream.tcc
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/istream.tcc \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\VigenereCipher.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/vector \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_vector.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/vector.tcc \
+ C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/GammaCipher.h \
+ C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/SubFunctions.h \
+ C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/globals.h

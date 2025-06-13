@@ -361,7 +361,7 @@ typename
 enable_if2
   <
   (is_arma_sparse_type<T1>::value && is_arma_type<T2>::value && is_same_type<typename T1::elem_type, typename T2::elem_type>::value),
-  const SpToDGlue<T1, T2, glue_times_sparse_dense>
+  Mat<typename T1::elem_type>
   >::result
 operator*
   (
@@ -371,7 +371,13 @@ operator*
   {
   arma_extra_debug_sigprint();
   
-  return SpToDGlue<T1, T2, glue_times_sparse_dense>(x, y);
+  typedef typename T1::elem_type eT;
+  
+  Mat<eT> result;
+  
+  spglue_times_misc::sparse_times_dense(result, x, y);
+  
+  return result;
   }
 
 
@@ -383,7 +389,7 @@ typename
 enable_if2
   <
   (is_arma_type<T1>::value && is_arma_sparse_type<T2>::value && is_same_type<typename T1::elem_type, typename T2::elem_type>::value),
-  const SpToDGlue<T1, T2, glue_times_dense_sparse>
+  Mat<typename T1::elem_type>
   >::result
 operator*
   (
@@ -393,7 +399,13 @@ operator*
   {
   arma_extra_debug_sigprint();
   
-  return SpToDGlue<T1, T2, glue_times_dense_sparse>(x, y);
+  typedef typename T1::elem_type eT;
+  
+  Mat<eT> result;
+  
+  spglue_times_misc::dense_times_sparse(result, x, y);
+  
+  return result;
   }
 
 
@@ -446,7 +458,7 @@ operator*
   
   Mat< typename promote_type<typename T1::elem_type, typename T2::elem_type>::result > out;
   
-  glue_times_sparse_dense::apply_mixed(out, X, Y);
+  spglue_times_mixed::sparse_times_dense(out, X, Y);
   
   return out;
   }
@@ -472,7 +484,7 @@ operator*
   
   Mat< typename promote_type<typename T1::elem_type, typename T2::elem_type>::result > out;
   
-  glue_times_dense_sparse::apply_mixed(out, X, Y);
+  spglue_times_mixed::dense_times_sparse(out, X, Y);
   
   return out;
   }

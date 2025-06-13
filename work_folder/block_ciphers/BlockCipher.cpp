@@ -1,4 +1,3 @@
-#pragma once
 #include "BlockCipher.h"
 #include "globals.h"
 #include <string>
@@ -11,7 +10,7 @@ std::vector<std::vector<int>> BlockCipher::text_into_numbers_ngrammas(std::strin
     size_t text_size = text.size();
 
     while (text.size() % key_size != 0) {
-        text += 'x';
+        text += 'X';
     }
 
     for (size_t i = 0; i < text.size(); i += key_size) {
@@ -68,4 +67,15 @@ std::vector<std::vector<int>> BlockCipher::find_inverse_matrix() {
     }
 
     return inverse_matrix;
+}
+
+
+void BlockCipher::check_hill_key(std::vector<std::vector<int>> matrix, int determinant)
+{
+    if (matrix.size() != matrix[0].size()) {
+        throw InvalidInputError("\nYour matrix is not square :(");
+    }
+    if (std::gcd(determinant, ALPHABET_SIZE) != 1) {
+        throw InvalidInputError("\nRemember the GCD rules! The determinant of your matrix-key should have 1 as GCD with the number of the letters in your language.\nTry again:");
+    }
 }

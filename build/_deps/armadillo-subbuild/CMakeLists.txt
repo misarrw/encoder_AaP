@@ -27,7 +27,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(armadillo-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://gitlab.com/conradsnicta/armadillo-code.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "12.6.x"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://gitlab.com/conradsnicta/armadillo-code.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "12.0.x"
                     SOURCE_DIR          "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-src"
                     BINARY_DIR          "C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build"
                     CONFIGURE_COMMAND   ""

@@ -191,28 +191,42 @@ TEST_CASE("Caesar Decryption") {
 
 
 TEST_CASE("Caesar invalid key") {
+    std::stringstream buffer;
+    auto* old_buf = std::cerr.rdbuf(buffer.rdbuf());
     SUBCASE("Not full key") {
-        REQUIRE_THROWS_AS(CaesarCipher{"hahaha"}, std::invalid_argument);
+        CaesarCipher caesar("hahaha");
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Your key is too short or incorrect. Check the tip and try again"));
     }
 
     SUBCASE("Repeated symbols key") {
-        REQUIRE_THROWS_AS(CaesarCipher{"aaaaaaaaaaaaaaaaaaaaaaaaaa"}, std::invalid_argument);
+        CaesarCipher caesar("aaaaaaaaaaaaaaaaaaaaaaaaaa");
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Your key is too short or incorrect. Check the tip and try again"));
     }
 
     SUBCASE("Empty key") {
-        REQUIRE_THROWS_AS(CaesarCipher{""}, std::invalid_argument);
+        CaesarCipher caesar("");
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Your key is too short or incorrect. Check the tip and try again"));
     }
 
     SUBCASE("Key with symbols") {
-        REQUIRE_THROWS_AS(CaesarCipher{"ABC123?"}, std::invalid_argument);
+        CaesarCipher caesar("ABC123?");
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Your key is too short or incorrect. Check the tip and try again"));
     }
 }
 
 
-TEST_CASE("Vigenere encryption") {
+TEST_CASE("Hill encryption") {
     std::vector<std::vector<int>> key{{1, 1}, {3, 4}};
     std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(key);
-    int option = 1;
+    char option = '1';
 
     SUBCASE("Empty string") {
         std::string text = "";
@@ -240,10 +254,10 @@ TEST_CASE("Vigenere encryption") {
 }
 
 
-TEST_CASE("Vigenere decryption") {
+TEST_CASE("Hill decryption") {
     std::vector<std::vector<int>> key{{1, 1}, {3, 4}};
     std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(key);
-    int option = 2;
+    char option = '2';
 
     SUBCASE("Empty string") {
         std::string text = "";
@@ -266,12 +280,20 @@ TEST_CASE("Vigenere decryption") {
 
 
 TEST_CASE("Hill invalid key") {
+    std::stringstream buffer;
+    auto* old_buf = std::cerr.rdbuf(buffer.rdbuf());
     SUBCASE("Not square matrix") {
-        REQUIRE_THROWS_AS(BlockCipher({{1, 1}, {1}}), std::invalid_argument);
+        BlockCipher key_vec({{1, 1}, {1}});
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Your matrix is not square :("));
     }
 
     SUBCASE("no GCD = 1") {
-        REQUIRE_THROWS_AS(BlockCipher({{1, 1}, {3, 5}}), std::invalid_argument);
+        BlockCipher key_vec({{1, 1}, {1}});
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Remember the GCD rules! The determinant of your matrix-key should have 1 as GCD with the number of the letters in your language. Try again:"));
     }
 }
 

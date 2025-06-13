@@ -21,6 +21,22 @@
 
 
 
+template<typename eT>
+class mat_injector_row
+  {
+  public:
+  
+  arma_cold inline mat_injector_row();
+  
+  arma_cold inline void insert(const eT val) const;
+  
+  mutable uword        n_cols;
+  mutable podarray<eT> A;
+  mutable podarray<eT> B;
+  };
+
+
+
 template<typename T1>
 class mat_injector
   {
@@ -35,13 +51,14 @@ class mat_injector
   
   private:
   
-  inline mat_injector(T1& in_X, const elem_type val);
-  inline mat_injector(T1& in_X, const injector_end_of_row<>&);
+  arma_cold inline mat_injector(T1& in_X, const elem_type val);
+  arma_cold inline mat_injector(T1& in_X, const injector_end_of_row<>& x);
   
-  T1& parent;
+  T1&           X;
+  mutable uword n_rows;
   
-  mutable std::vector<elem_type> values;
-  mutable std::vector<char>      rowend;
+  mutable podarray< mat_injector_row<elem_type>* >* AA;
+  mutable podarray< mat_injector_row<elem_type>* >* BB;
   
   friend class Mat<elem_type>;
   friend class Row<elem_type>;
@@ -54,6 +71,23 @@ class mat_injector
 
 
 
+template<typename oT>
+class field_injector_row
+  {
+  public:
+  
+  arma_cold inline  field_injector_row();
+  arma_cold inline ~field_injector_row();
+  
+  arma_cold inline void insert(const oT& val) const;
+  
+  mutable uword      n_cols;
+  mutable field<oT>* AA;
+  mutable field<oT>* BB;
+  };
+
+  
+  
 template<typename T1>
 class field_injector
   {
@@ -68,13 +102,14 @@ class field_injector
   
   private:
   
-  inline field_injector(T1& in_X, const object_type& val);
-  inline field_injector(T1& in_X, const injector_end_of_row<>&);
+  arma_cold inline field_injector(T1& in_X, const object_type& val);
+  arma_cold inline field_injector(T1& in_X, const injector_end_of_row<>& x);
   
-  T1& parent;
+  T1&           X;
+  mutable uword n_rows;
   
-  mutable std::vector<object_type> values;
-  mutable std::vector<char>        rowend;
+  mutable podarray< field_injector_row<object_type>* >* AA;
+  mutable podarray< field_injector_row<object_type>* >* BB;
   
   friend class field<object_type>;
   };
