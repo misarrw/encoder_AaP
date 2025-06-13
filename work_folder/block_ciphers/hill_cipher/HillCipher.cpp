@@ -7,9 +7,9 @@
 #include <algorithm>
 
 
-std::string HillCipher::hill(std::string& pretext, int& option)
+std::string HillCipher::hill(std::string& pretext, char& option)
 {   
-    if (option == 2) {
+    if (option == '2') {
         key_vec = find_inverse_matrix(key_vec);
     }
 

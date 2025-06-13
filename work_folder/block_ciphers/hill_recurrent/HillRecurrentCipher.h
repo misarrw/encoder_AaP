@@ -13,6 +13,6 @@ class HillRecurrentCipher : public BlockCipher {
         HillRecurrentCipher(const std::vector<std::vector<int>>& key1,
                                        const std::vector<std::vector<int>>& key2): BlockCipher(key1), key1(key1), key2(key2) {};
         std::vector<std::vector<int>> generate_next_key(std::vector<std::vector<int>> key1, std::vector<std::vector<int>> key2);
-        std::string hill(std::string& pretext, int& option) override;
+        std::string hill(std::string& pretext, char& option) override;
 };
 

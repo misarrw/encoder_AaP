@@ -4,15 +4,15 @@
 #include <fstream>
 #include "work_folder/substitution_ciphers/caesar/CaesarCipher.h"
 #include "work_folder/substitution_ciphers/affine/AffineCipher.h"
+#include "work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h"
 #include "work_folder/files_functions.h"
 #include "work_folder/block_ciphers/BlockCipher.h"
 #include "work_folder/block_ciphers/hill_cipher/HillCipher.h"
+#include "work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.h"
 #include "work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.h"
 #include "work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.h"
 #include "work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.h"
 #include "work_folder/gamma_ciphers/VernameCipher/VernameCipher.h"
-#include "work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.h"
-#include "work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h"
 #include <memory>
 
 
@@ -25,9 +25,9 @@ int main()
         "2. Decryption\n"
         "Enter strictly 1 or 2: ";
 
-        std::string operation;
+        char operation;
         std::cin >> operation;
-        if (operation != "1" && operation != "1") {
+        if (operation != '1' && operation != '2') {
             std::cout << "\nInvalid enter. Try again.";
             break;
         }
@@ -36,8 +36,7 @@ int main()
         std::string file_with_text;
         std::cin >> file_with_text;
 
-        //bool is_valid = validate_file_path(file_with_text);
-        bool is_valid{true};
+        bool is_valid = validate_file_path(file_with_text);
         if (!is_valid) {
             std::cout << "\nInvalid file name. Try again.";
             break;
@@ -89,9 +88,10 @@ int main()
                             std::cin >> k;
                             CaesarCipher caesar(k);
                             std::string ciphertext;
-                            if (operation == "1") {ciphertext = caesar.caesar_encryption(text);}
+                            if (operation == '1') {ciphertext = caesar.caesar_encryption(text);}
                             else {ciphertext = caesar.caesar_decryption(text);}
                             string_to_file(result_file, ciphertext);
+                            break;
                         }
 
                         case 2: {
@@ -103,6 +103,7 @@ int main()
                             AffineCoder coder(alpha, beta);
                             std::string ciphertext = AffineCipher(text).affine(coder);
                             string_to_file(result_file, ciphertext);
+                            break;
                         }
 
                         case 3: {
@@ -114,13 +115,13 @@ int main()
                             std::array<int, 2> key1 = {alpha1, beta1};
                             std::array<int, 2> key2 = {alpha2, beta2};
 
-                            int option = std::stoi(operation);
                             AffineRecurrentCipher arcipher(key1, key2);
-                            std::string ciphertext = arcipher.cipher(text, option);
+                            std::string ciphertext = arcipher.cipher(text, operation);
                             string_to_file(result_file, ciphertext);
                             break;
                         }
                     }
+                    break;
                 }
 
                 case 2: {
@@ -162,10 +163,11 @@ int main()
                             }
 
                             std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(matrix);
-                            int option = 1;
-                            std::string ciphertext = key_vec->hill(text, option);
+                            std::string ciphertext = key_vec->hill(text, operation);
                             string_to_file(result_file, ciphertext);
+                            break;
                         }
+                        
                         
                         case 2: {
                             std::vector<std::vector<int>> matrix1(key_size, std::vector<int>(key_size));
@@ -208,8 +210,7 @@ int main()
                             }
 
                             HillRecurrentCipher hrcipher(matrix1, matrix2);
-                            int option = std::stoi(operation);
-                            std::string ciphertext = hrcipher.hill(text, option);
+                            std::string ciphertext = hrcipher.hill(text, operation);
                             string_to_file(result_file, ciphertext);
 
                         }
@@ -239,30 +240,34 @@ int main()
                             int gamma_type;
                             std::cin >> gamma_type;
 
-                            int option = std::stoi(operation);
-
                             std::string ciphertext;
                             switch(gamma_type) {
                                 case 1: {
-                                    ciphertext = VigenereRepetitionGamma(text, option).ciphertext;
+                                    ciphertext = VigenereRepetitionGamma(text, operation).ciphertext;
+                                    break;
                                 }
 
                                 case 2: {
-                                    ciphertext =  VigenereOpenTextGamma(text, option).ciphertext;
+                                    ciphertext =  VigenereOpenTextGamma(text, operation).ciphertext;
+                                    break;
                                 }
 
                                 case 3: {
-                                    ciphertext =  VigenereCipherTextGamma(text, option).ciphertext;
+                                    ciphertext =  VigenereCipherTextGamma(text, operation).ciphertext;
+                                    break;
                                 }
                             }
 
                             string_to_file(result_file, ciphertext);
+                            break;
                         }
 
                         case 2: {
                             VernameCipher(text, 1);
+                            break;
                         }
                     }
+                    break;
                 }
             }
         }

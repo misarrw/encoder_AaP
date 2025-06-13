@@ -105,18 +105,20 @@ TEST_CASE("Affine recurrent encryption and decryption") {
         std::array<int, 2> key1 = {5, 7};
         std::array<int, 2> key2 = {7, 11};
         std::string text = "HELLO";
+        char option = '1';
         
         AffineRecurrentCipher arcipher(key1, key2);
-        std::string encrypted = arcipher.cipher(text, 1);
+        std::string encrypted = arcipher.cipher(text, option);
         CHECK(encrypted == "QNNUD");
     }
 
     SUBCASE("With spaces") {
         std::array<int, 2> key1 = {5, 7};   
         std::array<int, 2> key2 = {7, 11};  
-        std::string text = "H E";        
+        std::string text = "H E";
+        char option = '1';        
         AffineRecurrentCipher arcipher(key1, key2);
-        std::string encrypted = arcipher.cipher(text, 1);
+        std::string encrypted = arcipher.cipher(text, option);
         CHECK(encrypted == "Q N");
     }
 
@@ -124,9 +126,10 @@ TEST_CASE("Affine recurrent encryption and decryption") {
         std::array<int, 2> key1 = {5, 7};
         std::array<int, 2> key2 = {7, 11};
         std::string text = "";
+        char option = '1';
         
         AffineRecurrentCipher arcipher(key1, key2);
-        std::string encrypted = arcipher.cipher(text, 1);
+        std::string encrypted = arcipher.cipher(text, option);
         CHECK(encrypted == "");
     }
 
@@ -134,9 +137,10 @@ TEST_CASE("Affine recurrent encryption and decryption") {
         std::array<int, 2> key1 = {5, 7};
         std::array<int, 2> key2 = {7, 11};
         std::string text = "Hello";
+        char option = '1';
         
         AffineRecurrentCipher arcipher(key1, key2);
-        std::string encrypted = arcipher.cipher(text, 1);
+        std::string encrypted = arcipher.cipher(text, option);
         CHECK(encrypted == "QNNUD");
     }
 
@@ -144,10 +148,12 @@ TEST_CASE("Affine recurrent encryption and decryption") {
         std::array<int, 2> key1 = {5, 7};
         std::array<int, 2> key2 = {7, 11};
         std::string text = "HELLO WORLD";
+        char encrypted_choice = '1';
+        char decrypted_choice = '2';
         
         AffineRecurrentCipher arcipher(key1, key2);
-        std::string encrypted = arcipher.cipher(text, 1);
-        std::string decrypted = arcipher.cipher(encrypted, 2);
+        std::string encrypted = arcipher.cipher(text, encrypted_choice);
+        std::string decrypted = arcipher.cipher(encrypted, decrypted_choice);
         
         CHECK(encrypted == "QNNUD KVGVW");
         CHECK(decrypted == "HELLO WORLD");
@@ -157,10 +163,12 @@ TEST_CASE("Affine recurrent encryption and decryption") {
         std::array<int, 2> key1 = {3, 5};
         std::array<int, 2> key2 = {7, 10};
         std::string text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char encrypted_choice = '1';
+        char decrypted_choice = '2';
         
         AffineRecurrentCipher arcipher(key1, key2);
-        std::string encrypted = arcipher.cipher(text, 1);
-        std::string decrypted = arcipher.cipher(encrypted, 2);
+        std::string encrypted = arcipher.cipher(text, encrypted_choice);
+        std::string decrypted = arcipher.cipher(encrypted, decrypted_choice);
 
         
         CHECK(decrypted == text);
@@ -170,10 +178,12 @@ TEST_CASE("Affine recurrent encryption and decryption") {
         std::array<int, 2> key1 = {3, 5};
         std::array<int, 2> key2 = {7, 10};
         std::string text = "A  B   C";
+        char encrypted_choice = '1';
+        char decrypted_choice = '2';
         
         AffineRecurrentCipher arcipher(key1, key2);
-        std::string encrypted = arcipher.cipher(text, 1);
-        std::string decrypted = arcipher.cipher(encrypted, 2);
+        std::string encrypted = arcipher.cipher(text, encrypted_choice);
+        std::string decrypted = arcipher.cipher(encrypted, decrypted_choice);
         
         CHECK(decrypted == text);
     }
@@ -182,19 +192,21 @@ TEST_CASE("Affine recurrent encryption and decryption") {
         std::array<int, 2> key1 = {5, 7};
         std::array<int, 2> key2 = {7, 11};
         std::string text = "HELLO";
+        char option = '3';
 
         AffineRecurrentCipher arcipher(key1, key2);
-        CHECK_THROWS_AS(arcipher.cipher(text, 3), std::invalid_argument);
+        CHECK_THROWS_AS(arcipher.cipher(text, option), std::invalid_argument);
     }
 
     SUBCASE("Invalid characters") {
         std::array<int, 2> key1 = {5, 7};
         std::array<int, 2> key2 = {7, 11};
         std::string text = "HELLO!";
+        char option = '1';
         AffineRecurrentCipher arcipher(key1, key2);
+
         
-        
-        CHECK_THROWS_AS(arcipher.cipher(text, 1), std::invalid_argument);
+        CHECK_THROWS_AS(arcipher.cipher(text, option), std::invalid_argument);
     }
 }
 
@@ -213,21 +225,21 @@ TEST_CASE("Hill Recurrent Cipher - Basic Encryption/Decryption") {
     
     SUBCASE("Encrypt short text") {
         std::string text = "HEL";
-        int option = 1;
+        char option = '1';
         std::string encrypted = cipher.hill(text, option);
         CHECK(encrypted == "WWH"); 
     }
     
     SUBCASE("Decrypt short text") {
         std::string text = "WWH";
-        int option = 2;
+        char option = '2';
         std::string decrypted = cipher.hill(text, option);
         CHECK(decrypted == "HEL");
     }
     
     SUBCASE("Encrypt with padding") {
         std::string text = "HE";
-        int option = 1;
+        char option = '1';
         std::string encrypted = cipher.hill(text, option);
         CHECK(encrypted.size() == 3); 
     }
@@ -240,8 +252,7 @@ TEST_CASE("Hill Recurrent Cipher - Key Generation") {
     
     SUBCASE("Generate next key") {
         auto new_key = cipher.generate_next_key(key1, key2);
-        
-        // Проверяем правильность генерации следующего ключа
+
         CHECK(new_key[0][0] == (2*11 + 3*17) % 26);
         CHECK(new_key[0][1] == (2*13 + 3*19) % 26);
         CHECK(new_key[1][0] == (5*11 + 7*17) % 26);
@@ -258,8 +269,8 @@ TEST_CASE("Hill Recurrent Cipher - Full Cycle") {
     
     SUBCASE("Encrypt-Decrypt cycle") {
         std::string original = "SECRETSMESSAGE";
-        int encrypt_option = 1;
-        int decrypt_option = 2;
+        char encrypt_option = '1';
+        char decrypt_option = '2';
         std::string encrypted = cipher.hill(original, encrypt_option);
         std::string decrypted = cipher.hill(encrypted, decrypt_option);
         
@@ -269,7 +280,7 @@ TEST_CASE("Hill Recurrent Cipher - Full Cycle") {
     SUBCASE("Case insensitivity") {
         std::string upper = "HELLO";
         std::string mixed = "HeLlO";
-        int encrypt_option = 1;
+        char encrypt_option = '1';
         std::string encrypted_upper = cipher.hill(upper, encrypt_option);
         std::string encrypted_mixed = cipher.hill(mixed, encrypt_option);
         
@@ -286,7 +297,6 @@ TEST_CASE("Hill Recurrent Cipher - Matrix Operations") {
         
         auto new_key = cipher.generate_next_key(key1, key2);
         
-        // Проверяем правильность умножения матриц и применения модуля
         CHECK(new_key[0][0] == (2*11 + 3*17) % 26);
         CHECK(new_key[0][1] == (2*13 + 3*19) % 26);
         CHECK(new_key[1][0] == (5*11 + 7*17) % 26);
@@ -295,152 +305,172 @@ TEST_CASE("Hill Recurrent Cipher - Matrix Operations") {
 
 }
 
+TEST_CASE("Caesar encryption") {
+    std::string k = "qazwsxedcrfvtgbyhnujmikolp";
+    CaesarCipher caesar(k);
 
-// // misarrw's tests
-// TEST_CASE("Caesar encryption") {
-//     std::string k = "qazwsxedcrfvtgbyhnujmikolp";
-//     CaesarCipher caesar(k);
+    SUBCASE("Empty string") {
+        std::string text = "";
+        std::string ciphertext = caesar.caesar_encryption(text);
+        CHECK(ciphertext == "");
+    }
 
-//     SUBCASE("Empty string") {
-//         std::string text = "";
-//         std::string ciphertext = caesar.caesar_encryption(text);
-//         CHECK(ciphertext == "");
-//     }
+    SUBCASE("One-symbol string") {
+        std::string text = "A";
+        std::string ciphertext = caesar.caesar_encryption(text);
+        CHECK(ciphertext == "Q");
+    }
 
-//     SUBCASE("One-symbol string") {
-//         std::string text = "A";
-//         std::string ciphertext = caesar.caesar_encryption(text);
-//         CHECK(ciphertext == "Q");
-//     }
+    SUBCASE("Different letter cases string") {
+        std::string text = "bUtTeRfLy";
+        std::string ciphertext = caesar.caesar_encryption(text);
+        CHECK(ciphertext == "AMJJSNXVL");
+    }
 
-//     SUBCASE("Different letter cases string") {
-//         std::string text = "bUtTeRfLy";
-//         std::string ciphertext = caesar.caesar_encryption(text);
-//         CHECK(ciphertext == "AMJJSNXVL");
-//     }
-
-//     SUBCASE("Letters and symbols string") {
-//         std::string text = "Hello, World!";
-//         std::string ciphertext = caesar.caesar_encryption(text);
-//         CHECK(ciphertext == "DSVVB, KBNVW!");
-//     }
-// }
+    SUBCASE("Letters and symbols string") {
+        std::string text = "Hello, World!";
+        std::string ciphertext = caesar.caesar_encryption(text);
+        CHECK(ciphertext == "DSVVB, KBNVW!");
+    }
+}
 
 
-// TEST_CASE("Caesar Decryption") {
-//     std::string k = "qazwsxedcrfvtgbyhnujmikolp";
-//     CaesarCipher caesar(k);
+TEST_CASE("Caesar Decryption") {
+    std::string k = "qazwsxedcrfvtgbyhnujmikolp";
+    CaesarCipher caesar(k);
 
-//     SUBCASE("Empty string") {
-//         std::string ciphertext = "";
-//         std::string text = caesar.caesar_decryption(ciphertext);
-//         CHECK(text == "");
-//     }
+    SUBCASE("Empty string") {
+        std::string ciphertext = "";
+        std::string text = caesar.caesar_decryption(ciphertext);
+        CHECK(text == "");
+    }
 
-//     SUBCASE("One-symbol string") {
-//         std::string ciphertext = "Q";
-//         std::string text = caesar.caesar_decryption(ciphertext);
-//         CHECK(text == "A");
-//     }
+    SUBCASE("One-symbol string") {
+        std::string ciphertext = "Q";
+        std::string text = caesar.caesar_decryption(ciphertext);
+        CHECK(text == "A");
+    }
 
-//     SUBCASE("Different letter cases string") {
-//         std::string ciphertext = "AmJjSnXvL";
-//         std::string text = caesar.caesar_decryption(ciphertext);
-//         CHECK(text == "BUTTERFLY");
-//     }
+    SUBCASE("Different letter cases string") {
+        std::string ciphertext = "AmJjSnXvL";
+        std::string text = caesar.caesar_decryption(ciphertext);
+        CHECK(text == "BUTTERFLY");
+    }
 
-//     SUBCASE("Letters and symbols string") {
-//         std::string ciphertext = "Dsvvb, Kbnvw!";
-//         std::string text = caesar.caesar_decryption(ciphertext);
-//         CHECK(text == "HELLO, WORLD!");
-//     }
-// }
-
-
-// TEST_CASE("Caesar invalid key") {
-//     SUBCASE("Not full key") {
-//         REQUIRE_THROWS_AS(CaesarCipher{"hahaha"}, std::invalid_argument);
-//     }
-
-//     SUBCASE("Repeated symbols key") {
-//         REQUIRE_THROWS_AS(CaesarCipher{"aaaaaaaaaaaaaaaaaaaaaaaaaa"}, std::invalid_argument);
-//     }
-
-//     SUBCASE("Empty key") {
-//         REQUIRE_THROWS_AS(CaesarCipher{""}, std::invalid_argument);
-//     }
-
-//     SUBCASE("Key with symbols") {
-//         REQUIRE_THROWS_AS(CaesarCipher{"ABC123?"}, std::invalid_argument);
-//     }
-// }
+    SUBCASE("Letters and symbols string") {
+        std::string ciphertext = "Dsvvb, Kbnvw!";
+        std::string text = caesar.caesar_decryption(ciphertext);
+        CHECK(text == "HELLO, WORLD!");
+    }
+}
 
 
-// TEST_CASE("Vigenere encryption") {
-//     std::vector<std::vector<int>> key{{1, 1}, {3, 4}};
-//     std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(key);
-//     int option = 1;
+TEST_CASE("Caesar invalid key") {
+    std::stringstream buffer;
+    auto* old_buf = std::cerr.rdbuf(buffer.rdbuf());
+    SUBCASE("Not full key") {
+        CaesarCipher caesar("hahaha");
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Your key is too short or incorrect. Check the tip and try again"));
+    }
 
-//     SUBCASE("Empty string") {
-//         std::string text = "";
-//         std::string ciphertext = key_vec->hill(text, option);
-//         CHECK(ciphertext == "");
-//     }
+    SUBCASE("Repeated symbols key") {
+        CaesarCipher caesar("aaaaaaaaaaaaaaaaaaaaaaaaaa");
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Your key is too short or incorrect. Check the tip and try again"));
+    }
 
-//     SUBCASE("One-symbol string") {
-//         std::string text = "A";
-//         std::string ciphertext = key_vec->hill(text, option);
-//         CHECK(ciphertext == "XO");
-//     }
+    SUBCASE("Empty key") {
+        CaesarCipher caesar("");
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Your key is too short or incorrect. Check the tip and try again"));
+    }
 
-//     SUBCASE("Different letter cases string") {
-//         std::string text = "bUtTeRfLy";
-//         std::string ciphertext = key_vec->hill(text, option);
-//         CHECK(ciphertext == "VFMDVCQHVI");
-//     }
-
-//     SUBCASE("Letters and symbols string") {
-//         std::string text = "Hello, World!";
-//         std::string ciphertext = key_vec->hill(text, option);
-//         CHECK(ciphertext == "LLWZNMKSCRAX");
-//     }
-// }
-
-
-// TEST_CASE("Vigenere decryption") {
-//     std::vector<std::vector<int>> key{{1, 1}, {3, 4}};
-//     std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(key);
-//     int option = 2;
-
-//     SUBCASE("Empty string") {
-//         std::string text = "";
-//         std::string ciphertext = key_vec->hill(text, option);
-//         CHECK(ciphertext == "");
-//     }
-
-//     SUBCASE("One-symbol string") {
-//         std::string text = "A";
-//         std::string ciphertext = key_vec->hill(text, option);
-//         CHECK(ciphertext == "DX");
-//     }
-
-//     SUBCASE("Different letter cases string") {
-//         std::string text = "VfMdVcQhVi";
-//         std::string ciphertext = key_vec->hill(text, option);
-//         CHECK(ciphertext == "BUTTERFLYX");
-//     }
-// }
+    SUBCASE("Key with symbols") {
+        CaesarCipher caesar("ABC123?");
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Your key is too short or incorrect. Check the tip and try again"));
+    }
+}
 
 
-// TEST_CASE("Hill invalid key") {
-//     SUBCASE("Not square matrix") {
-//         REQUIRE_THROWS_AS(BlockCipher({{1, 1}, {1}}), std::invalid_argument);
-//     }
+TEST_CASE("Hill encryption") {
+    std::vector<std::vector<int>> key{{1, 1}, {3, 4}};
+    std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(key);
+    char option = '1';
 
-//     SUBCASE("no GCD = 1") {
-//         REQUIRE_THROWS_AS(BlockCipher({{1, 1}, {3, 5}}), std::invalid_argument);
-//     }
-// }
+    SUBCASE("Empty string") {
+        std::string text = "";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "");
+    }
+
+    SUBCASE("One-symbol string") {
+        std::string text = "A";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "XO");
+    }
+
+    SUBCASE("Different letter cases string") {
+        std::string text = "bUtTeRfLy";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "VFMDVCQHVI");
+    }
+
+    SUBCASE("Letters and symbols string") {
+        std::string text = "Hello, World!";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "LLWZNMKSCRAX");
+    }
+}
+
+
+TEST_CASE("Hill decryption") {
+    std::vector<std::vector<int>> key{{1, 1}, {3, 4}};
+    std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(key);
+    char option = '2';
+
+    SUBCASE("Empty string") {
+        std::string text = "";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "");
+    }
+
+    SUBCASE("One-symbol string") {
+        std::string text = "A";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "DX");
+    }
+
+    SUBCASE("Different letter cases string") {
+        std::string text = "VfMdVcQhVi";
+        std::string ciphertext = key_vec->hill(text, option);
+        CHECK(ciphertext == "BUTTERFLYX");
+    }
+}
+
+
+TEST_CASE("Hill invalid key") {
+    std::stringstream buffer;
+    auto* old_buf = std::cerr.rdbuf(buffer.rdbuf());
+    SUBCASE("Not square matrix") {
+        BlockCipher key_vec({{1, 1}, {1}});
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Your matrix is not square :("));
+    }
+
+    SUBCASE("no GCD = 1") {
+        BlockCipher key_vec({{1, 1}, {1}});
+        std::cerr.rdbuf(old_buf);
+        std::string output = buffer.str();
+        REQUIRE(output.find("Error: Remember the GCD rules! The determinant of your matrix-key should have 1 as GCD with the number of the letters in your language. Try again:"));
+    }
+}
 
 
 // jabohka's tests

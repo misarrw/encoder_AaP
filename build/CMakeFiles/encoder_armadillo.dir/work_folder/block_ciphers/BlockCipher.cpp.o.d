@@ -1660,5 +1660,5 @@ CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/BlockCipher.cpp.o: \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/newarp_UpperHessenbergQR_meat.hpp \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/compiler_setup_post.hpp \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/../globals.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/../SubFunctions.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.h

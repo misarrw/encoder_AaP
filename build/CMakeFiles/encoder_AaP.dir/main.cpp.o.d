@@ -984,6 +984,23 @@ CMakeFiles/encoder_AaP.dir/main.cpp.o: \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/caesar/../../globals.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine/AffineCipher.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine/../SubstitutionCipher.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/numeric \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/accumulate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/inner_product.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/iota.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/midpoint.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/partial_sum.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/pstl_reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/saturation_arithmetic.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/../SubstitutionCipher.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/files_functions.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/BlockCipher.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo \
@@ -1008,20 +1025,6 @@ CMakeFiles/encoder_AaP.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__random/is_seed_sequence.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__random/discard_block_engine.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__random/discrete_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/numeric \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/accumulate.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/inner_product.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/iota.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/midpoint.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/partial_sum.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/pstl_reduce.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/saturation_arithmetic.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__random/extreme_value_distribution.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__random/fisher_f_distribution.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__random/geometric_distribution.h \
@@ -1669,22 +1672,20 @@ CMakeFiles/encoder_AaP.dir/main.cpp.o: \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/newarp_UpperHessenbergQR_meat.hpp \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/compiler_setup_post.hpp \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/../globals.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/../SubFunctions.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/hill_cipher/HillCipher.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/hill_cipher/../../globals.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/hill_cipher/../BlockCipher.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/hill_recurrent/../../globals.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/hill_recurrent/../BlockCipher.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/../VigenereCipher.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/../../GammaCipher.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/../../../SubFunctions.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/../VigenereCipher.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/../VigenereCipher.h \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/VernameCipher/VernameCipher.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/VernameCipher/../GammaCipher.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/hill_recurrent/../../globals.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/block_ciphers/hill_recurrent/../BlockCipher.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/../SubstitutionCipher.h
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/gamma_ciphers/VernameCipher/../GammaCipher.h

@@ -32,11 +32,11 @@ std::vector<std::vector<int>> HillRecurrentCipher::generate_next_key(std::vector
 
 
 
-std::string HillRecurrentCipher::hill(std::string& pretext, int& option) {
+std::string HillRecurrentCipher::hill(std::string& pretext, char& option) {
     std::vector<std::vector<int>> current_key = key1;
     std::vector<std::vector<int>> next_key = key2;
     
-    if (option == 2) { 
+    if (option == '2') { 
         current_key = find_inverse_matrix(key1);
         next_key = find_inverse_matrix(key2);
     }
@@ -65,11 +65,11 @@ std::string HillRecurrentCipher::hill(std::string& pretext, int& option) {
         ciphertext_ngrammas_numbers.push_back(ciphertext_ngramma);
         ciphertext_ngramma.clear();
     
-    if (option == 1) {
+    if (option == '1') {
         std::vector<std::vector<int>> new_key = generate_next_key(current_key, next_key);
         current_key = next_key;
         next_key = new_key; }
-    if (option == 2) {
+    if (option == '2') {
         std::vector<std::vector<int>> new_key = generate_next_key(next_key, current_key);
         current_key = next_key;
         next_key = new_key; }

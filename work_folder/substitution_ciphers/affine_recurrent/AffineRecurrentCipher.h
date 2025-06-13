@@ -33,5 +33,5 @@ class AffineRecurrentCipher{
 
             return true;
         }
-        std::string cipher (const std::string& text, const int choice);
+        std::string cipher (const std::string& text, const char choice);
 };

@@ -17,18 +17,18 @@ std::array<int, 2> AffineRecurrentCipher::find_another_key(const std::array<int,
 }
 
 std::string AffineRecurrentCipher::cipher(const std::string& text, 
-                                        const int choice) 
+                                        const char choice) 
 {
     if (text.empty()) return "";
 
     std::vector<int> pre_result;
     std::array<int, 2> current_key, next_key;
     
-    if (choice == 1) { 
+    if (choice == '1') { 
         current_key = key1;
         next_key = key2;
     } 
-    else if (choice == 2) { 
+    else if (choice == '2') { 
         int tmp_a1 = key1[0];
         int tmp_a2 = key2[0];
         current_key = {
@@ -58,7 +58,7 @@ std::string AffineRecurrentCipher::cipher(const std::string& text,
         num = static_cast<int>(pos);
 
         int modified;
-        if (choice == 1) { 
+        if (choice == '1') { 
             modified = (current_key[0] * num + current_key[1]) % ALPHABET_SIZE;
         } 
         else { 
