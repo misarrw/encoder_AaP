@@ -956,10 +956,6 @@ CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/Aff
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/unistd.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.hpp \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.hpp \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.hpp \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/numeric \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/accumulate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
@@ -973,4 +969,11 @@ CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/Aff
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/pstl_reduce.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/saturation_arithmetic.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/../../globals.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/../SubstitutionCipher.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/../../SubFunctions.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/../../../work_folder/SubFunctions.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/affine_recurrent/../../../work_folder/substitution_ciphers/SubstitutionCipher.h

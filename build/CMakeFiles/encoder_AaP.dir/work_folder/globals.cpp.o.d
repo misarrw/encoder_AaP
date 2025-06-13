@@ -1,6 +1,6 @@
 CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.o: \
   /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.cpp \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.hpp \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__assertion_handler \

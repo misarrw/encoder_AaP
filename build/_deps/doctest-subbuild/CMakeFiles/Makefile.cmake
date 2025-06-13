@@ -10,8 +10,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.31.5/CMakeSystem.cmake"
   "CMakeLists.txt"
   "doctest-populate-prefix/tmp/doctest-populate-mkdirs.cmake"
+  "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake"
+  "/opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in"
   "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
   "/opt/homebrew/share/cmake/Modules/ExternalProject.cmake"
@@ -36,6 +38,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/3.31.5/CMakeSystem.cmake"
   "doctest-populate-prefix/tmp/doctest-populate-mkdirs.cmake"
   "doctest-populate-prefix/tmp/doctest-populate-gitclone.cmake"
   "doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt"

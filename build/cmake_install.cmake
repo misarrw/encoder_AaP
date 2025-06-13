@@ -39,6 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/_deps/armadillo-build/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/build/external/cmake_install.cmake")
 endif()
 

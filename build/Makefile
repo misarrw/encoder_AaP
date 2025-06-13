@@ -97,7 +97,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"dev\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -198,6 +198,45 @@ encoder_test/fast:
 .PHONY : encoder_test/fast
 
 #=============================================================================
+# Target rules for targets named encoder_armadillo
+
+# Build rule for target.
+encoder_armadillo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 encoder_armadillo
+.PHONY : encoder_armadillo
+
+# fast build rule for target.
+encoder_armadillo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/build
+.PHONY : encoder_armadillo/fast
+
+#=============================================================================
+# Target rules for targets named armadillo
+
+# Build rule for target.
+armadillo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 armadillo
+.PHONY : armadillo
+
+# fast build rule for target.
+armadillo/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/armadillo-build/CMakeFiles/armadillo.dir/build.make _deps/armadillo-build/CMakeFiles/armadillo.dir/build
+.PHONY : armadillo/fast
+
+#=============================================================================
+# Target rules for targets named smoke_test
+
+# Build rule for target.
+smoke_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 smoke_test
+.PHONY : smoke_test
+
+# fast build rule for target.
+smoke_test/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/build.make _deps/armadillo-build/tests1/CMakeFiles/smoke_test.dir/build
+.PHONY : smoke_test/fast
+
+#=============================================================================
 # Target rules for targets named doctest_with_main
 
 # Build rule for target.
@@ -240,6 +279,7 @@ main.o: main.cpp.o
 # target to build an object file
 main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -248,6 +288,7 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -256,6 +297,7 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 work_folder/SubFunctions.o: work_folder/SubFunctions.cpp.o
@@ -265,6 +307,7 @@ work_folder/SubFunctions.o: work_folder/SubFunctions.cpp.o
 work_folder/SubFunctions.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/SubFunctions.cpp.o
 .PHONY : work_folder/SubFunctions.cpp.o
 
 work_folder/SubFunctions.i: work_folder/SubFunctions.cpp.i
@@ -274,6 +317,7 @@ work_folder/SubFunctions.i: work_folder/SubFunctions.cpp.i
 work_folder/SubFunctions.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/SubFunctions.cpp.i
 .PHONY : work_folder/SubFunctions.cpp.i
 
 work_folder/SubFunctions.s: work_folder/SubFunctions.cpp.s
@@ -283,14 +327,194 @@ work_folder/SubFunctions.s: work_folder/SubFunctions.cpp.s
 work_folder/SubFunctions.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/SubFunctions.cpp.s
 .PHONY : work_folder/SubFunctions.cpp.s
+
+work_folder/block_ciphers/BlockCipher.o: work_folder/block_ciphers/BlockCipher.cpp.o
+.PHONY : work_folder/block_ciphers/BlockCipher.o
+
+# target to build an object file
+work_folder/block_ciphers/BlockCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/BlockCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/block_ciphers/BlockCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/BlockCipher.cpp.o
+.PHONY : work_folder/block_ciphers/BlockCipher.cpp.o
+
+work_folder/block_ciphers/BlockCipher.i: work_folder/block_ciphers/BlockCipher.cpp.i
+.PHONY : work_folder/block_ciphers/BlockCipher.i
+
+# target to preprocess a source file
+work_folder/block_ciphers/BlockCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/BlockCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/block_ciphers/BlockCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/BlockCipher.cpp.i
+.PHONY : work_folder/block_ciphers/BlockCipher.cpp.i
+
+work_folder/block_ciphers/BlockCipher.s: work_folder/block_ciphers/BlockCipher.cpp.s
+.PHONY : work_folder/block_ciphers/BlockCipher.s
+
+# target to generate assembly for a file
+work_folder/block_ciphers/BlockCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/BlockCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/block_ciphers/BlockCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/BlockCipher.cpp.s
+.PHONY : work_folder/block_ciphers/BlockCipher.cpp.s
+
+work_folder/block_ciphers/hill_cipher/HillCipher.o: work_folder/block_ciphers/hill_cipher/HillCipher.cpp.o
+.PHONY : work_folder/block_ciphers/hill_cipher/HillCipher.o
+
+# target to build an object file
+work_folder/block_ciphers/hill_cipher/HillCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.o
+.PHONY : work_folder/block_ciphers/hill_cipher/HillCipher.cpp.o
+
+work_folder/block_ciphers/hill_cipher/HillCipher.i: work_folder/block_ciphers/hill_cipher/HillCipher.cpp.i
+.PHONY : work_folder/block_ciphers/hill_cipher/HillCipher.i
+
+# target to preprocess a source file
+work_folder/block_ciphers/hill_cipher/HillCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.i
+.PHONY : work_folder/block_ciphers/hill_cipher/HillCipher.cpp.i
+
+work_folder/block_ciphers/hill_cipher/HillCipher.s: work_folder/block_ciphers/hill_cipher/HillCipher.cpp.s
+.PHONY : work_folder/block_ciphers/hill_cipher/HillCipher.s
+
+# target to generate assembly for a file
+work_folder/block_ciphers/hill_cipher/HillCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.s
+.PHONY : work_folder/block_ciphers/hill_cipher/HillCipher.cpp.s
+
+work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.o: work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.o
+.PHONY : work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.o
+
+# target to build an object file
+work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.o
+.PHONY : work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.o
+
+work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.i: work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i
+.PHONY : work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.i
+
+# target to preprocess a source file
+work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i
+.PHONY : work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i
+
+work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.s: work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s
+.PHONY : work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.s
+
+# target to generate assembly for a file
+work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s
+.PHONY : work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s
+
+work_folder/files_functions.o: work_folder/files_functions.cpp.o
+.PHONY : work_folder/files_functions.o
+
+# target to build an object file
+work_folder/files_functions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/files_functions.cpp.o
+.PHONY : work_folder/files_functions.cpp.o
+
+work_folder/files_functions.i: work_folder/files_functions.cpp.i
+.PHONY : work_folder/files_functions.i
+
+# target to preprocess a source file
+work_folder/files_functions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/files_functions.cpp.i
+.PHONY : work_folder/files_functions.cpp.i
+
+work_folder/files_functions.s: work_folder/files_functions.cpp.s
+.PHONY : work_folder/files_functions.s
+
+# target to generate assembly for a file
+work_folder/files_functions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/files_functions.cpp.s
+.PHONY : work_folder/files_functions.cpp.s
+
+work_folder/gamma_ciphers/GammaCipher.o: work_folder/gamma_ciphers/GammaCipher.cpp.o
+.PHONY : work_folder/gamma_ciphers/GammaCipher.o
+
+# target to build an object file
+work_folder/gamma_ciphers/GammaCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/GammaCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/GammaCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.o
+.PHONY : work_folder/gamma_ciphers/GammaCipher.cpp.o
+
+work_folder/gamma_ciphers/GammaCipher.i: work_folder/gamma_ciphers/GammaCipher.cpp.i
+.PHONY : work_folder/gamma_ciphers/GammaCipher.i
+
+# target to preprocess a source file
+work_folder/gamma_ciphers/GammaCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/GammaCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/GammaCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.i
+.PHONY : work_folder/gamma_ciphers/GammaCipher.cpp.i
+
+work_folder/gamma_ciphers/GammaCipher.s: work_folder/gamma_ciphers/GammaCipher.cpp.s
+.PHONY : work_folder/gamma_ciphers/GammaCipher.s
+
+# target to generate assembly for a file
+work_folder/gamma_ciphers/GammaCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/GammaCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/GammaCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.s
+.PHONY : work_folder/gamma_ciphers/GammaCipher.cpp.s
+
+work_folder/gamma_ciphers/VernameCipher/VernameCipher.o: work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.o
+.PHONY : work_folder/gamma_ciphers/VernameCipher/VernameCipher.o
+
+# target to build an object file
+work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.o
+.PHONY : work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.o
+
+work_folder/gamma_ciphers/VernameCipher/VernameCipher.i: work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.i
+.PHONY : work_folder/gamma_ciphers/VernameCipher/VernameCipher.i
+
+# target to preprocess a source file
+work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.i
+.PHONY : work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.i
+
+work_folder/gamma_ciphers/VernameCipher/VernameCipher.s: work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.s
+.PHONY : work_folder/gamma_ciphers/VernameCipher/VernameCipher.s
+
+# target to generate assembly for a file
+work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.s
+.PHONY : work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.s
 
 work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.o: work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o
 .PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.o
 
 # target to build an object file
 work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o
 .PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.o
 
 work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.i: work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i
@@ -298,7 +522,9 @@ work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.i: work_folder/gamma_ci
 
 # target to preprocess a source file
 work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i
 .PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i
 
 work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.s: work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s
@@ -306,32 +532,100 @@ work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.s: work_folder/gamma_ci
 
 # target to generate assembly for a file
 work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s
 .PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.s
 
-work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.o: work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o
-.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.o
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.o: work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.o
 
 # target to build an object file
-work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o
-.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.o
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.o
 
-work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.i: work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i
-.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.i
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.i: work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.i
 
 # target to preprocess a source file
-work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i
-.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.i
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.i
 
-work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.s: work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s
-.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.s
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.s: work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.s
 
 # target to generate assembly for a file
-work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s
-.PHONY : work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.cpp.s
+work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.s
+
+work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.o: work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.o
+
+# target to build an object file
+work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.o
+
+work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.i: work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.i
+
+# target to preprocess a source file
+work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.i
+
+work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.s: work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.s
+
+# target to generate assembly for a file
+work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.s
+
+work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.o: work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.o
+
+# target to build an object file
+work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.o
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.o
+
+work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.i: work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.i
+
+# target to preprocess a source file
+work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.i
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.i
+
+work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.s: work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.s
+
+# target to generate assembly for a file
+work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.s
+.PHONY : work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.s
 
 work_folder/globals.o: work_folder/globals.cpp.o
 .PHONY : work_folder/globals.o
@@ -340,6 +634,7 @@ work_folder/globals.o: work_folder/globals.cpp.o
 work_folder/globals.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/globals.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/globals.cpp.o
 .PHONY : work_folder/globals.cpp.o
 
 work_folder/globals.i: work_folder/globals.cpp.i
@@ -349,6 +644,7 @@ work_folder/globals.i: work_folder/globals.cpp.i
 work_folder/globals.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/globals.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/globals.cpp.i
 .PHONY : work_folder/globals.cpp.i
 
 work_folder/globals.s: work_folder/globals.cpp.s
@@ -358,6 +654,7 @@ work_folder/globals.s: work_folder/globals.cpp.s
 work_folder/globals.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/globals.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/globals.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/globals.cpp.s
 .PHONY : work_folder/globals.cpp.s
 
 work_folder/substitution_ciphers/SubstitutionCipher.o: work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
@@ -367,6 +664,7 @@ work_folder/substitution_ciphers/SubstitutionCipher.o: work_folder/substitution_
 work_folder/substitution_ciphers/SubstitutionCipher.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
 .PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.o
 
 work_folder/substitution_ciphers/SubstitutionCipher.i: work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
@@ -376,6 +674,7 @@ work_folder/substitution_ciphers/SubstitutionCipher.i: work_folder/substitution_
 work_folder/substitution_ciphers/SubstitutionCipher.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
 .PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.i
 
 work_folder/substitution_ciphers/SubstitutionCipher.s: work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
@@ -385,7 +684,38 @@ work_folder/substitution_ciphers/SubstitutionCipher.s: work_folder/substitution_
 work_folder/substitution_ciphers/SubstitutionCipher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
 .PHONY : work_folder/substitution_ciphers/SubstitutionCipher.cpp.s
+
+work_folder/substitution_ciphers/affine/AffineCipher.o: work_folder/substitution_ciphers/affine/AffineCipher.cpp.o
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.o
+
+# target to build an object file
+work_folder/substitution_ciphers/affine/AffineCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.o
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.cpp.o
+
+work_folder/substitution_ciphers/affine/AffineCipher.i: work_folder/substitution_ciphers/affine/AffineCipher.cpp.i
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.i
+
+# target to preprocess a source file
+work_folder/substitution_ciphers/affine/AffineCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.i
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.cpp.i
+
+work_folder/substitution_ciphers/affine/AffineCipher.s: work_folder/substitution_ciphers/affine/AffineCipher.cpp.s
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.s
+
+# target to generate assembly for a file
+work_folder/substitution_ciphers/affine/AffineCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/affine/AffineCipher.cpp.s
+.PHONY : work_folder/substitution_ciphers/affine/AffineCipher.cpp.s
 
 work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.o: work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
 .PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.o
@@ -394,6 +724,7 @@ work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.o: work_
 work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
 .PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.o
 
 work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.i: work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
@@ -403,6 +734,7 @@ work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.i: work_
 work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
 .PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.i
 
 work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.s: work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
@@ -412,6 +744,7 @@ work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.s: work_
 work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
 .PHONY : work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.cpp.s
 
 work_folder/substitution_ciphers/caesar/CaesarCipher.o: work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o
@@ -420,6 +753,8 @@ work_folder/substitution_ciphers/caesar/CaesarCipher.o: work_folder/substitution
 # target to build an object file
 work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o
 .PHONY : work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.o
 
 work_folder/substitution_ciphers/caesar/CaesarCipher.i: work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.i
@@ -428,6 +763,8 @@ work_folder/substitution_ciphers/caesar/CaesarCipher.i: work_folder/substitution
 # target to preprocess a source file
 work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.i
 .PHONY : work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.i
 
 work_folder/substitution_ciphers/caesar/CaesarCipher.s: work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.s
@@ -436,6 +773,8 @@ work_folder/substitution_ciphers/caesar/CaesarCipher.s: work_folder/substitution
 # target to generate assembly for a file
 work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_AaP.dir/build.make CMakeFiles/encoder_AaP.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_test.dir/build.make CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_armadillo.dir/build.make CMakeFiles/encoder_armadillo.dir/work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.s
 .PHONY : work_folder/substitution_ciphers/caesar/CaesarCipher.cpp.s
 
 # Help Target
@@ -451,9 +790,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... armadillo"
 	@echo "... doctest_with_main"
 	@echo "... encoder_AaP"
+	@echo "... encoder_armadillo"
 	@echo "... encoder_test"
+	@echo "... smoke_test"
 	@echo "... encoder_test.o"
 	@echo "... encoder_test.i"
 	@echo "... encoder_test.s"
@@ -463,18 +805,45 @@ help:
 	@echo "... work_folder/SubFunctions.o"
 	@echo "... work_folder/SubFunctions.i"
 	@echo "... work_folder/SubFunctions.s"
+	@echo "... work_folder/block_ciphers/BlockCipher.o"
+	@echo "... work_folder/block_ciphers/BlockCipher.i"
+	@echo "... work_folder/block_ciphers/BlockCipher.s"
+	@echo "... work_folder/block_ciphers/hill_cipher/HillCipher.o"
+	@echo "... work_folder/block_ciphers/hill_cipher/HillCipher.i"
+	@echo "... work_folder/block_ciphers/hill_cipher/HillCipher.s"
+	@echo "... work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.o"
+	@echo "... work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.i"
+	@echo "... work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.s"
+	@echo "... work_folder/files_functions.o"
+	@echo "... work_folder/files_functions.i"
+	@echo "... work_folder/files_functions.s"
+	@echo "... work_folder/gamma_ciphers/GammaCipher.o"
+	@echo "... work_folder/gamma_ciphers/GammaCipher.i"
+	@echo "... work_folder/gamma_ciphers/GammaCipher.s"
+	@echo "... work_folder/gamma_ciphers/VernameCipher/VernameCipher.o"
+	@echo "... work_folder/gamma_ciphers/VernameCipher/VernameCipher.i"
+	@echo "... work_folder/gamma_ciphers/VernameCipher/VernameCipher.s"
 	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.o"
 	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.i"
 	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.s"
-	@echo "... work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.o"
-	@echo "... work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.i"
-	@echo "... work_folder/gamma_ciphers/vigenere_cipher/gamma_generation/repetition_gamma/RepetitionGamma.s"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.o"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.i"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.s"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.o"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.i"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.s"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.o"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.i"
+	@echo "... work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.s"
 	@echo "... work_folder/globals.o"
 	@echo "... work_folder/globals.i"
 	@echo "... work_folder/globals.s"
 	@echo "... work_folder/substitution_ciphers/SubstitutionCipher.o"
 	@echo "... work_folder/substitution_ciphers/SubstitutionCipher.i"
 	@echo "... work_folder/substitution_ciphers/SubstitutionCipher.s"
+	@echo "... work_folder/substitution_ciphers/affine/AffineCipher.o"
+	@echo "... work_folder/substitution_ciphers/affine/AffineCipher.i"
+	@echo "... work_folder/substitution_ciphers/affine/AffineCipher.s"
 	@echo "... work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.o"
 	@echo "... work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.i"
 	@echo "... work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.s"

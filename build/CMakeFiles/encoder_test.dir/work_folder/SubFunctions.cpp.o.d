@@ -956,5 +956,5 @@ CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/unistd.h \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.hpp \
-  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.hpp
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.h \
+  /Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/globals.h

@@ -1,100 +1,79 @@
 #include <iostream>
 #include <array>
 #include <string>
-#include "AffineRecurrentCipher.hpp"
-#include "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/SubFunctions.hpp"
-#include "/Users/aidasardarova/Documents/HSE/A&P/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.hpp"
-#include "globals.hpp"
 #include <numeric>
+#include "../../globals.h"
+#include "AffineRecurrentCipher.h"
+#include "../../../work_folder/SubFunctions.h"
+#include "../../../work_folder/substitution_ciphers/SubstitutionCipher.h"
 
-
-std::vector<std::array<int, 2>> AffineRecurrentCipher::all_keys(
-    const std::array<int, 2>& key1,
-    const std::array<int, 2>& key2,
-    const std::string& text) 
+std::array<int, 2> AffineRecurrentCipher::find_another_key(const std::array<int, 2>& key1, 
+                                                         const std::array<int, 2>& key2)
 {
-    std::vector<std::array<int, 2>> keys;
-    keys.push_back(key1);
-    keys.push_back(key2);
-
-    for (size_t i = 2; i < text.size(); ++i) {
-        int new_a = (keys[i-1][0] * keys[i-2][0]) % ALPHABET_SIZE;
-        int new_b = (keys[i-1][1] + keys[i-2][1]) % ALPHABET_SIZE;
-        keys.push_back({new_a, new_b});
-    }
-    
-    return keys;
+    return {
+        (key1[0] * key2[0]) % ALPHABET_SIZE, 
+        (key1[1] + key2[1]) % ALPHABET_SIZE
+    };
 }
 
-std::string AffineRecurrentCipher::encryption(const std::string& text, 
-                                            const std::array<int, 2>& key1,
-                                            const std::array<int, 2>& key2) 
+std::string AffineRecurrentCipher::cipher(const std::string& text, 
+                                        const int choice) 
 {
     if (text.empty()) return "";
 
-    auto keys = all_keys(key1, key2, text);
     std::vector<int> pre_result;
-    size_t key_index = 0;
-    std::vector<int> text_in_nums = SubFunction::text_in_numbers(text);
+    std::array<int, 2> current_key, next_key;
     
-    for (int c : text_in_nums) {
-        const auto& key = keys[key_index++];
-        if (c == -1) { pre_result.push_back(c);} 
-        else {
-            int encrypted = (key[0] * c + key[1]) % ALPHABET_SIZE;
-            if (encrypted < 0) encrypted += ALPHABET_SIZE;
-            pre_result.push_back(encrypted);
-            }
+    if (choice == 1) { 
+        current_key = key1;
+        next_key = key2;
+    } 
+    else if (choice == 2) { 
+        int tmp_a1 = key1[0];
+        int tmp_a2 = key2[0];
+        current_key = {
+            SubstitutionCipher::opposite_alpha(tmp_a1),
+            key1[1]  
+        };
+        next_key = {
+            SubstitutionCipher::opposite_alpha(tmp_a2),
+            key2[1]  
+        };
     }
-    std::string result = SubFunction::numbers_to_text(pre_result);
-    
-    return result;
-}
-
-std::vector<std::array<int, 2>> AffineRecurrentCipher::decryption_keys(const std::array<int, 2>& key1, const std::array<int, 2>& key2, const std::string& text) 
-{
-    std::vector<std::array<int, 2>> dec_keys;
-    
-    int a1 = key1[0];
-    int b1 = key1[1];
-    int a2 = key2[0];  
-    int b2 = key2[1];
-    
-    int a1_inv = SubstitutionCipher::opposite_alpha(a1);
-    int a2_inv = SubstitutionCipher::opposite_alpha(a2);
-
-    dec_keys.push_back({a1_inv, b1});
-    dec_keys.push_back({a2_inv, b2});
-
-    for (size_t i = 2; i < text.size(); i++) {  
-        int new_a = (dec_keys[i-2][0] * dec_keys[i-1][0]) % ALPHABET_SIZE;  
-        int new_b = (dec_keys[i-2][1] + dec_keys[i-1][1]) % ALPHABET_SIZE;  
-        dec_keys.push_back({new_a, new_b}); 
+    else {
+        throw std::invalid_argument("Invalid choice value. Use 1 for encryption or 2 for decryption");
     }
-    
-    return dec_keys;
-}
 
+    for (char c : text) {
+        char upper = std::toupper(static_cast<unsigned char>(c));
+        int num;
+        if (upper == ' ') {
+            pre_result.push_back(-1); 
+            continue;
+        }
+        size_t pos = ALPHABET.find(upper);
+        if (pos == std::string::npos) {
+            throw std::invalid_argument("Invalid character: " + std::string(1, c)); // change to is_alpha
+        }
+        num = static_cast<int>(pos);
 
-std::string AffineRecurrentCipher::decryption(const std::string& ciphertext, const std::array<int, 2>& key1, const std::array<int, 2>& key2) 
-{
-    if (ciphertext.empty()) return "";
-
-    auto dec_keys = decryption_keys(key1, key2, ciphertext);
-    std::vector<int> pre_result;
-    size_t key_index = 0;
-    std::vector<int> text_in_nums = SubFunction::text_in_numbers(ciphertext);
-    
-    for (int c : text_in_nums) {
-        const auto& key = dec_keys[key_index++];
-        if (c == -1) { pre_result.push_back(c);}
-        else {
-            int decrypted = (key[0] * (c - key[1])) % ALPHABET_SIZE;
-            if (decrypted < 0) decrypted += ALPHABET_SIZE;
-            pre_result.push_back(decrypted);
+        int modified;
+        if (choice == 1) { 
+            modified = (current_key[0] * num + current_key[1]) % ALPHABET_SIZE;
+        } 
+        else { 
+            modified = (current_key[0] * (num - current_key[1])) % ALPHABET_SIZE;
         }
         
+        if (modified < 0) modified += ALPHABET_SIZE;
+        pre_result.push_back(modified);
+
+        auto new_key = find_another_key(current_key, next_key);
+        current_key = next_key;
+        next_key = new_key;
     }
+
     std::string result = SubFunction::numbers_to_text(pre_result);
+    
     return result;
 }
