@@ -139,4 +139,12 @@ CMakeFiles/encoder_test.dir/work_folder/SubFunctions.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_vector.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_bvector.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/vector.tcc \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\globals.h
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\globals.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/algorithm \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_algo.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/algorithmfwd.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_heap.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/uniform_int_dist.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_tempbuf.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/pstl/execution_defs.h

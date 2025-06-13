@@ -1,9 +1,9 @@
-libdir=C:/Program Files (x86)/Encoder/lib
-includedir=C:/Program Files (x86)/Encoder/include
+libdir=/usr/lib
+includedir=/usr/include
 
 Name: armadillo
-Description: C++ library for linear algebra and scientific computing with MATLAB-like syntax
+Description: Fast C++ matrix library with syntax similar to MATLAB and Octave
 URL: http://arma.sourceforge.net
-Version: 12.6.7
+Version: 12.0.1
 Cflags: -I${includedir}
 Libs: -L${libdir} -larmadillo

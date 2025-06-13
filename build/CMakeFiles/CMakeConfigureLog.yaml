@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       The system is: Windows - 10.0.22631 - AMD64
   -
@@ -14,7 +14,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: C:/Users/skwor/gcc/bin/gcc.exe 
@@ -36,7 +36,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: C:/Users/skwor/gcc/bin/c++.exe 
@@ -57,12 +57,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-nat1qk"
-      binary: "C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-nat1qk"
+      source: "C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-d6ndwu"
+      binary: "C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-d6ndwu"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,13 +71,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-nat1qk'
+        Change Dir: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-d6ndwu'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e90cf/fast
-        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e90cf.dir\\build.make CMakeFiles/cmTC_e90cf.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-nat1qk'
-        Building C object CMakeFiles/cmTC_e90cf.dir/CMakeCCompilerABI.c.obj
-        C:\\Users\\skwor\\gcc\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b8706/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b8706.dir\\build.make CMakeFiles/cmTC_b8706.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-d6ndwu'
+        Building C object CMakeFiles/cmTC_b8706.dir/CMakeCCompilerABI.c.obj
+        C:\\Users\\skwor\\gcc\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\skwor\\gcc\\bin\\gcc.exe
@@ -86,8 +86,8 @@ events:
         Thread model: win32
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e90cf.dir\\'
-         C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_e90cf.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\skwor\\AppData\\Local\\Temp\\ccwS53bE.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b8706.dir\\'
+         C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_b8706.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\skwor\\AppData\\Local\\Temp\\cc964Cxb.s
         GNU C17 (GCC) version 14.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 14.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -103,17 +103,17 @@ events:
          C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 9cb5df469d6e63be7b7800c5266d461e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e90cf.dir\\'
-         C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj C:\\Users\\skwor\\AppData\\Local\\Temp\\ccwS53bE.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b8706.dir\\'
+         C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj C:\\Users\\skwor\\AppData\\Local\\Temp\\cc964Cxb.s
         GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.41
         COMPILER_PATH=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/skwor/gcc/bin/../libexec/gcc/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/skwor/gcc/bin/../lib/gcc/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.'
-        Linking C executable cmTC_e90cf.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_e90cf.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_e90cf.dir/objects.a
-        C:\\Users\\skwor\\gcc\\bin\\ar.exe qc CMakeFiles\\cmTC_e90cf.dir/objects.a @CMakeFiles\\cmTC_e90cf.dir\\objects1.rsp
-        C:\\Users\\skwor\\gcc\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_e90cf.dir/objects.a -Wl,--no-whole-archive -o cmTC_e90cf.exe -Wl,--out-implib,libcmTC_e90cf.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_b8706.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b8706.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b8706.dir/objects.a
+        C:\\Users\\skwor\\gcc\\bin\\ar.exe qc CMakeFiles\\cmTC_b8706.dir/objects.a @CMakeFiles\\cmTC_b8706.dir\\objects1.rsp
+        C:\\Users\\skwor\\gcc\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_b8706.dir/objects.a -Wl,--no-whole-archive -o cmTC_b8706.exe -Wl,--out-implib,libcmTC_b8706.dll.a -Wl,--major-image-version,0,--minor-image-version,0
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\skwor\\gcc\\bin\\gcc.exe
@@ -125,13 +125,13 @@ events:
         gcc version 14.2.0 (GCC) 
         COMPILER_PATH=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/skwor/gcc/bin/../libexec/gcc/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/skwor/gcc/bin/../lib/gcc/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e90cf.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e90cf.'
-         C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccKDXO30.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_e90cf.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_e90cf.dir/objects.a --no-whole-archive --out-implib libcmTC_e90cf.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b8706.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b8706.'
+         C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cceT56Zi.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_b8706.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_b8706.dir/objects.a --no-whole-archive --out-implib libcmTC_b8706.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         collect2 version 14.2.0
-        C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccKDXO30.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_e90cf.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_e90cf.dir/objects.a --no-whole-archive --out-implib libcmTC_e90cf.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cceT56Zi.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_b8706.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_b8706.dir/objects.a --no-whole-archive --out-implib libcmTC_b8706.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (GNU Binutils) 2.41
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e90cf.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e90cf.'
-        mingw32-make[1]: Leaving directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-nat1qk'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b8706.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b8706.'
+        mingw32-make[1]: Leaving directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-d6ndwu'
         
       exitCode: 0
   -
@@ -139,7 +139,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
@@ -159,18 +159,18 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-nat1qk']
+        ignore line: [Change Dir: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-d6ndwu']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e90cf/fast]
-        ignore line: [C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e90cf.dir\\build.make CMakeFiles/cmTC_e90cf.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-nat1qk']
-        ignore line: [Building C object CMakeFiles/cmTC_e90cf.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:\\Users\\skwor\\gcc\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b8706/fast]
+        ignore line: [C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b8706.dir\\build.make CMakeFiles/cmTC_b8706.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-d6ndwu']
+        ignore line: [Building C object CMakeFiles/cmTC_b8706.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\Users\\skwor\\gcc\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\skwor\\gcc\\bin\\gcc.exe]
@@ -179,8 +179,8 @@ events:
         ignore line: [Thread model: win32]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e90cf.dir\\']
-        ignore line: [ C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_e90cf.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\skwor\\AppData\\Local\\Temp\\ccwS53bE.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b8706.dir\\']
+        ignore line: [ C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_b8706.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\skwor\\AppData\\Local\\Temp\\cc964Cxb.s]
         ignore line: [GNU C17 (GCC) version 14.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 14.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -196,8 +196,8 @@ events:
         ignore line: [ C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 9cb5df469d6e63be7b7800c5266d461e]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e90cf.dir\\']
-        ignore line: [ C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj C:\\Users\\skwor\\AppData\\Local\\Temp\\ccwS53bE.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b8706.dir\\']
+        ignore line: [ C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj C:\\Users\\skwor\\AppData\\Local\\Temp\\cc964Cxb.s]
         ignore line: [GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.41]
         ignore line: [COMPILER_PATH=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/]
         ignore line: [C:/Users/skwor/gcc/bin/../libexec/gcc/]
@@ -208,12 +208,12 @@ events:
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e90cf.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_e90cf.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_e90cf.dir\\link.txt --verbose=1]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_e90cf.dir/objects.a]
-        ignore line: [C:\\Users\\skwor\\gcc\\bin\\ar.exe qc CMakeFiles\\cmTC_e90cf.dir/objects.a @CMakeFiles\\cmTC_e90cf.dir\\objects1.rsp]
-        ignore line: [C:\\Users\\skwor\\gcc\\bin\\gcc.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_e90cf.dir/objects.a -Wl --no-whole-archive -o cmTC_e90cf.exe -Wl --out-implib libcmTC_e90cf.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_b8706.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_b8706.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b8706.dir\\link.txt --verbose=1]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b8706.dir/objects.a]
+        ignore line: [C:\\Users\\skwor\\gcc\\bin\\ar.exe qc CMakeFiles\\cmTC_b8706.dir/objects.a @CMakeFiles\\cmTC_b8706.dir\\objects1.rsp]
+        ignore line: [C:\\Users\\skwor\\gcc\\bin\\gcc.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_b8706.dir/objects.a -Wl --no-whole-archive -o cmTC_b8706.exe -Wl --out-implib libcmTC_b8706.dll.a -Wl --major-image-version 0 --minor-image-version 0]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\skwor\\gcc\\bin\\gcc.exe]
@@ -232,13 +232,13 @@ events:
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e90cf.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e90cf.']
-        link line: [ C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccKDXO30.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_e90cf.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_e90cf.dir/objects.a --no-whole-archive --out-implib libcmTC_e90cf.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b8706.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b8706.']
+        link line: [ C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cceT56Zi.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_b8706.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_b8706.dir/objects.a --no-whole-archive --out-implib libcmTC_b8706.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccKDXO30.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cceT56Zi.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
@@ -258,7 +258,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_e90cf.exe] ==> ignore
+          arg [cmTC_b8706.exe] ==> ignore
           arg [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
@@ -269,10 +269,10 @@ events:
           arg [-LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_e90cf.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_b8706.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_e90cf.dll.a] ==> ignore
+          arg [libcmTC_b8706.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -293,7 +293,7 @@ events:
           arg [-lkernel32] ==> lib [kernel32]
           arg [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o] ==> obj [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccKDXO30.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_e90cf.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_e90cf.dir/objects.a --no-whole-archive --out-implib libcmTC_e90cf.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cceT56Zi.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_b8706.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_b8706.dir/objects.a --no-whole-archive --out-implib libcmTC_b8706.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         linker tool for 'C': C:/Users/skwor/gcc/x86_64-w64-mingw32/bin/ld.exe
         remove lib [msvcrt]
         remove lib [msvcrt]
@@ -318,7 +318,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Running the C compiler's linker: "C:/Users/skwor/gcc/x86_64-w64-mingw32/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.41
@@ -327,12 +327,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-qk90ta"
-      binary: "C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-qk90ta"
+      source: "C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-j3h3am"
+      binary: "C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-j3h3am"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -342,13 +342,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-qk90ta'
+        Change Dir: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-j3h3am'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_799a4/fast
-        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_799a4.dir\\build.make CMakeFiles/cmTC_799a4.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-qk90ta'
-        Building CXX object CMakeFiles/cmTC_799a4.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\Users\\skwor\\gcc\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_40a47/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_40a47.dir\\build.make CMakeFiles/cmTC_40a47.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-j3h3am'
+        Building CXX object CMakeFiles/cmTC_40a47.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\Users\\skwor\\gcc\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\skwor\\gcc\\bin\\c++.exe
@@ -357,8 +357,8 @@ events:
         Thread model: win32
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_799a4.dir\\'
-         C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_799a4.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\skwor\\AppData\\Local\\Temp\\cc7y5oNX.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_40a47.dir\\'
+         C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_40a47.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\skwor\\AppData\\Local\\Temp\\cc81dFsS.s
         GNU C++17 (GCC) version 14.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 14.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -380,17 +380,17 @@ events:
          C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 2cdd3e89952d411c6c1bf705b5926036
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_799a4.dir\\'
-         C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\skwor\\AppData\\Local\\Temp\\cc7y5oNX.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_40a47.dir\\'
+         C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\skwor\\AppData\\Local\\Temp\\cc81dFsS.s
         GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.41
         COMPILER_PATH=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/skwor/gcc/bin/../libexec/gcc/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/skwor/gcc/bin/../lib/gcc/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_799a4.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_799a4.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_799a4.dir/objects.a
-        C:\\Users\\skwor\\gcc\\bin\\ar.exe qc CMakeFiles\\cmTC_799a4.dir/objects.a @CMakeFiles\\cmTC_799a4.dir\\objects1.rsp
-        C:\\Users\\skwor\\gcc\\bin\\c++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_799a4.dir/objects.a -Wl,--no-whole-archive -o cmTC_799a4.exe -Wl,--out-implib,libcmTC_799a4.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_40a47.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_40a47.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_40a47.dir/objects.a
+        C:\\Users\\skwor\\gcc\\bin\\ar.exe qc CMakeFiles\\cmTC_40a47.dir/objects.a @CMakeFiles\\cmTC_40a47.dir\\objects1.rsp
+        C:\\Users\\skwor\\gcc\\bin\\c++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_40a47.dir/objects.a -Wl,--no-whole-archive -o cmTC_40a47.exe -Wl,--out-implib,libcmTC_40a47.dll.a -Wl,--major-image-version,0,--minor-image-version,0
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\skwor\\gcc\\bin\\c++.exe
@@ -402,13 +402,13 @@ events:
         gcc version 14.2.0 (GCC) 
         COMPILER_PATH=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/skwor/gcc/bin/../libexec/gcc/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/skwor/gcc/bin/../lib/gcc/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_799a4.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_799a4.'
-         C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccwBeuda.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_799a4.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_799a4.dir/objects.a --no-whole-archive --out-implib libcmTC_799a4.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_40a47.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_40a47.'
+         C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cc2cUkW3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_40a47.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_40a47.dir/objects.a --no-whole-archive --out-implib libcmTC_40a47.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         collect2 version 14.2.0
-        C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccwBeuda.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_799a4.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_799a4.dir/objects.a --no-whole-archive --out-implib libcmTC_799a4.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cc2cUkW3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_40a47.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_40a47.dir/objects.a --no-whole-archive --out-implib libcmTC_40a47.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (GNU Binutils) 2.41
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_799a4.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_799a4.'
-        mingw32-make[1]: Leaving directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-qk90ta'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_40a47.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_40a47.'
+        mingw32-make[1]: Leaving directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-j3h3am'
         
       exitCode: 0
   -
@@ -416,7 +416,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -442,18 +442,18 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-qk90ta']
+        ignore line: [Change Dir: 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-j3h3am']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_799a4/fast]
-        ignore line: [C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_799a4.dir\\build.make CMakeFiles/cmTC_799a4.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-qk90ta']
-        ignore line: [Building CXX object CMakeFiles/cmTC_799a4.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\Users\\skwor\\gcc\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_40a47/fast]
+        ignore line: [C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_40a47.dir\\build.make CMakeFiles/cmTC_40a47.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/skwor/HSE/c++/encoder_AaP/build/CMakeFiles/CMakeScratch/TryCompile-j3h3am']
+        ignore line: [Building CXX object CMakeFiles/cmTC_40a47.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\Users\\skwor\\gcc\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\skwor\\gcc\\bin\\c++.exe]
@@ -462,8 +462,8 @@ events:
         ignore line: [Thread model: win32]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_799a4.dir\\']
-        ignore line: [ C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_799a4.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\skwor\\AppData\\Local\\Temp\\cc7y5oNX.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_40a47.dir\\']
+        ignore line: [ C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_40a47.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\skwor\\AppData\\Local\\Temp\\cc81dFsS.s]
         ignore line: [GNU C++17 (GCC) version 14.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 14.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -485,8 +485,8 @@ events:
         ignore line: [ C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 2cdd3e89952d411c6c1bf705b5926036]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_799a4.dir\\']
-        ignore line: [ C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\skwor\\AppData\\Local\\Temp\\cc7y5oNX.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_40a47.dir\\']
+        ignore line: [ C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\skwor\\AppData\\Local\\Temp\\cc81dFsS.s]
         ignore line: [GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.41]
         ignore line: [COMPILER_PATH=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/]
         ignore line: [C:/Users/skwor/gcc/bin/../libexec/gcc/]
@@ -497,12 +497,12 @@ events:
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_799a4.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_799a4.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_799a4.dir\\link.txt --verbose=1]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_799a4.dir/objects.a]
-        ignore line: [C:\\Users\\skwor\\gcc\\bin\\ar.exe qc CMakeFiles\\cmTC_799a4.dir/objects.a @CMakeFiles\\cmTC_799a4.dir\\objects1.rsp]
-        ignore line: [C:\\Users\\skwor\\gcc\\bin\\c++.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_799a4.dir/objects.a -Wl --no-whole-archive -o cmTC_799a4.exe -Wl --out-implib libcmTC_799a4.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_40a47.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_40a47.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_40a47.dir\\link.txt --verbose=1]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_40a47.dir/objects.a]
+        ignore line: [C:\\Users\\skwor\\gcc\\bin\\ar.exe qc CMakeFiles\\cmTC_40a47.dir/objects.a @CMakeFiles\\cmTC_40a47.dir\\objects1.rsp]
+        ignore line: [C:\\Users\\skwor\\gcc\\bin\\c++.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_40a47.dir/objects.a -Wl --no-whole-archive -o cmTC_40a47.exe -Wl --out-implib libcmTC_40a47.dll.a -Wl --major-image-version 0 --minor-image-version 0]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\skwor\\gcc\\bin\\c++.exe]
@@ -521,13 +521,13 @@ events:
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_799a4.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_799a4.']
-        link line: [ C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccwBeuda.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_799a4.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_799a4.dir/objects.a --no-whole-archive --out-implib libcmTC_799a4.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_40a47.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_40a47.']
+        link line: [ C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cc2cUkW3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_40a47.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_40a47.dir/objects.a --no-whole-archive --out-implib libcmTC_40a47.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccwBeuda.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cc2cUkW3.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
@@ -547,7 +547,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_799a4.exe] ==> ignore
+          arg [cmTC_40a47.exe] ==> ignore
           arg [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
@@ -558,10 +558,10 @@ events:
           arg [-LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_799a4.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_40a47.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_799a4.dll.a] ==> ignore
+          arg [libcmTC_40a47.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -583,7 +583,7 @@ events:
           arg [-lkernel32] ==> lib [kernel32]
           arg [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o] ==> obj [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\ccwBeuda.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_799a4.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_799a4.dir/objects.a --no-whole-archive --out-implib libcmTC_799a4.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/skwor/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\skwor\\AppData\\Local\\Temp\\cc2cUkW3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_40a47.exe C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/skwor/gcc/bin/../lib/gcc -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_40a47.dir/objects.a --no-whole-archive --out-implib libcmTC_40a47.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/skwor/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         linker tool for 'CXX': C:/Users/skwor/gcc/x86_64-w64-mingw32/bin/ld.exe
         remove lib [msvcrt]
         remove lib [msvcrt]
@@ -608,7 +608,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Running the CXX compiler's linker: "C:/Users/skwor/gcc/x86_64-w64-mingw32/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.41

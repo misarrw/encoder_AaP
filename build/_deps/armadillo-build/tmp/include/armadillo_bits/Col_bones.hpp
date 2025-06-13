@@ -67,9 +67,6 @@ class Col : public Mat<eT>
   inline            Col(Col&& m);
   inline Col& operator=(Col&& m);
   
-  // inline            Col(Mat<eT>&& m);
-  // inline Col& operator=(Mat<eT>&& m);
-  
   inline Col& operator=(const eT val);
   inline Col& operator=(const Col& m);
   
@@ -261,9 +258,9 @@ class Col<eT>::fixed : public Col<eT>
   arma_warn_unused arma_inline       eT* memptr();
   arma_warn_unused arma_inline const eT* memptr() const;
   
-  inline const Col<eT>& fill(const eT val);
-  inline const Col<eT>& zeros();
-  inline const Col<eT>& ones();
+  arma_hot inline const Col<eT>& fill(const eT val);
+  arma_hot inline const Col<eT>& zeros();
+  arma_hot inline const Col<eT>& ones();
   };
 
 

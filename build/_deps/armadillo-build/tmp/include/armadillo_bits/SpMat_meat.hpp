@@ -320,8 +320,8 @@ SpMat<eT>::SpMat(const Base<uword,T1>& locations_expr, const Base<eT,T2>& vals_e
   {
   arma_extra_debug_sigprint_this(this);
   
-  const quasi_unwrap<T1> locs_tmp( locations_expr.get_ref() );
-  const quasi_unwrap<T2> vals_tmp(      vals_expr.get_ref() );
+  const unwrap<T1> locs_tmp( locations_expr.get_ref() );
+  const unwrap<T2> vals_tmp(      vals_expr.get_ref() );
   
   const Mat<uword>& locs = locs_tmp.M;
   const Mat<eT>&    vals = vals_tmp.M;
@@ -393,8 +393,8 @@ SpMat<eT>::SpMat(const Base<uword,T1>& locations_expr, const Base<eT,T2>& vals_e
   {
   arma_extra_debug_sigprint_this(this);
   
-  const quasi_unwrap<T1> locs_tmp( locations_expr.get_ref() );
-  const quasi_unwrap<T2> vals_tmp(      vals_expr.get_ref() );
+  const unwrap<T1> locs_tmp( locations_expr.get_ref() );
+  const unwrap<T2> vals_tmp(      vals_expr.get_ref() );
   
   const Mat<uword>& locs = locs_tmp.M;
   const Mat<eT>&    vals = vals_tmp.M;
@@ -462,8 +462,8 @@ SpMat<eT>::SpMat(const bool add_values, const Base<uword,T1>& locations_expr, co
   {
   arma_extra_debug_sigprint_this(this);
   
-  const quasi_unwrap<T1> locs_tmp( locations_expr.get_ref() );
-  const quasi_unwrap<T2> vals_tmp(      vals_expr.get_ref() );
+  const unwrap<T1> locs_tmp( locations_expr.get_ref() );
+  const unwrap<T2> vals_tmp(      vals_expr.get_ref() );
   
   const Mat<uword>& locs = locs_tmp.M;
   const Mat<eT>&    vals = vals_tmp.M;
@@ -546,9 +546,9 @@ SpMat<eT>::SpMat
   {
   arma_extra_debug_sigprint_this(this);
   
-  const quasi_unwrap<T1> rowind_tmp( rowind_expr.get_ref() );
-  const quasi_unwrap<T2> colptr_tmp( colptr_expr.get_ref() );
-  const quasi_unwrap<T3>   vals_tmp( values_expr.get_ref() );
+  const unwrap<T1> rowind_tmp( rowind_expr.get_ref() );
+  const unwrap<T2> colptr_tmp( colptr_expr.get_ref() );
+  const unwrap<T3>   vals_tmp( values_expr.get_ref() );
   
   const Mat<uword>& rowind = rowind_tmp.M;
   const Mat<uword>& colptr = colptr_tmp.M;
@@ -1033,13 +1033,93 @@ template<typename eT>
 template<typename T1>
 inline
 SpMat<eT>&
-SpMat<eT>::operator*=(const Base<eT, T1>& x)
+SpMat<eT>::operator*=(const Base<eT, T1>& y)
   {
   arma_extra_debug_sigprint();
   
   sync_csc();
   
-  return (*this).operator=( (*this) * x.get_ref() );
+  const Proxy<T1> p(y.get_ref());
+  
+  arma_debug_assert_mul_size(n_rows, n_cols, p.get_n_rows(), p.get_n_cols(), "matrix multiplication");
+  
+  // We assume the matrix structure is such that we will end up with a sparse
+  // matrix.  Assuming that every entry in the dense matrix is nonzero (which is
+  // a fairly valid assumption), each row with any nonzero elements in it (in this
+  // matrix) implies an entire nonzero column.  Therefore, we iterate over all
+  // the row_indices and count the number of rows with any elements in them
+  // (using the quasi-linked-list idea from SYMBMM -- see spglue_times_meat.hpp).
+  podarray<uword> index(n_rows);
+  index.fill(n_rows); // Fill with invalid links.
+  
+  uword last_index = n_rows + 1;
+  for(uword i = 0; i < n_nonzero; ++i)
+    {
+    if(index[row_indices[i]] == n_rows)
+      {
+      index[row_indices[i]] = last_index;
+      last_index = row_indices[i];
+      }
+    }
+  
+  // Now count the number of rows which have nonzero elements.
+  uword nonzero_rows = 0;
+  while(last_index != n_rows + 1)
+    {
+    ++nonzero_rows;
+    last_index = index[last_index];
+    }
+  
+  SpMat<eT> z(arma_reserve_indicator(), n_rows, p.get_n_cols(), (nonzero_rows * p.get_n_cols())); // upper bound on size
+  
+  // Now we have to fill all the elements using a modification of the NUMBMM algorithm.
+  uword cur_pos = 0;
+  
+  podarray<eT> partial_sums(n_rows);
+  partial_sums.zeros();
+  
+  for(uword lcol = 0; lcol < n_cols; ++lcol)
+    {
+    const_iterator it     = begin();
+    const_iterator it_end = end();
+    
+    while(it != it_end)
+      {
+      const eT value = (*it);
+      
+      partial_sums[it.row()] += (value * p.at(it.col(), lcol));
+      
+      ++it;
+      }
+    
+    // Now add all partial sums to the matrix.
+    for(uword i = 0; i < n_rows; ++i)
+      {
+      if(partial_sums[i] != eT(0))
+        {
+        access::rw(z.values[cur_pos]) = partial_sums[i];
+        access::rw(z.row_indices[cur_pos]) = i;
+        ++access::rw(z.col_ptrs[lcol + 1]);
+        //printf("colptr %d now %d\n", lcol + 1, z.col_ptrs[lcol + 1]);
+        ++cur_pos;
+        partial_sums[i] = 0; // Would it be faster to do this in batch later?
+        }
+      }
+    }
+  
+  // Now fix the column pointers.
+  for(uword c = 1; c <= z.n_cols; ++c)
+    {
+    access::rw(z.col_ptrs[c]) += z.col_ptrs[c - 1];
+    }
+  
+  // Resize to final correct size.
+  z.mem_resize(z.col_ptrs[z.n_cols]);
+  
+  // Now take the memory of the temporary matrix.
+  steal_mem(z);
+  
+  return *this;
   }
 
 
@@ -1072,38 +1152,13 @@ SpMat<eT>::operator%=(const Base<eT, T1>& x)
   {
   arma_extra_debug_sigprint();
   
-  const quasi_unwrap<T1> U(x.get_ref());
-  const Mat<eT>& B     = U.M;
+  SpMat<eT> tmp;
   
-  arma_debug_assert_same_size(n_rows, n_cols, B.n_rows, B.n_cols, "element-wise multiplication");
+  // Just call the other order (these operations are commutative)
+  // TODO: if there is a matrix size mismatch, the debug assert will print the matrix sizes in wrong order
+  spglue_schur_misc::dense_schur_sparse(tmp, x.get_ref(), (*this));
   
-  sync_csc();
-  invalidate_cache();
-  
-  constexpr eT zero = eT(0);
-  
-  bool has_zero = false;
-  
-  for(uword c=0; c < n_cols; ++c)
-    {
-    const uword index_start = col_ptrs[c    ];
-    const uword index_end   = col_ptrs[c + 1];
-    
-    for(uword i=index_start; i < index_end; ++i)
-      {
-      const uword r = row_indices[i];
-      
-      eT& val = access::rw(values[i]);
-      
-      const eT result = val * B.at(r,c);
-      
-      val = result;
-      
-      if(result == zero)  { has_zero = true; }
-      }
-    }
-  
-  if(has_zero)  { remove_zeros(); }
+  steal_mem(tmp);
   
   return *this;
   }
@@ -2971,11 +3026,12 @@ SpMat<eT>::swap_cols(const uword in_col1, const uword in_col2)
   
   // TODO: this is a rudimentary implementation
   
-  const SpMat<eT> tmp1 = (*this).col(in_col1);
-  const SpMat<eT> tmp2 = (*this).col(in_col2);
+  SpMat<eT> tmp = (*this);
   
-  (*this).col(in_col2) = tmp1;
-  (*this).col(in_col1) = tmp2;
+  tmp.col(in_col1) = (*this).col(in_col2);
+  tmp.col(in_col2) = (*this).col(in_col1);
+  
+  steal_mem(tmp);
   
   // for(uword lrow = 0; lrow < n_rows; ++lrow)
   //   {
@@ -3055,8 +3111,8 @@ SpMat<eT>::shed_rows(const uword in_row1, const uword in_row2)
   
   // Now, copy over the elements.
   // i is the index in the old matrix; j is the index in the new matrix.
-  const_iterator it     = cbegin();
-  const_iterator it_end = cend();
+  const_iterator it     = begin();
+  const_iterator it_end = end();
   
   uword j = 0; // The index in the new matrix.
   while(it != it_end)
@@ -3126,8 +3182,8 @@ SpMat<eT>::shed_cols(const uword in_col1, const uword in_col2)
   
   if(diff > 0)
     {
-    eT*    new_values      = memory::acquire<eT>   (n_nonzero + 1 - diff);
-    uword* new_row_indices = memory::acquire<uword>(n_nonzero + 1 - diff);
+    eT*    new_values      = memory::acquire<eT>   (n_nonzero - diff);
+    uword* new_row_indices = memory::acquire<uword>(n_nonzero - diff);
     
     // Copy first part.
     if(col_beg != 0)
@@ -3142,10 +3198,6 @@ SpMat<eT>::shed_cols(const uword in_col1, const uword in_col2)
       arrayops::copy(new_values + col_beg, values + col_end, n_nonzero - col_end);
       arrayops::copy(new_row_indices + col_beg, row_indices + col_end, n_nonzero - col_end);
       }
-
-    // Copy sentry element.
-    new_values[n_nonzero - diff] = values[n_nonzero];
-    new_row_indices[n_nonzero - diff] = row_indices[n_nonzero];
     
     if(values)       { memory::release(access::rw(values));      }
     if(row_indices)  { memory::release(access::rw(row_indices)); }
@@ -3394,6 +3446,21 @@ SpMat<eT>::is_square() const
 
 
 
+//! returns true if all of the elements are finite
+template<typename eT>
+inline
+bool
+SpMat<eT>::is_finite() const
+  {
+  arma_extra_debug_sigprint();
+  
+  sync_csc();
+  
+  return arrayops::is_finite(values, n_nonzero);
+  }
+
+
+
 template<typename eT>
 inline
 bool
@@ -3489,21 +3556,7 @@ SpMat<eT>::is_hermitian(const typename get_pod_type<elem_type>::result tol) cons
 template<typename eT>
 inline
 bool
-SpMat<eT>::internal_is_finite() const
-  {
-  arma_extra_debug_sigprint();
-  
-  sync_csc();
-  
-  return arrayops::is_finite(values, n_nonzero);
-  }
-
-
-
-template<typename eT>
-inline
-bool
-SpMat<eT>::internal_has_inf() const
+SpMat<eT>::has_inf() const
   {
   arma_extra_debug_sigprint();
   
@@ -3517,7 +3570,7 @@ SpMat<eT>::internal_has_inf() const
 template<typename eT>
 inline
 bool
-SpMat<eT>::internal_has_nan() const
+SpMat<eT>::has_nan() const
   {
   arma_extra_debug_sigprint();
   
@@ -3531,7 +3584,7 @@ SpMat<eT>::internal_has_nan() const
 template<typename eT>
 inline
 bool
-SpMat<eT>::internal_has_nonfinite() const
+SpMat<eT>::has_nonfinite() const
   {
   arma_extra_debug_sigprint();
   
@@ -3675,12 +3728,12 @@ SpMat<eT>::in_range(const uword in_row, const uword in_col, const SizeMat& s) co
 template<typename eT>
 template<typename eT2>
 inline
-SpMat<eT>&
+void
 SpMat<eT>::copy_size(const SpMat<eT2>& m)
   {
   arma_extra_debug_sigprint();
   
-  return set_size(m.n_rows, m.n_cols);
+  set_size(m.n_rows, m.n_cols);
   }
 
 
@@ -3688,19 +3741,19 @@ SpMat<eT>::copy_size(const SpMat<eT2>& m)
 template<typename eT>
 template<typename eT2>
 inline
-SpMat<eT>&
+void
 SpMat<eT>::copy_size(const Mat<eT2>& m)
   {
   arma_extra_debug_sigprint();
   
-  return set_size(m.n_rows, m.n_cols);
+  set_size(m.n_rows, m.n_cols);
   }
 
 
 
 template<typename eT>
 inline
-SpMat<eT>&
+void
 SpMat<eT>::set_size(const uword in_elem)
   {
   arma_extra_debug_sigprint();
@@ -3714,52 +3767,57 @@ SpMat<eT>::set_size(const uword in_elem)
     {
     set_size(in_elem, 1);
     }
-  
-  return *this;
   }
 
 
 
 template<typename eT>
 inline
-SpMat<eT>&
+void
 SpMat<eT>::set_size(const uword in_rows, const uword in_cols)
   {
   arma_extra_debug_sigprint();
   
   invalidate_cache(); // placed here, as set_size() is used during matrix modification
   
-  if( (n_rows == in_rows) && (n_cols == in_cols) )  { return *this; }
-  
-  init(in_rows, in_cols);
-  
-  return *this;
+  if( (n_rows == in_rows) && (n_cols == in_cols) )
+    {
+    return;
+    }
+  else
+    {
+    init(in_rows, in_cols);
+    }
   }
 
 
 
 template<typename eT>
 inline
-SpMat<eT>&
+void
 SpMat<eT>::set_size(const SizeMat& s)
   {
   arma_extra_debug_sigprint();
   
-  return (*this).set_size(s.n_rows, s.n_cols);
+  (*this).set_size(s.n_rows, s.n_cols);
   }
 
 
 
 template<typename eT>
 inline
-SpMat<eT>&
+void
 SpMat<eT>::resize(const uword in_rows, const uword in_cols)
   {
   arma_extra_debug_sigprint();
   
-  if( (n_rows == in_rows) && (n_cols == in_cols) )  { return *this; }
+  if( (n_rows == in_rows) && (n_cols == in_cols) )  { return; }
   
-  if( (n_elem == 0) || (n_nonzero == 0) )  { return set_size(in_rows, in_cols); }
+  if( (n_elem == 0) || (n_nonzero == 0) )
+    {
+    set_size(in_rows, in_cols);
+    return;
+    }
   
   SpMat<eT> tmp(in_rows, in_cols);
   
@@ -3774,39 +3832,41 @@ SpMat<eT>::resize(const uword in_rows, const uword in_cols)
     }
   
   steal_mem(tmp);
-  
-  return *this;
   }
 
 
 
 template<typename eT>
 inline
-SpMat<eT>&
+void
 SpMat<eT>::resize(const SizeMat& s)
   {
   arma_extra_debug_sigprint();
   
-  return (*this).resize(s.n_rows, s.n_cols);
+  (*this).resize(s.n_rows, s.n_cols);
   }
 
 
 
 template<typename eT>
 inline
-SpMat<eT>&
+void
 SpMat<eT>::reshape(const uword in_rows, const uword in_cols)
   {
   arma_extra_debug_sigprint();
   
   arma_check( ((in_rows*in_cols) != n_elem), "SpMat::reshape(): changing the number of elements in a sparse matrix is currently not supported" );
   
-  if( (n_rows == in_rows) && (n_cols == in_cols) )  { return *this; }
+  if( (n_rows == in_rows) && (n_cols == in_cols) )  { return; }
   
   if(vec_state == 1)  { arma_debug_check( (in_cols != 1), "SpMat::reshape(): object is a column vector; requested size is not compatible" ); }
   if(vec_state == 2)  { arma_debug_check( (in_rows != 1), "SpMat::reshape(): object is a row vector; requested size is not compatible"    ); }
   
-  if(n_nonzero == 0)  { return (*this).zeros(in_rows, in_cols); }
+  if(n_nonzero == 0)
+    {
+    (*this).zeros(in_rows, in_cols);
+    return;
+    }
   
   if(in_cols == 1)
     {
@@ -3816,20 +3876,18 @@ SpMat<eT>::reshape(const uword in_rows, const uword in_cols)
     {
     (*this).reshape_helper_generic(in_rows, in_cols);
     }
-  
-  return *this;
   }
 
 
 
 template<typename eT>
 inline
-SpMat<eT>&
+void
 SpMat<eT>::reshape(const SizeMat& s)
   {
   arma_extra_debug_sigprint();
   
-  return (*this).reshape(s.n_rows, s.n_cols);
+  (*this).reshape(s.n_rows, s.n_cols);
   }
 
 
@@ -3855,8 +3913,8 @@ SpMat<eT>::reshape_helper_generic(const uword in_rows, const uword in_cols)
   
   arrayops::fill_zeros(new_col_ptrs, in_cols + 1);
   
-  const_iterator it     = cbegin();
-  const_iterator it_end = cend();
+  const_iterator it     = begin();
+  const_iterator it_end = end();
   
   for(; it != it_end; ++it)
     {
@@ -3895,7 +3953,7 @@ SpMat<eT>::reshape_helper_intovec()
   sync_csc();
   invalidate_cache();
   
-  const_iterator it = cbegin();
+  const_iterator it = begin();
   
   const uword t_n_rows    = n_rows;
   const uword t_n_nonzero = n_nonzero;
@@ -3927,7 +3985,7 @@ SpMat<eT>::reshape_helper_intovec()
 template<typename eT>
 template<typename functor>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::for_each(functor F)
   {
   arma_extra_debug_sigprint();
@@ -3972,7 +4030,10 @@ SpMat<eT>::for_each(functor F) const
   
   const uword N = (*this).n_nonzero;
   
-  for(uword i=0; i < N; ++i)  { F(values[i]); }
+  for(uword i=0; i < N; ++i)
+    {
+    F(values[i]);
+    }
   
   return *this;
   }
@@ -3983,7 +4044,7 @@ SpMat<eT>::for_each(functor F) const
 template<typename eT>
 template<typename functor>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::transform(functor F)
   {
   arma_extra_debug_sigprint();
@@ -4015,7 +4076,7 @@ SpMat<eT>::transform(functor F)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::replace(const eT old_val, const eT new_val)
   {
   arma_extra_debug_sigprint();
@@ -4041,7 +4102,7 @@ SpMat<eT>::replace(const eT old_val, const eT new_val)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::clean(const typename get_pod_type<eT>::result threshold)
   {
   arma_extra_debug_sigprint();
@@ -4062,7 +4123,7 @@ SpMat<eT>::clean(const typename get_pod_type<eT>::result threshold)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::clamp(const eT min_val, const eT max_val)
   {
   arma_extra_debug_sigprint();
@@ -4093,16 +4154,14 @@ SpMat<eT>::clamp(const eT min_val, const eT max_val)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::zeros()
   {
   arma_extra_debug_sigprint();
   
-  if((n_nonzero == 0) && (values != nullptr))
-    {
-    invalidate_cache();
-    }
-  else
+  const bool already_done = ( (sync_state != 1) && (n_nonzero == 0) );
+  
+  if(already_done == false)
     {
     init(n_rows, n_cols);
     }
@@ -4114,7 +4173,7 @@ SpMat<eT>::zeros()
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::zeros(const uword in_elem)
   {
   arma_extra_debug_sigprint();
@@ -4135,16 +4194,14 @@ SpMat<eT>::zeros(const uword in_elem)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::zeros(const uword in_rows, const uword in_cols)
   {
   arma_extra_debug_sigprint();
   
-  if((n_nonzero == 0) && (n_rows == in_rows) && (n_cols == in_cols) && (values != nullptr))
-    {
-    invalidate_cache();
-    }
-  else
+  const bool already_done = ( (sync_state != 1) && (n_nonzero == 0) && (n_rows == in_rows) && (n_cols == in_cols) );
+  
+  if(already_done == false)
     {
     init(in_rows, in_cols);
     }
@@ -4156,7 +4213,7 @@ SpMat<eT>::zeros(const uword in_rows, const uword in_cols)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::zeros(const SizeMat& s)
   {
   arma_extra_debug_sigprint();
@@ -4168,7 +4225,7 @@ SpMat<eT>::zeros(const SizeMat& s)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::eye()
   {
   arma_extra_debug_sigprint();
@@ -4180,7 +4237,7 @@ SpMat<eT>::eye()
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::eye(const uword in_rows, const uword in_cols)
   {
   arma_extra_debug_sigprint();
@@ -4207,7 +4264,7 @@ SpMat<eT>::eye(const uword in_rows, const uword in_cols)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::eye(const SizeMat& s)
   {
   arma_extra_debug_sigprint();
@@ -4219,7 +4276,7 @@ SpMat<eT>::eye(const SizeMat& s)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::speye()
   {
   arma_extra_debug_sigprint();
@@ -4231,7 +4288,7 @@ SpMat<eT>::speye()
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::speye(const uword in_n_rows, const uword in_n_cols)
   {
   arma_extra_debug_sigprint();
@@ -4243,7 +4300,7 @@ SpMat<eT>::speye(const uword in_n_rows, const uword in_n_cols)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::speye(const SizeMat& s)
   {
   arma_extra_debug_sigprint();
@@ -4255,7 +4312,7 @@ SpMat<eT>::speye(const SizeMat& s)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::sprandu(const uword in_rows, const uword in_cols, const double density)
   {
   arma_extra_debug_sigprint();
@@ -4329,7 +4386,7 @@ SpMat<eT>::sprandu(const uword in_rows, const uword in_cols, const double densit
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::sprandu(const SizeMat& s, const double density)
   {
   arma_extra_debug_sigprint();
@@ -4341,7 +4398,7 @@ SpMat<eT>::sprandu(const SizeMat& s, const double density)
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::sprandn(const uword in_rows, const uword in_cols, const double density)
   {
   arma_extra_debug_sigprint();
@@ -4415,7 +4472,7 @@ SpMat<eT>::sprandn(const uword in_rows, const uword in_cols, const double densit
 
 template<typename eT>
 inline
-SpMat<eT>&
+const SpMat<eT>&
 SpMat<eT>::sprandn(const SizeMat& s, const double density)
   {
   arma_extra_debug_sigprint();
@@ -4431,12 +4488,20 @@ void
 SpMat<eT>::reset()
   {
   arma_extra_debug_sigprint();
-  
+
   switch(vec_state)
     {
-    default:  init(0, 0); break;
-    case 1:   init(0, 1); break;
-    case 2:   init(1, 0); break;
+    default:
+      init(0, 0);
+      break;
+      
+    case 1:
+      init(0, 1);
+      break;
+    
+    case 2:
+      init(1, 0);
+      break;
     }
   }
 
@@ -4552,7 +4617,7 @@ SpMat<eT>::save(const std::string name, const file_type type) const
       save_okay = false;
     }
   
-  if(save_okay == false)  { arma_debug_warn_level(3, "SpMat::save(): write failed; file: ", name); }
+  if(save_okay == false)  { arma_debug_warn_level(3, "SpMat::save(): couldn't write; file: ", name); }
   
   return save_okay;
   }
@@ -4609,7 +4674,7 @@ SpMat<eT>::save(const csv_name& spec, const file_type type) const
     
     if(spec.header_ro.n_elem != save_n_cols)
       {
-      arma_debug_warn_level(1, "SpMat::save(): size mismatch between header and matrix");
+      arma_debug_warn_level(1, "SpMat::save(): size mistmach between header and matrix");
       return false;
       }
     }
@@ -4627,7 +4692,7 @@ SpMat<eT>::save(const csv_name& spec, const file_type type) const
     save_okay = diskio::save_csv_ascii(*this, spec.filename, spec.header_ro, with_header, separator);
     }
   
-  if(save_okay == false)  { arma_debug_warn_level(3, "SpMat::save(): write failed; file: ", spec.filename); }
+  if(save_okay == false)  { arma_debug_warn_level(3, "SpMat::save(): couldn't write; file: ", spec.filename); }
   
   return save_okay;
   }
@@ -4669,7 +4734,7 @@ SpMat<eT>::save(std::ostream& os, const file_type type) const
       save_okay = false;
     }
   
-  if(save_okay == false)  { arma_debug_warn_level(3, "SpMat::save(): stream write failed"); }
+  if(save_okay == false)  { arma_debug_warn_level(3, "SpMat::save(): couldn't write to stream"); }
   
   return save_okay;
   }
@@ -4724,7 +4789,7 @@ SpMat<eT>::load(const std::string name, const file_type type)
       }
     else
       {
-      arma_debug_warn_level(3, "SpMat::load(): read failed; file: ", name);
+      arma_debug_warn_level(3, "SpMat::load(): couldn't read; file: ", name);
       }
     }
   
@@ -4799,7 +4864,7 @@ SpMat<eT>::load(const csv_name& spec, const file_type type)
       }
     else
       {
-      arma_debug_warn_level(3, "SpMat::load(): read failed; file: ", spec.filename);
+      arma_debug_warn_level(3, "SpMat::load(): couldn't read; file: ", spec.filename);
       }
     }
   else
@@ -4808,7 +4873,7 @@ SpMat<eT>::load(const csv_name& spec, const file_type type)
     
     if(with_header && (spec.header_rw.n_elem != load_n_cols))
       {
-      arma_debug_warn_level(3, "SpMat::load(): size mismatch between header and matrix");
+      arma_debug_warn_level(3, "SpMat::load(): size mistmach between header and matrix");
       }
     }
   
@@ -4872,7 +4937,7 @@ SpMat<eT>::load(std::istream& is, const file_type type)
       }
     else
       {
-      arma_debug_warn_level(3, "SpMat::load(): stream read failed");
+      arma_debug_warn_level(3, "SpMat::load(): couldn't load from stream");
       }
     }
   
@@ -5206,21 +5271,11 @@ SpMat<eT>::init_simple(const SpMat<eT>& x)
   
   if(this == &x)  { return; }
   
-  if((x.n_nonzero == 0) && (n_nonzero == 0) && (n_rows == x.n_rows) && (n_cols == x.n_cols) && (values != nullptr))
-    {
-    invalidate_cache();
-    }
-  else
-    {
-    init(x.n_rows, x.n_cols, x.n_nonzero);
-    }
+  init(x.n_rows, x.n_cols, x.n_nonzero);
   
-  if(x.n_nonzero != 0)
-    {
-    if(x.values     )  { arrayops::copy(access::rwp(values),      x.values,      x.n_nonzero + 1); }
-    if(x.row_indices)  { arrayops::copy(access::rwp(row_indices), x.row_indices, x.n_nonzero + 1); }
-    if(x.col_ptrs   )  { arrayops::copy(access::rwp(col_ptrs),    x.col_ptrs,    x.n_cols    + 1); }
-    }
+  if(x.values     )  { arrayops::copy(access::rwp(values),      x.values,      x.n_nonzero + 1); }
+  if(x.row_indices)  { arrayops::copy(access::rwp(row_indices), x.row_indices, x.n_nonzero + 1); }
+  if(x.col_ptrs   )  { arrayops::copy(access::rwp(col_ptrs),    x.col_ptrs,    x.n_cols    + 1); }
   }
 
 
@@ -5648,11 +5703,9 @@ SpMat<eT>::remove_zeros()
   
   const eT* old_values = values;
   
-  constexpr eT zero = eT(0);
-  
   for(uword i=0; i < old_n_nonzero; ++i)
     {
-    new_n_nonzero += (old_values[i] != zero) ? uword(1) : uword(0);
+    new_n_nonzero += (old_values[i] != eT(0)) ? uword(1) : uword(0);
     }
   
   if(new_n_nonzero != old_n_nonzero)
@@ -5663,21 +5716,18 @@ SpMat<eT>::remove_zeros()
     
     uword new_index = 0;
     
-    const_iterator it     = cbegin();
-    const_iterator it_end = cend();
+    const_iterator it     = begin();
+    const_iterator it_end = end();
     
     for(; it != it_end; ++it)
       {
       const eT val = eT(*it);
       
-      if(val != zero)
+      if(val != eT(0))
         {
-        const uword it_row = it.row();
-        const uword it_col = it.col();
-        
         access::rw(tmp.values[new_index])      = val;
-        access::rw(tmp.row_indices[new_index]) = it_row;
-        access::rw(tmp.col_ptrs[it_col + 1])++;
+        access::rw(tmp.row_indices[new_index]) = it.row();
+        access::rw(tmp.col_ptrs[it.col() + 1])++;
         ++new_index;
         }
       }
