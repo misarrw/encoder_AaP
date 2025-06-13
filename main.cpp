@@ -34,8 +34,7 @@ int main()
         std::string file_with_text;
         std::cin >> file_with_text;
 
-        //bool is_valid = validate_file_path(file_with_text);
-        bool is_valid{true};
+        bool is_valid = validate_file_path(file_with_text);
         if (!is_valid) {
             std::cout << "\nInvalid file name. Try again.";
             break;
@@ -90,6 +89,7 @@ int main()
                             if (operation == '1') {ciphertext = caesar.caesar_encryption(text);}
                             else {ciphertext = caesar.caesar_decryption(text);}
                             string_to_file(result_file, ciphertext);
+                            break;
                         }
 
                         case 2: {
@@ -101,16 +101,18 @@ int main()
                             AffineCoder coder(alpha, beta);
                             std::string ciphertext = AffineCipher(text).affine(coder);
                             string_to_file(result_file, ciphertext);
+                            break;
                         }
 
                         case 3: {
                             // аффинный рекуррентный
+                            break;
                         }
                     }
+                    break;
                 }
 
                 case 2: {
-                    /
                     std::cout << "1. Hill cipher\n"
                     "2. Recurrent Hill cipher\n"
                     "Enter strictly 1 or 2: ";
@@ -149,15 +151,17 @@ int main()
                             }
 
                             std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(matrix);
-                            int option = 1;
-                            std::string ciphertext = key_vec->hill(text, option);
+                            std::string ciphertext = key_vec->hill(text, operation);
                             string_to_file(result_file, ciphertext);
+                            break;
                         }
                         
                         case 2: {
                             // хилла рекуррентный
+                            break;
                         }
                     }
+                    break;
                 }
 
                 case 3: {
@@ -186,24 +190,30 @@ int main()
                             switch(gamma_type) {
                                 case 1: {
                                     ciphertext = VigenereRepetitionGamma(text, operation).ciphertext;
+                                    break;
                                 }
 
                                 case 2: {
                                     ciphertext =  VigenereOpenTextGamma(text, operation).ciphertext;
+                                    break;
                                 }
 
                                 case 3: {
                                     ciphertext =  VigenereCipherTextGamma(text, operation).ciphertext;
+                                    break;
                                 }
                             }
 
                             string_to_file(result_file, ciphertext);
+                            break;
                         }
 
                         case 2: {
                             VernameCipher(text, 1);
+                            break;
                         }
                     }
+                    break;
                 }
             }
         }
