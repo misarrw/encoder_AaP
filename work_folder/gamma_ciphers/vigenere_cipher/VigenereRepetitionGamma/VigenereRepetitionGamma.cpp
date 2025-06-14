@@ -3,6 +3,7 @@
 # include <iostream>
 # include <cctype>
 
+
 void VigenereRepetitionGamma::create_gamma()
 {
     const size_t len_text = text_numbers.size();

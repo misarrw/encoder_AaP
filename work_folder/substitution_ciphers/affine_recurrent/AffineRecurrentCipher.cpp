@@ -1,10 +1,6 @@
 #include <iostream>
 #include <array>
 #include <string>
-#include "AffineRecurrentCipher.h"
-#include "../../SubFunctions.h"
-#include "../SubstitutionCipher.h"
-#include "../../globals.h"
 #include <numeric>
 #include "../../globals.h"
 #include "AffineRecurrentCipher.h"
