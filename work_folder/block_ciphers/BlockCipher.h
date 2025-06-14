@@ -12,6 +12,7 @@ class BlockCipher : public SubFunction
 protected:
     std::vector<std::vector<int>> key_vec;
     void check_hill_key(std::vector<std::vector<int>> matrix, int determinant);
+    arma::mat gauss_jordan_inverse_arma(const arma::mat& mat);
     
 
 public:

@@ -10,7 +10,6 @@ AffineCipher::AffineCipher(const std::string& text):text(text) {}
 std::string AffineCipher::affine(Affine& coder)
 {
     std::string cipher_text;
-    std::cout << text;
     for (char c : text) {
         c = toupper(c);
         int index = ALPHABET.find(c);
@@ -26,7 +25,6 @@ std::string AffineCipher::affine(Affine& coder)
 
 int AffineCoder::cipher(int &index)
 {
-    std::cout << "2";
     return (alpha * index + beta) % ALPHABET_SIZE;
 }
 
