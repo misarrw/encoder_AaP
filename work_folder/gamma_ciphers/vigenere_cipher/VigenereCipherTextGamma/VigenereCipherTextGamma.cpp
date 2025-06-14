@@ -1,6 +1,7 @@
 #include "VigenereCipherTextGamma.h"
 
-void VigenereCipherTextGamma::creat_gamma()
+
+void VigenereCipherTextGamma::create_gamma()
 {
     gamma.push_back(key_numbers[0]);
 }

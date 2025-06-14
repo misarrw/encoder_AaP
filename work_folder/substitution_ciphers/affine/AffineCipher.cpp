@@ -1,6 +1,6 @@
 #include <iostream>
 #include "AffineCipher.h"
-#include "..\..\globals.h"
+#include "../../globals.h"
 #include <cctype>
 
 

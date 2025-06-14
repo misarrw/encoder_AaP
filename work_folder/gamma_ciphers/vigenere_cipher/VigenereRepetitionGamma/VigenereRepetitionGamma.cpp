@@ -1,10 +1,9 @@
 #include "VigenereRepetitionGamma.h"
-# include "..\..\..\globals.h"
+# include "../../../globals.h"
 # include <iostream>
 # include <cctype>
 
-
-void VigenereRepetitionGamma::creat_gamma()
+void VigenereRepetitionGamma::create_gamma()
 {
     const size_t len_text = text_numbers.size();
     const size_t len_key = key_numbers.size(); 
@@ -18,4 +17,3 @@ void VigenereRepetitionGamma::creat_gamma()
     gamma = text_in_numbers(gamma_str);
     return;
 }
-

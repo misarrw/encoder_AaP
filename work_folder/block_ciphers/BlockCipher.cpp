@@ -41,7 +41,7 @@ arma::mat BlockCipher::make_arma_matrix(std::vector<std::vector<int>>& key_vec)
 }
 
 
-std::vector<std::vector<int>> BlockCipher::find_inverse_matrix() {
+std::vector<std::vector<int>> BlockCipher::find_inverse_matrix(std::vector<std::vector<int>> key_vec) {
     arma::mat arma_matrix = make_arma_matrix(key_vec);
 
     double det = arma::det(arma_matrix);

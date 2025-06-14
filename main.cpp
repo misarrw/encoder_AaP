@@ -1,16 +1,18 @@
 #include <iostream>
 #include <cctype>
-#include "work_folder\SubFunctions.h"
+#include "work_folder/SubFunctions.h"
 #include <fstream>
-#include "work_folder\substitution_ciphers\caesar\CaesarCipher.h"
-#include "work_folder\substitution_ciphers\Affine\AffineCipher.h"
-#include "work_folder\files_functions.h"
-#include "work_folder\block_ciphers\BlockCipher.h"
-#include "work_folder\block_ciphers\hill_cipher\HillCipher.h"
-#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereOpenTextGamma\VigenereOpenTextGamma.h"
-#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereCipherTextGamma\VigenereCipherTextGamma.h"
-#include "work_folder\gamma_ciphers\vigenere_cipher\VigenereRepetitionGamma\VigenereRepetitionGamma.h"
-#include "work_folder\gamma_ciphers\VernameCipher\VernameCipher.h"
+#include "work_folder/substitution_ciphers/caesar/CaesarCipher.h"
+#include "work_folder/substitution_ciphers/affine/AffineCipher.h"
+#include "work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h"
+#include "work_folder/files_functions.h"
+#include "work_folder/block_ciphers/BlockCipher.h"
+#include "work_folder/block_ciphers/hill_cipher/HillCipher.h"
+#include "work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.h"
+#include "work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.h"
+#include "work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.h"
+#include "work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.h"
+#include "work_folder/gamma_ciphers/VernameCipher/VernameCipher.h"
 #include <memory>
 
 
@@ -105,7 +107,17 @@ int main()
                         }
 
                         case 3: {
-                            // аффинный рекуррентный
+                            int alpha1, beta1, alpha2, beta2;
+                            std::cout << "Enter the first key (alpha beta): ";
+                            std::cin >> alpha1 >> beta1;
+                            std::cout << "Enter the second key (alpha beta): ";
+                            std::cin >> alpha2 >> beta2;
+                            std::array<int, 2> key1 = {alpha1, beta1};
+                            std::array<int, 2> key2 = {alpha2, beta2};
+
+                            AffineRecurrentCipher arcipher(key1, key2);
+                            std::string ciphertext = arcipher.cipher(text, operation);
+                            string_to_file(result_file, ciphertext);
                             break;
                         }
                     }
@@ -156,9 +168,51 @@ int main()
                             break;
                         }
                         
+                        
                         case 2: {
-                            // хилла рекуррентный
-                            break;
+                            std::vector<std::vector<int>> matrix1(key_size, std::vector<int>(key_size));
+                            std::vector<std::vector<int>> matrix2(key_size, std::vector<int>(key_size));
+
+                            std::cout << "\nEnter the first key matrix:\n"
+                            "Hint: enter columns separated by spaces, and rows by pressing 'ENTER':" << std::endl;
+
+                            for (int i = 0; i < key_size; ++i) {
+                                std::string row_input;
+                                std::cout << "Row " << i + 1 << ": ";
+                                std::getline(std::cin >> std::ws, row_input);
+                            
+                                std::istringstream iss(row_input);
+                                for (int j = 0; j < key_size; ++j) {
+                                    if (!(iss >> matrix1[i][j])) {
+                                        std::cerr << "Invalid input for row " << i + 1 << ". Please try again.\n";
+                                        --i;
+                                        break;
+                                    }
+                                }
+                            }
+
+                            std::cout << "\nEnter the second key matrix:\n"
+                            "Hint: enter columns separated by spaces, and rows by pressing 'ENTER':" << std::endl;
+
+                            for (int i = 0; i < key_size; ++i) {
+                                std::string row_input;
+                                std::cout << "Row " << i + 1 << ": ";
+                                std::getline(std::cin >> std::ws, row_input);
+                            
+                                std::istringstream iss(row_input);
+                                for (int j = 0; j < key_size; ++j) {
+                                    if (!(iss >> matrix2[i][j])) {
+                                        std::cerr << "Invalid input for row " << i + 1 << ". Please try again.\n";
+                                        --i;
+                                        break;
+                                    }
+                                }
+                            }
+
+                            HillRecurrentCipher hrcipher(matrix1, matrix2);
+                            std::string ciphertext = hrcipher.hill(text, operation);
+                            string_to_file(result_file, ciphertext);
+
                         }
                     }
                     break;

@@ -4,8 +4,8 @@
 #include <stdexcept>
 #include <armadillo>
 #include <numeric>
-#include "..\globals.h"
-#include "..\SubFunctions.h"
+#include "../globals.h"
+#include "../SubFunctions.h"
 
 class BlockCipher : public SubFunction
 {
@@ -40,33 +40,8 @@ public:
 
     arma::mat make_arma_matrix(std::vector<std::vector<int>>& key_vec);
 
-    std::vector<std::vector<int>> find_inverse_matrix();
+    std::vector<std::vector<int>> find_inverse_matrix(std::vector<std::vector<int>> key_vec);
 
     virtual ~BlockCipher() = default;
 };
 
-
-// struct MatrixKey : BlockCipher
-// {
-//     std::vector<std::vector<int>> data;
-//     size_t size;
-
-//     // Конструктор, принимающий двумерный вектор
-//     MatrixKey(const std::vector<std::vector<int>>& matrix) 
-//         : data(matrix), size(matrix.size()) 
-//     {}
-
-//     MatrixKey(size_t n) 
-//         : data(n, std::vector<int>(n, 0)), size(n) 
-//     {}
-
-//     // Оператор доступа к элементам матрицы (неконстантная версия)
-//     std::vector<int>& operator[](size_t index) {
-//         return data[index];
-//     }
-
-//     // Получение размера матрицы
-//     size_t getSize() const {
-//         return size;
-//     }
-// };
