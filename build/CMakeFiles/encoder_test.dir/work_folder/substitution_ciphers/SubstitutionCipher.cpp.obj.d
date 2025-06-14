@@ -140,4 +140,8 @@ CMakeFiles/encoder_test.dir/work_folder/substitution_ciphers/SubstitutionCipher.
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_vector.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_bvector.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/vector.tcc \
- C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/globals.h
+ C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/globals.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/numeric \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_numeric.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/pstl/glue_numeric_defs.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/pstl/execution_defs.h

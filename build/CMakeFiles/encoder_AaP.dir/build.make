@@ -296,26 +296,11 @@ CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.s"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_cipher\HillCipher.cpp -o CMakeFiles\encoder_AaP.dir\work_folder\block_ciphers\hill_cipher\HillCipher.cpp.s
 
-CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_AaP.dir/flags.make
-CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_AaP.dir/includes_CXX.rsp
-CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp
-CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_AaP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj"
-	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj -MF CMakeFiles\encoder_AaP.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.obj.d -o CMakeFiles\encoder_AaP.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp
-
-CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i"
-	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp > CMakeFiles\encoder_AaP.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.i
-
-CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s"
-	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp -o CMakeFiles\encoder_AaP.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.s
-
 CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj: CMakeFiles/encoder_AaP.dir/flags.make
 CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj: CMakeFiles/encoder_AaP.dir/includes_CXX.rsp
 CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/files_functions.cpp
 CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj: CMakeFiles/encoder_AaP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj -MF CMakeFiles\encoder_AaP.dir\work_folder\files_functions.cpp.obj.d -o CMakeFiles\encoder_AaP.dir\work_folder\files_functions.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\files_functions.cpp
 
 CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.i: cmake_force
@@ -325,6 +310,21 @@ CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.i: cmake_force
 CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.s"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\files_functions.cpp -o CMakeFiles\encoder_AaP.dir\work_folder\files_functions.cpp.s
+
+CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_AaP.dir/flags.make
+CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_AaP.dir/includes_CXX.rsp
+CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp
+CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_AaP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj -MF CMakeFiles\encoder_AaP.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.obj.d -o CMakeFiles\encoder_AaP.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp
+
+CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp > CMakeFiles\encoder_AaP.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.i
+
+CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp -o CMakeFiles\encoder_AaP.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.s
 
 # Object files for target encoder_AaP
 encoder_AaP_OBJECTS = \
@@ -343,8 +343,8 @@ encoder_AaP_OBJECTS = \
 "CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.obj" \
 "CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/BlockCipher.cpp.obj" \
 "CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.obj" \
-"CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj" \
-"CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj"
+"CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj" \
+"CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj"
 
 # External object files for target encoder_AaP
 encoder_AaP_EXTERNAL_OBJECTS =
@@ -364,8 +364,8 @@ encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/gamma_ciphers/GammaCiphe
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/SubFunctions.cpp.obj
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/BlockCipher.cpp.obj
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.obj
-encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/files_functions.cpp.obj
+encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/build.make
 encoder_AaP.exe: _deps/armadillo-build/libarmadillo.dll.a
 encoder_AaP.exe: CMakeFiles/encoder_AaP.dir/linkLibs.rsp

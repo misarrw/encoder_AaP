@@ -133,7 +133,7 @@ CMakeFiles/encoder_armadillo.dir/main.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/ostream.tcc \
  C:/Users/skwor/gcc/include/c++/14.2.0/istream \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/istream.tcc \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\SubFunctions.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/SubFunctions.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/vector \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_uninitialized.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_vector.h \
@@ -144,7 +144,7 @@ CMakeFiles/encoder_armadillo.dir/main.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/fstream.tcc \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\caesar\CaesarCipher.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/substitution_ciphers/caesar/CaesarCipher.h \
  C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/substitution_ciphers/SubstitutionCipher.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/unordered_set \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/unordered_set.h \
@@ -155,11 +155,16 @@ CMakeFiles/encoder_armadillo.dir/main.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/node_handle.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/erase_if.h \
  C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/globals.h \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\substitution_ciphers\Affine\AffineCipher.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/substitution_ciphers/affine/AffineCipher.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/array \
  C:/Users/skwor/gcc/include/c++/14.2.0/compare \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\files_functions.h \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\BlockCipher.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/numeric \
+ C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_numeric.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/pstl/glue_numeric_defs.h \
+ C:/Users/skwor/gcc/include/c++/14.2.0/pstl/execution_defs.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/files_functions.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/block_ciphers/BlockCipher.h \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/config.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/compiler_check.hpp \
@@ -199,7 +204,6 @@ CMakeFiles/encoder_armadillo.dir/main.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/uniform_int_dist.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_tempbuf.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
- C:/Users/skwor/gcc/include/c++/14.2.0/pstl/execution_defs.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/complex \
  C:/Users/skwor/gcc/include/c++/14.2.0/utility \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_relops.h \
@@ -211,9 +215,6 @@ CMakeFiles/encoder_armadillo.dir/main.cpp.obj: \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/random.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/opt_random.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/random.tcc \
- C:/Users/skwor/gcc/include/c++/14.2.0/numeric \
- C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_numeric.h \
- C:/Users/skwor/gcc/include/c++/14.2.0/pstl/glue_numeric_defs.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/functional \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/std_function.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/unordered_map \
@@ -819,13 +820,14 @@ CMakeFiles/encoder_armadillo.dir/main.cpp.obj: \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_merge_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/spglue_relational_meat.hpp \
  C:/Users/skwor/HSE/c++/encoder_AaP/build/_deps/armadillo-build/tmp/include/armadillo_bits/compiler_setup_post.hpp \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_cipher\HillCipher.h \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\VigenereOpenTextGamma\VigenereOpenTextGamma.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/block_ciphers/hill_cipher/HillCipher.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.h \
  C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.h \
  C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/GammaCipher.h \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\VigenereCipherTextGamma\VigenereCipherTextGamma.h \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\VigenereRepetitionGamma\VigenereRepetitionGamma.h \
- C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\VernameCipher\VernameCipher.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.h \
+ C:\Users\skwor\HSE\c++\encoder_AaP\work_folder/gamma_ciphers/VernameCipher/VernameCipher.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/memory \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
  C:/Users/skwor/gcc/include/c++/14.2.0/bits/align.h \

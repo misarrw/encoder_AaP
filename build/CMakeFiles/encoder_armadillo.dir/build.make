@@ -221,26 +221,11 @@ CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_cipher/HillCiphe
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.s"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_cipher\HillCipher.cpp -o CMakeFiles\encoder_armadillo.dir\work_folder\block_ciphers\hill_cipher\HillCipher.cpp.s
 
-CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/flags.make
-CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/includes_CXX.rsp
-CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp
-CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj"
-	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj -MF CMakeFiles\encoder_armadillo.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.obj.d -o CMakeFiles\encoder_armadillo.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp
-
-CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i"
-	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp > CMakeFiles\encoder_armadillo.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.i
-
-CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s"
-	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp -o CMakeFiles\encoder_armadillo.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.s
-
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.obj: CMakeFiles/encoder_armadillo.dir/flags.make
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.obj: CMakeFiles/encoder_armadillo.dir/includes_CXX.rsp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.obj: CMakeFiles/encoder_armadillo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.obj"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.obj -MF CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\vigenere_cipher\VigenereRepetitionGamma\VigenereRepetitionGamma.cpp.obj.d -o CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\vigenere_cipher\VigenereRepetitionGamma\VigenereRepetitionGamma.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\VigenereRepetitionGamma\VigenereRepetitionGamma.cpp
 
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.i: cmake_force
@@ -255,7 +240,7 @@ CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/Vigen
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.obj: CMakeFiles/encoder_armadillo.dir/includes_CXX.rsp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.obj: CMakeFiles/encoder_armadillo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.obj"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.obj -MF CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\vigenere_cipher\VigenereOpenTextGamma\VigenereOpenTextGamma.cpp.obj.d -o CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\vigenere_cipher\VigenereOpenTextGamma\VigenereOpenTextGamma.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\VigenereOpenTextGamma\VigenereOpenTextGamma.cpp
 
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.i: cmake_force
@@ -270,7 +255,7 @@ CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/Vigen
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.obj: CMakeFiles/encoder_armadillo.dir/includes_CXX.rsp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.obj: CMakeFiles/encoder_armadillo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.obj"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.obj -MF CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\vigenere_cipher\VigenereCipherTextGamma\VigenereCipherTextGamma.cpp.obj.d -o CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\vigenere_cipher\VigenereCipherTextGamma\VigenereCipherTextGamma.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\VigenereCipherTextGamma\VigenereCipherTextGamma.cpp
 
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.i: cmake_force
@@ -285,7 +270,7 @@ CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/Vigen
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/includes_CXX.rsp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.obj"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.obj -MF CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\vigenere_cipher\VigenereCipher.cpp.obj.d -o CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\vigenere_cipher\VigenereCipher.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\vigenere_cipher\VigenereCipher.cpp
 
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.i: cmake_force
@@ -300,7 +285,7 @@ CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/Vername
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/includes_CXX.rsp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.obj"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.obj -MF CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\VernameCipher\VernameCipher.cpp.obj.d -o CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\VernameCipher\VernameCipher.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\VernameCipher\VernameCipher.cpp
 
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.i: cmake_force
@@ -315,7 +300,7 @@ CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj: 
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/includes_CXX.rsp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/gamma_ciphers/GammaCipher.cpp
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj -MF CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\GammaCipher.cpp.obj.d -o CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\GammaCipher.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\GammaCipher.cpp
 
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.i: cmake_force
@@ -325,6 +310,21 @@ CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.i: cm
 CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.s"
 	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\gamma_ciphers\GammaCipher.cpp -o CMakeFiles\encoder_armadillo.dir\work_folder\gamma_ciphers\GammaCipher.cpp.s
+
+CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/flags.make
+CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/includes_CXX.rsp
+CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: C:/Users/skwor/HSE/c++/encoder_AaP/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp
+CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj: CMakeFiles/encoder_armadillo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\skwor\HSE\c++\encoder_AaP\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj -MF CMakeFiles\encoder_armadillo.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.obj.d -o CMakeFiles\encoder_armadillo.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.obj -c C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp
+
+CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.i"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp > CMakeFiles\encoder_armadillo.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.i
+
+CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.s"
+	C:\Users\skwor\gcc\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\skwor\HSE\c++\encoder_AaP\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp -o CMakeFiles\encoder_armadillo.dir\work_folder\block_ciphers\hill_recurrent\HillRecurrentCipher.cpp.s
 
 # Object files for target encoder_armadillo
 encoder_armadillo_OBJECTS = \
@@ -338,13 +338,13 @@ encoder_armadillo_OBJECTS = \
 "CMakeFiles/encoder_armadillo.dir/work_folder/files_functions.cpp.obj" \
 "CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/BlockCipher.cpp.obj" \
 "CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.obj" \
-"CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj" \
 "CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.obj" \
 "CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.obj" \
 "CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.obj" \
 "CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.obj" \
 "CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.obj" \
-"CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj"
+"CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj" \
+"CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj"
 
 # External object files for target encoder_armadillo
 encoder_armadillo_EXTERNAL_OBJECTS =
@@ -359,13 +359,13 @@ encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/substitution
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/files_functions.cpp.obj
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/BlockCipher.cpp.obj
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_cipher/HillCipher.cpp.obj
-encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp.obj
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp.obj
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp.obj
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp.obj
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp.obj
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/gamma_ciphers/GammaCipher.cpp.obj
+encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.cpp.obj
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/build.make
 encoder_armadillo.exe: _deps/armadillo-build/libarmadillo.dll.a
 encoder_armadillo.exe: CMakeFiles/encoder_armadillo.dir/linkLibs.rsp
