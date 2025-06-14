@@ -88,12 +88,10 @@ arma::mat BlockCipher::gauss_jordan_inverse_arma(const arma::mat& mat) {
         throw std::invalid_argument("Matrix must be square");
     }
 
-    arma::mat A = mat;  // Копия исходной матрицы
-    arma::mat inv = arma::eye<arma::mat>(n, n);  // Единичная матрица
+    arma::mat A = mat;
+    arma::mat inv = arma::eye<arma::mat>(n, n);
 
-    // Прямой ход (приведение к верхнетреугольному виду)
     for (int col = 0; col < n; ++col) {
-        // Поиск ведущего элемента
         int pivot = col;
         for (int row = col + 1; row < n; ++row) {
             if (std::abs(A(row, col)) > std::abs(A(pivot, col))) {
@@ -101,13 +99,11 @@ arma::mat BlockCipher::gauss_jordan_inverse_arma(const arma::mat& mat) {
             }
         }
 
-        // Перестановка строк
         if (pivot != col) {
             A.swap_rows(col, pivot);
             inv.swap_rows(col, pivot);
         }
 
-        // Нормализация текущей строки
         double div = A(col, col);
         if (div == 0) {
             throw std::runtime_error("Matrix is singular");
@@ -115,7 +111,6 @@ arma::mat BlockCipher::gauss_jordan_inverse_arma(const arma::mat& mat) {
         A.row(col) /= div;
         inv.row(col) /= div;
 
-        // Обнуление столбца в других строках
         for (int row = 0; row < n; ++row) {
             if (row != col && A(row, col) != 0) {
                 double factor = A(row, col);
