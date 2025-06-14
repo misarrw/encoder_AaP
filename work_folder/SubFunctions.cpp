@@ -65,3 +65,4 @@ bool SubFunction::is_alpha(const std::string& str) {
            std::all_of(str.begin(), str.end(), 
                [](char c){ return isalpha(c); });
 }
+

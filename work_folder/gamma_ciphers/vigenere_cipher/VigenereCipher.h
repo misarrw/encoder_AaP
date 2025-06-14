@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
-#include "..\GammaCipher.h"
+#include "../GammaCipher.h"
 
 class VigenereCipher : public GammaCipher{
     protected:

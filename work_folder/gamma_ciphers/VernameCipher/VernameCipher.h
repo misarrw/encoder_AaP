@@ -5,7 +5,7 @@
 
 class VernameCipher: public GammaCipher {
     protected:
-    void creat_gamma() override;
+    void create_gamma() override;
     size_t len_text;
     std::vector<int> gamma;
     std::vector<int> get_gamma() override {return gamma;}
@@ -19,7 +19,7 @@ class VernameCipher: public GammaCipher {
         text_numbers = text_in_numbers(text);
         len_text = text.size();
         if (x == 1){
-            creat_gamma();
+            create_gamma();
         } else {
             std::string gamma_text;
             std::cin >> gamma_text;

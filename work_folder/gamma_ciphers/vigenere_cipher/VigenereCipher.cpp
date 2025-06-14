@@ -2,7 +2,7 @@
 #include <string>
 #include <cctype>
 #include "VigenereCipher.h"
-#include "..\..\globals.h"
+#include "../../globals.h"
 
 void VigenereCipher::check_key() 
 {

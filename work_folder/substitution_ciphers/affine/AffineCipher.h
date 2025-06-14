@@ -1,5 +1,5 @@
 #pragma once
-#include "..\SubstitutionCipher.h"
+#include "../SubstitutionCipher.h"
 #include <array>
 
 class Affine

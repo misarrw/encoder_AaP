@@ -4,7 +4,7 @@
 #include <random>  
 #include "globals.h"
 
-void VernameCipher::creat_gamma() {
+void VernameCipher::create_gamma() {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> dist(0, ALPHABET_SIZE); 
