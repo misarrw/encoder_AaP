@@ -1,3 +1,8 @@
+/**
+ * \file
+ * \brief Точка входа в приложение. Обеспечивает пользовательский интерфейс для запуска различных шифров.
+ */
+
 #include <iostream>
 #include <cctype>
 #include "work_folder/SubFunctions.h"
@@ -15,10 +20,14 @@
 #include "work_folder/gamma_ciphers/VernameCipher/VernameCipher.h"
 #include <memory>
 
-
+/**
+ * \brief Главная функция программы. Отвечает за вывод приветствия и управление интерфейсом.
+ * \return Код завершения (0 при успешном выполнении).
+ */
 int main()
 {
     std::cout << "Welcome to the 'Historical Encryptor'!\n";
+    SubFunction subfunction;
     while (true) {
         std::cout << "\nWhat operation would you like to perform?\n"
         "1. Encryption\n"
@@ -99,12 +108,24 @@ int main()
 
                     case 2: {
                         int alpha; int beta;
-                        std::cout << "Enter alpha: ";
-                        std::cin >> alpha;
+                        int opposite_alpha;
+                        while (true)
+                        {
+                            std::cout << "Enter alpha: ";
+                            std::cin >> alpha;
+                            opposite_alpha = subfunction.modInverse(alpha, ALPHABET_SIZE);
+                            if (opposite_alpha != -1) {
+                                break;
+                            }
+                            std::cout << "Error: The alpha value and alphabet size must be coprime (their GCD should be 1)." << std::endl;
+                        }
+                        
                         std::cout << "Enter beta: ";
                         std::cin >> beta;
-                        AffineCoder coder(alpha, beta);
-                        ciphertext = AffineCipher(text).affine(coder);
+                        if (operation == '1') {AffineCoder coder(alpha, beta); 
+                            ciphertext = AffineCipher(text).affine(coder);}
+                        else {AffineEncoder coder(subfunction.modInverse(alpha, ALPHABET_SIZE), beta); 
+                            ciphertext = AffineCipher(text).affine(coder);}
                         break;
                     }
 
@@ -241,17 +262,20 @@ int main()
 
                         switch(gamma_type) {
                             case 1: {
-                                ciphertext = VigenereRepetitionGamma(text, operation).ciphertext;
+                                if (operation == '1') {ciphertext = VigenereRepetitionGamma(text, 1).ciphertext;}
+                                else {ciphertext = VigenereRepetitionGamma(text, -1).ciphertext;}
                                 break;
                             }
 
                             case 2: {
-                                ciphertext =  VigenereOpenTextGamma(text, operation).ciphertext;
+                                if (operation == '1') {ciphertext =  VigenereOpenTextGamma(text, 1).ciphertext;}
+                                else {ciphertext =  VigenereCipherTextGamma(text, -1).ciphertext;}
                                 break;
                             }
 
                             case 3: {
-                                ciphertext =  VigenereCipherTextGamma(text, operation).ciphertext;
+                                if (operation == '1') {ciphertext =  VigenereCipherTextGamma(text, 1).ciphertext;}
+                                else {ciphertext =  VigenereOpenTextGamma(text, -1).ciphertext;}
                                 break;
                             }
                         }
@@ -260,7 +284,8 @@ int main()
                     }
 
                     case 2: {
-                        VernameCipher(text, 1);
+                        if (operation == '1') {ciphertext =  VernameCipher(text, 1).ciphertext;}
+                        else {ciphertext =  VernameCipher(text, -1).ciphertext;}
                         break;
                     }
                 }
@@ -269,4 +294,5 @@ int main()
         }
         string_to_file(result_file, ciphertext);
     }
+    return 0;
 }
