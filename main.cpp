@@ -6,7 +6,6 @@
 #include <iostream>
 #include <cctype>
 #include "work_folder/SubFunctions.h"
-#include <fstream>
 #include "work_folder/substitution_ciphers/caesar/CaesarCipher.h"
 #include "work_folder/substitution_ciphers/affine/AffineCipher.h"
 #include "work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h"
@@ -169,20 +168,7 @@ int main()
                         std::cout << "\nEnter the key matrix:\n"
                         "Hint: enter columns separated by spaces, and rows by pressing 'ENTER':" << std::endl;
 
-                        for (int i = 0; i < key_size; ++i) {
-                            std::string row_input;
-                            std::cout << "Row " << i + 1 << ": ";
-                            std::getline(std::cin >> std::ws, row_input);
-                        
-                            std::istringstream iss(row_input);
-                            for (int j = 0; j < key_size; ++j) {
-                                if (!(iss >> matrix[i][j])) {
-                                    std::cerr << "Invalid input for row " << i + 1 << ". Please try again.\n";
-                                    --i;
-                                    break;
-                                }
-                            }
-                        }
+                        enter_the_matrix(key_size, matrix);
 
                         std::unique_ptr<BlockCipher> key_vec = std::make_unique<HillCipher>(matrix);
                         ciphertext = key_vec->hill(text, operation);
@@ -197,38 +183,12 @@ int main()
                         std::cout << "\nEnter the first key matrix:\n"
                         "Hint: enter columns separated by spaces, and rows by pressing 'ENTER':" << std::endl;
 
-                        for (int i = 0; i < key_size; ++i) {
-                            std::string row_input;
-                            std::cout << "Row " << i + 1 << ": ";
-                            std::getline(std::cin >> std::ws, row_input);
-                        
-                            std::istringstream iss(row_input);
-                            for (int j = 0; j < key_size; ++j) {
-                                if (!(iss >> matrix1[i][j])) {
-                                    std::cerr << "Invalid input for row " << i + 1 << ". Please try again.\n";
-                                    --i;
-                                    break;
-                                }
-                            }
-                        }
+                        enter_the_matrix(key_size, matrix1);
 
                         std::cout << "\nEnter the second key matrix:\n"
                         "Hint: enter columns separated by spaces, and rows by pressing 'ENTER':" << std::endl;
 
-                        for (int i = 0; i < key_size; ++i) {
-                            std::string row_input;
-                            std::cout << "Row " << i + 1 << ": ";
-                            std::getline(std::cin >> std::ws, row_input);
-                        
-                            std::istringstream iss(row_input);
-                            for (int j = 0; j < key_size; ++j) {
-                                if (!(iss >> matrix2[i][j])) {
-                                    std::cerr << "Invalid input for row " << i + 1 << ". Please try again.\n";
-                                    --i;
-                                    break;
-                                }
-                            }
-                        }
+                        enter_the_matrix(key_size, matrix2);
 
                         HillRecurrentCipher hrcipher(matrix1, matrix2);
                         ciphertext = hrcipher.hill(text, operation);

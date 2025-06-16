@@ -8,6 +8,8 @@
 #include <stdexcept>
 #include <string>
 #include <filesystem>
+#include <sstream>
+#include <vector>
 
 /**
  * \brief Считывает содержимое файла в строку.
@@ -76,5 +78,27 @@ bool validate_file_path(const std::string& path) {
     }
     catch (const fs::filesystem_error&) {
         return false;
+    }
+}
+
+/**
+ * \brief Ввод квадратной матрицы.
+ * \param key_size Размер ключа.
+ * \param matrix Матрица, которую надо ввести.
+ */
+void enter_the_matrix(int& key_size, std::vector<std::vector<int>> matrix){
+    for (int i = 0; i < key_size; ++i) {
+        std::string row_input;
+        std::cout << "Row " << i + 1 << ": ";
+        std::getline(std::cin >> std::ws, row_input);
+    
+        std::istringstream iss(row_input);
+        for (int j = 0; j < key_size; ++j) {
+            if (!(iss >> matrix[i][j])) {
+                std::cerr << "Invalid input for row " << i + 1 << ". Please try again.\n";
+                --i;
+                break;
+            }
+        }
     }
 }

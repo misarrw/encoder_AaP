@@ -8,7 +8,6 @@
 #include <vector>
 #include "../BlockCipher.h"
 #include "globals.h"
-#include <cctype>
 #include <algorithm>
 
 /**

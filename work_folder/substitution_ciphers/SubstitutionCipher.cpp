@@ -4,9 +4,9 @@
  */
 
 #include <iostream>
+#include <numeric>
 #include "SubstitutionCipher.h"
 #include "globals.h"
-#include "numeric"
 
 /**
  * \brief Вычисляет значение, обратное alpha по модулю ALPHABET_SIZE.

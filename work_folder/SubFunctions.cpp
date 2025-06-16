@@ -4,9 +4,9 @@
  */
 
 #include <iostream>
+#include <algorithm>
 #include "SubFunctions.h"
 #include "globals.h"
-#include "algorithm"
 
 /**
  * \brief Преобразует строку в вектор чисел, соответствующих позициям букв в алфавите.

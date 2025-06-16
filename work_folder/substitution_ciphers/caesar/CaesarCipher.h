@@ -5,8 +5,8 @@
 
 #pragma once
 #include <string>
-#include "../SubstitutionCipher.h"
 #include <unordered_set>
+#include "../SubstitutionCipher.h"
 #include "../../globals.h"
 
 /**
