@@ -37,12 +37,6 @@ add_executable(encoder_AaP
     work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp
     work_folder/gamma_ciphers/GammaCipher.cpp
     work_folder/substitution_ciphers/affine/AffineCipher.cpp
-    work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.cpp
-    work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.cpp
-    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.cpp
-    work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.cpp
-    work_folder/gamma_ciphers/VernameCipher/VernameCipher.cpp
-    work_folder/gamma_ciphers/GammaCipher.cpp
     work_folder/SubFunctions.cpp
     work_folder/block_ciphers/BlockCipher.cpp
     work_folder/block_ciphers/hill_cipher/HillCipher.cpp
