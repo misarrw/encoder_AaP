@@ -1,10 +1,19 @@
+/**
+ * \file
+ * \brief Реализация методов абстрактного класса BlockCipher.
+ */
+
 #include "BlockCipher.h"
 #include "globals.h"
 #include <string>
 #include <armadillo>
 
-
-std::vector<std::vector<int>> BlockCipher::text_into_numbers_ngrammas(std::string& text)
+/**
+ * \brief Преобразует текст в вектор числовых n-грамм.
+ * \param text Входной текст.
+ * \return Вектор n-грамм, каждая из которых представлена вектором чисел.
+ */
+std::vector<std::vector<int>> BlockCipher::text_into_numbers_ngrammas(std::string& text) 
 {
     std::vector<std::string> ngrammas_list;
     size_t key_size = key_vec.size();
@@ -17,19 +26,25 @@ std::vector<std::vector<int>> BlockCipher::text_into_numbers_ngrammas(std::strin
     for (size_t i = 0; i < text.size(); i += key_size) {
         ngrammas_list.push_back(text.substr(i, key_size));
     }
+
     std::vector<int> ngramma_numbers;
     std::vector<std::vector<int>> ngrammas_numbers;
-    for (std::string ngramma: ngrammas_list) {
-        for (char letter: ngramma) {
+    for (const std::string& ngramma : ngrammas_list) {
+        for (char letter : ngramma) {
             ngramma_numbers.push_back(ALPHABET.find(letter));
         }
         ngrammas_numbers.push_back(ngramma_numbers);
         ngramma_numbers.clear();
     }
+
     return ngrammas_numbers;
 }
 
-
+/**
+ * \brief Преобразует двумерный вектор в матрицу arma::mat.
+ * \param key_vec Двумерный вектор (матрица ключа).
+ * \return Матрица arma::mat с теми же значениями.
+ */
 arma::mat BlockCipher::make_arma_matrix(std::vector<std::vector<int>>& key_vec) 
 {
     arma::mat key(key_vec.size(), key_vec[0].size());
@@ -41,8 +56,14 @@ arma::mat BlockCipher::make_arma_matrix(std::vector<std::vector<int>>& key_vec)
     return key;
 }
 
-
-std::vector<std::vector<int>> BlockCipher::find_inverse_matrix(std::vector<std::vector<int>> key_vec) {
+/**
+ * \brief Строит обратную матрицу по модулю ALPHABET_SIZE.
+ * \param key_vec Ключевая матрица.
+ * \return Обратная матрица, представленная как вектор векторов.
+ * \throws std::runtime_error Если матрица не обратима по модулю.
+ */
+std::vector<std::vector<int>> BlockCipher::find_inverse_matrix(std::vector<std::vector<int>> key_vec) 
+{
     arma::mat arma_matrix = make_arma_matrix(key_vec);
 
     double det = arma::det(arma_matrix);
@@ -70,7 +91,12 @@ std::vector<std::vector<int>> BlockCipher::find_inverse_matrix(std::vector<std::
     return inverse_matrix;
 }
 
-
+/**
+ * \brief Проверяет, пригодна ли матрица для использования в шифре Хилла.
+ * \param matrix Проверяемая матрица.
+ * \param determinant Её определитель.
+ * \throws InvalidInputError В случае несоответствия требованиям.
+ */
 void BlockCipher::check_hill_key(std::vector<std::vector<int>> matrix, int determinant)
 {
     if (matrix.size() != matrix[0].size()) {
@@ -81,8 +107,14 @@ void BlockCipher::check_hill_key(std::vector<std::vector<int>> matrix, int deter
     }
 }
 
-
-arma::mat BlockCipher::gauss_jordan_inverse_arma(const arma::mat& mat) {
+/**
+ * \brief Вычисляет обратную матрицу методом Гаусса-Жордана.
+ * \param mat Входная квадратная матрица.
+ * \return Обратная матрица (arma::mat).
+ * \throws std::runtime_error Если матрица вырождена.
+ */
+arma::mat BlockCipher::gauss_jordan_inverse_arma(const arma::mat& mat) 
+{
     int n = mat.n_rows;
     if (n != mat.n_cols) {
         throw std::invalid_argument("Matrix must be square");

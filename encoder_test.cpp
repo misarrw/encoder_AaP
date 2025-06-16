@@ -2,13 +2,18 @@
 #include <doctest/doctest.h>
 #include "SubFunctions.h"
 #include "work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h"
+#include "work_folder/substitution_ciphers/affine/AffineCipher.h"
 #include "globals.h"
 #include "work_folder/substitution_ciphers/caesar/CaesarCipher.h"
 #include "work_folder/block_ciphers/hill_cipher/HillCipher.h"
 #include "work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.h"
 #include "work_folder/gamma_ciphers/vigenere_cipher/VigenereRepetitionGamma/VigenereRepetitionGamma.h"
+#include "work_folder/gamma_ciphers/vigenere_cipher/VigenereOpenTextGamma/VigenereOpenTextGamma.h"
+#include "work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.h"
 #include "work_folder/gamma_ciphers/GammaCipher.h"
 #include "work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.h"
+#include "work_folder\gamma_ciphers\VernameCipher\VernameCipher.h"
+#include <memory>
 
 // sardarik's tests
 TEST_CASE("Encoding tests") {
@@ -30,75 +35,6 @@ TEST_CASE("Encoding tests") {
         CHECK(encoder.text_in_numbers("Hello world") == std::vector<int>{7, 4, 11, 11, 14, -1, 22, 14, 17, 11, 3});
     }
 }
-
-// TEST_CASE("Creating rep gamma") {
-//     ViginereRepetitionGamma gamma;
-
-//     SUBCASE("Short key repeats correctly") {
-//         std::string key = "AB";
-//         std::vector<int> text_numbers{1,1,1}; 
-//         CHECK(gamma.repgamma(key, text_numbers) == std::vector<int>{0, 1, 0}); 
-//     }
-
-//     SUBCASE("Key same length as text") {
-//         std::string key = "XYZ";
-//         std::vector<int> text_numbers{1,1,1};
-//         CHECK(gamma.repgamma(key, text_numbers) == std::vector<int>{23, 24, 25}); 
-//     }
-
-//     SUBCASE("Single-letter key") {
-//         std::string key = "A";
-//         std::vector<int> text_numbers{1,1,1};
-//         CHECK(gamma.repgamma(key, text_numbers) == std::vector<int>{0,0,0});
-//     }
-// }
-
-// TEST_CASE("VigenereRepetitionGamma - Creating repetition gamma") {
-//     SUBCASE("Short key repeats correctly") {
-//         std::string text = 'BBBB';
-//         int option = 1;
-//         VigenereRepetitionGamma gamma(text, option);
-//         std::string key = "AB";
-//         std::vector<int> expected{0, 1, 0, 1}; // A=0, B=1, A=0, B=1
-//         CHECK(gamma()) == expected);
-//     }
-    
-    // SUBCASE("Key same length as text") {
-    //     std::string key = "XYZ";
-    //     std::vector<int> text_numbers{1, 1, 1};
-    //     std::vector<int> expected{23, 24, 25}; // X=23, Y=24, Z=25
-    //     CHECK(gamma.repgamma(key, text_numbers) == expected);
-    // }
-    
-    // SUBCASE("Single-letter key") {
-    //     std::string key = "A";
-    //     std::vector<int> text_numbers{1, 1, 1, 1, 1};
-    //     std::vector<int> expected{0, 0, 0, 0, 0}; // A=0 repeated
-    //     CHECK(gamma.repgamma(key, text_numbers) == expected);
-    // }
-    
-    // SUBCASE("Empty key throws exception") {
-    //     std::string key = "";
-    //     std::vector<int> text_numbers{1, 2, 3};
-    //     CHECK_THROWS_AS(gamma.repgamma(key, text_numbers), std::invalid_argument);
-    // }
-    
-    // SUBCASE("Non-alphabetic key throws exception") {
-    //     std::string key = "A1B";
-    //     std::vector<int> text_numbers{1, 2, 3};
-    //     CHECK_THROWS_AS(gamma.repgamma(key, text_numbers), std::invalid_argument);
-    // }
-    
-    // SUBCASE("Mixed case key works correctly") {
-    //     std::string key = "aBc";
-    //     std::vector<int> text_numbers{1, 1, 1};
-    //     std::vector<int> expected{0, 1, 2}; // a=0, B=1, c=2
-    //     CHECK(gamma.repgamma(key, text_numbers) == expected);
-    // }
-// }
-
-
-
 
 TEST_CASE("Affine recurrent encryption and decryption") {
     SUBCASE("Basic encryption") {
@@ -474,3 +410,42 @@ TEST_CASE("Hill invalid key") {
 
 
 // jabohka's tests
+TEST_CASE("AffineEncoder encrypts characters correctly") {
+    AffineCoder coder(5, 8);  
+    int index = 0; 
+    int result = coder.cipher(index);
+    CHECK(result == (5 * 0 + 8) % 26); 
+}
+
+TEST_CASE("AffineCoder decrypts characters correctly") {
+    AffineCoder coder(5, 8);
+    AffineEncoder encoder(5, 8);
+
+    int original = 0; // 'A'
+    int encrypted = coder.cipher(original);
+
+    int decrypted = encoder.cipher(encrypted);
+    CHECK(decrypted == original);
+}
+
+TEST_CASE("AffineCipher end-to-end encryption") {
+    std::string text = "HELLO";
+    AffineCipher cipher(text);
+
+    AffineCoder coder(5, 8);
+    std::string encrypted = cipher.affine(coder);
+
+    CHECK(encrypted.size() == text.size());
+    for (char c : encrypted) {
+        CHECK(isupper(c)); 
+    }
+}
+
+TEST_CASE("AffineEncoder throws on invalid alpha") {
+    int bad_alpha = 13; 
+    int beta = 5;
+    AffineCoder coder(bad_alpha, beta);
+    int index = 0;
+    int encrypted = coder.cipher(index);
+    CHECK(encrypted == (13 * 0 + 5) % 26); 
+}
