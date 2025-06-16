@@ -25,3 +25,10 @@ void string_to_file(const std::string& file_path, std::string& data);
  * \return true, если путь существует и доступен, иначе false.
  */
 bool validate_file_path(const std::string& filepath);
+
+/**
+ * \brief Ввод квадратной матрицы.
+ * \param key_size Размер ключа.
+ * \param matrix Матрица, которую надо ввести.
+ */
+void enter_the_matrix(int& key_size, std::vector<std::vector<int>> matrix);

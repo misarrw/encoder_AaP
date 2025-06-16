@@ -1,9 +1,9 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
+#include "globals.h"
 #include "SubFunctions.h"
 #include "work_folder/substitution_ciphers/affine_recurrent/AffineRecurrentCipher.h"
 #include "work_folder/substitution_ciphers/affine/AffineCipher.h"
-#include "globals.h"
 #include "work_folder/substitution_ciphers/caesar/CaesarCipher.h"
 #include "work_folder/block_ciphers/hill_cipher/HillCipher.h"
 #include "work_folder/block_ciphers/hill_recurrent/HillRecurrentCipher.h"
@@ -12,7 +12,7 @@
 #include "work_folder/gamma_ciphers/vigenere_cipher/VigenereCipherTextGamma/VigenereCipherTextGamma.h"
 #include "work_folder/gamma_ciphers/GammaCipher.h"
 #include "work_folder/gamma_ciphers/vigenere_cipher/VigenereCipher.h"
-#include "work_folder\gamma_ciphers\VernameCipher\VernameCipher.h"
+#include "work_folder/gamma_ciphers/VernameCipher/VernameCipher.h"
 #include <memory>
 
 // sardarik's tests
