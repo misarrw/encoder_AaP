@@ -1,15 +1,33 @@
-# include "../../../globals.h"
-# include <iostream>
-# include <vector>
-# include <string>
-# include <cctype>
+/**
+ * \file
+ * \brief Реализация метода создания гаммы в классе VigenereOpenTextGamma.
+ */
+
+#include "../../../globals.h"
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cctype>
 #include "VigenereOpenTextGamma.h"
 
-
-void VigenereOpenTextGamma::creat_gamma()
+/**
+ * \brief Формирует гамму из ключа и открытого текста.
+ */
+void VigenereOpenTextGamma::create_gamma() 
 {
     gamma.push_back(key_numbers[0]);
-    for (int i{0}; i < (text_numbers.size() - 1); i++) {
-        gamma.push_back(text_numbers[i]);
+
+    std::string gamma_str{};
+    for (int i = 0; i < (text.size() - 1); i++) {
+        char c = toupper(text[i]);
+        int index = ALPHABET.find(c);
+        if (index == std::string::npos) {
+            gamma_str += "q";
+            continue;
+        }
+        gamma_str += text[i];
     }
+
+    std::vector<int> gamma_numbers{ text_in_numbers(gamma_str) };
+    gamma.insert(gamma.end(), gamma_numbers.begin(), gamma_numbers.end());
 }

@@ -1,3 +1,8 @@
+/**
+ * \file
+ * \brief Реализация метода HillCipher::hill — классического блочного шифра Хилла.
+ */
+
 #include "HillCipher.h"
 #include <string>
 #include <vector>
@@ -6,15 +11,19 @@
 #include <cctype>
 #include <algorithm>
 
-
+/**
+ * \brief Шифрует или дешифрует текст методом Хилла.
+ * \param pretext Входной текст.
+ * \param option '1' — шифрование, '2' — дешифрование.
+ * \return Результирующий текст.
+ */
 std::string HillCipher::hill(std::string& pretext, char& option)
-{   
+{
     if (option == '2') {
-        key_vec = find_inverse_matrix();
+        key_vec = find_inverse_matrix(key_vec);
     }
-
     std::string text;
-    for (char symbol: pretext) {
+    for (char symbol : pretext) {
         if (!std::count(SYMBOLS.begin(), SYMBOLS.end(), symbol)) {
             text += symbol;
         }
@@ -27,7 +36,7 @@ std::string HillCipher::hill(std::string& pretext, char& option)
     std::vector<int> ciphertext_ngramma;
     int letter = 0;
     size_t key_size = key_vec.size();
-    for (std::vector<int> text_ngramma: text_ngrammas_numbers) {
+    for (const std::vector<int>& text_ngramma : text_ngrammas_numbers) {
         for (size_t i = 0; i < key_size; i++) {
             for (size_t j = 0; j < key_size; j++) {
                 letter += key_vec[i][j] * text_ngramma[j];
@@ -38,10 +47,9 @@ std::string HillCipher::hill(std::string& pretext, char& option)
         ciphertext_ngrammas_numbers.push_back(ciphertext_ngramma);
         ciphertext_ngramma.clear();
     }
-
     std::string ciphertext;
-    for (std::vector<int> ngramma_numbers: ciphertext_ngrammas_numbers) {
-        for (int number: ngramma_numbers) {
+    for (const std::vector<int>& ngramma_numbers : ciphertext_ngrammas_numbers) {
+        for (int number : ngramma_numbers) {
             ciphertext += static_cast<char>(ALPHABET[number]);
         }
     }

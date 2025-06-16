@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\encoder_AaP.dir/objects.a
-C:\Users\skwor\gcc\bin\ar.exe qc CMakeFiles\encoder_AaP.dir/objects.a @CMakeFiles\encoder_AaP.dir\objects1.rsp
-C:\Users\skwor\gcc\bin\c++.exe -Wl,--whole-archive CMakeFiles\encoder_AaP.dir/objects.a -Wl,--no-whole-archive -o encoder_AaP.exe -Wl,--out-implib,libencoder_AaP.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\encoder_AaP.dir\linkLibs.rsp
