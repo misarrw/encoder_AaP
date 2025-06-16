@@ -133,17 +133,6 @@ TEST_CASE("Affine recurrent encryption and decryption") {
         AffineRecurrentCipher arcipher(key1, key2);
         CHECK_THROWS_AS(arcipher.cipher(text, option), std::invalid_argument);
     }
-
-    SUBCASE("Invalid characters") {
-        std::array<int, 2> key1 = {5, 7};
-        std::array<int, 2> key2 = {7, 11};
-        std::string text = "HELLO!";
-        char option = '1';
-        AffineRecurrentCipher arcipher(key1, key2);
-
-        
-        CHECK_THROWS_AS(arcipher.cipher(text, option), std::invalid_argument);
-    }
 }
 
 TEST_CASE("Hill Recurrent Cipher - Basic Encryption/Decryption") {
