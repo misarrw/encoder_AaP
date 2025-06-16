@@ -44,8 +44,12 @@ std::string SubFunction::numbers_to_text(const std::vector<int>& nums) {
     for (int num : nums) {
         if (num == -1) {
             result += ' ';
-        } else {
-            result += static_cast<char>('A' + num);
+        }
+        else if (num >= 0 && num < ALPHABET_SIZE) {
+            result += ALPHABET[num];  // Буквы алфавита
+        }
+        else {
+            result += static_cast<char>(num);  // Символы (их оригинальные ASCII-коды)
         }
     }
     return result;

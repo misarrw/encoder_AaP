@@ -69,6 +69,10 @@ std::string AffineRecurrentCipher::cipher(const std::string& text,
             pre_result.push_back(-1);
             continue;
         }
+        if (SYMBOLS.find(upper) != std::string::npos) {
+            pre_result.push_back(static_cast<int>(upper));
+            continue;
+        }
         size_t pos = ALPHABET.find(upper);
         if (pos == std::string::npos) {
             throw std::invalid_argument("Invalid character: " + std::string(1, c));
